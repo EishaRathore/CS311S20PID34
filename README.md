@@ -1,6 +1,6 @@
 # CS311S20PID34
 
-![image] (https://github.com/ManahilAmeer/CS311S20PID34/blob/master/UI/images/icon.png)
+<img src="UI/images/icon.png" alt="BusTub Logo" height="200">
 
 # Activity Scheduling  
 ## Build With
