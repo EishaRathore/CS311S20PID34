@@ -1,4 +1,4 @@
-<img src="./icon.png" align="right" />
+<img src="../icon.png" align="right" />
 # CS311S20PID34
 
 # Activity Scheduling  
