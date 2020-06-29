@@ -1,11 +1,12 @@
 # CS311S20PID34
 
-#Activity Scheduling  
+# Activity Scheduling  
 
-##Build With
+## Build With
+
 *[Html & CSS]-For Web Designing
 
-##Author
+## Author
 * **Eisha Nawaz** - *Initial Work* - [EishaButt](https://github.com/EishaButt)
 
 See also the list of [contributors] who contributed in this project.
