@@ -1,6 +1,6 @@
 # CS311S20PID34
 
-<img src="UI/images/icon.png" alt="BusTub Logo" height="200">
+<img src="UI/images/icon.png" align="right">
 
 # Activity Scheduling  
 ## Build With
