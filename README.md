@@ -1,6 +1,6 @@
 # CS311S20PID34
 
-![alt text] (https://url/to/icon.png)
+![image] (https://github.com/ManahilAmeer/CS311S20PID34/blob/master/UI/images/icon.png)
 
 # Activity Scheduling  
 ## Build With
