@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/UET1.jpg") ;
+    height: 100%;
+    background-position: centers ;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+      background-size: cover;
+      font-family: poppins;
+}
+
+.main{
+    width: 400px;
+    height: 420px;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    padding: 70px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    box-shadow: 8px 8px 50px #000;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 15%;
+    font-family: courgette;
+    color: #fff;
+}
+
+.main input{
+width: 100%;
+margin-bottom: 5%;
+}
+
+.main input[type=text], .main input[type=password]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    font-size: 16px;
+    opacity: 1;
+    color: #ccc;
+}
+
+.main input[type=submit]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(204,154,237);
+    background: linear-gradient(90deg, rgba(204,154,237,1) 0%, rgba(255,255,255,1) 54%, rgba(29,225,253,1) 100%);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.main input[type=submit]:hover{
+    cursor: pointer;
+}
+
+.main input[type=button]{
+    color: black;
+}
+.main a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.main a:hover{
+color: #fff;
+opacity: 1;
+}
+
+.bottomText{
+    color: #000;
+}
+
+.bottomText input{
+    width: 50%;
+    float: left;
+}
+.bottomText input[type=submit]{
+    padding: 0px 0px 22px;
+    border: none;
+    background: transparent;
+    outline: none;
+    width:65px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.986);
+}
+
+.bottomText input[type=submit]:hover{
+    color: rgb(179, 234, 241);
+opacity: 1;
+}
+.bottomText a{
+    float: left;
+}
+
+.Socials{
+    margin-top: 12%;
+    text-align: center;
+}
+
+.Socials a{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.Socials a:nth-child(1){
+    background: #3b5998;
+}
+
+.Socials a:nth-child(2){
+    background: #55acee;
+}
+
+.Socials a:nth-child(3){
+    background: #bd081c;
+}
+
+
+.Socials a i{
+    padding: 8px 0;
+
+}
+
+#overlyArea{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.5);
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
