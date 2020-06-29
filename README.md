@@ -1,7 +1,6 @@
 # CS311S20PID34
 
-# Activity Scheduling  [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Dependency Status]
-
+# Activity Scheduling  
 ## Build With
 
 
