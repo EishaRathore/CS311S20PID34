@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    background-image: url(./images/UET1.jpg);
+    background-position: center;
+    background-size: cover;overflow-x: hidden;
+    position: relative;
+}
+.background{
+    height: 100vh;
+    
+    background-position: center;
+    background-size: cover;overflow-x: hidden;
+    position: relative;
+}
