@@ -5,12 +5,18 @@ body{
     background-image: url(./images/UET1.jpg);
     background-position: center;
     background-size: cover;overflow-x: hidden;
-    position: relative;
+     background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    background-size: cover;
+     font-family: poppins;
+     height: 100vh;
 }
 .background{
-    height: 100vh;
-    
-    background-position: center;
-    background-size: cover;overflow-x: hidden;
     position: relative;
+    background-color: rgba(0, 0, 0,0.5);
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
 }
