@@ -1,5 +1,6 @@
-<img src="icon.png" align="right" />
 # CS311S20PID34
+
+<img src="UI/images/icon.png" align="right">
 
 # Activity Scheduling  
 ## Build With
