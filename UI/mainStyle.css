@@ -322,7 +322,7 @@ body{
  top: 50%;
  left: 50%;
  transform:translate(-50%,-50%) scale(0);
- color: rgba(240, 248, 255, 0.021);
+ color:rgba(240, 258, 260, 0.021);
  font-size: 12rem;
 letter-spacing: 50px;
 z-index: -1;
