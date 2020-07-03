@@ -250,6 +250,16 @@ body{
 /*End mediaQuery*/
 
 /*Key Frames*/
+@keyframes ham_plus{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.3) ;
+    }
+}
 
 @keyframes text_reveal_box{
     50%{
@@ -296,7 +306,7 @@ body{
     background-color: rgb(31, 30, 30);
     width: 100vw;
     height: 100vh;
-    left: 0;
+    left: 100%;
     top: 0;
     display: flex;
     flex-direction: column;
@@ -304,9 +314,13 @@ body{
     align-items: center;
     z-index: 1;
     overflow-x: hidden;
+    transition: .5s ease left;
+}
+#header .nav-list ul.active{
+    left: 0;
 }
 #header .nav-list ul a{
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: .2rem;
     text-decoration: none;
@@ -340,6 +354,17 @@ z-index: -1;
     justify-content: center;
     z-index: 100;
     cursor: pointer;
+    transform: scale(.8);
+    margin-right:200px;
+}
+#header .ham::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: ham_plus 3s ease infinite;
 }
 #header .nav-list ul li:hover a::after{
    transform: translate(-50%,-50%) scale(1);
@@ -370,5 +395,11 @@ z-index: -1;
 }
 #header .ham .bar::before{
     bottom: 8px;
+}
+#header .ham.active .bar::before{
+    bottom: 0;
+}
+#header .ham.active .bar::after{
+    top: 0;
 }
 /*Header End*/
