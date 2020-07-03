@@ -328,9 +328,47 @@ letter-spacing: 50px;
 z-index: -1;
  transition: .3s ease letter-spacing; 
 }
+#header .ham{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border:3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+}
 #header .nav-list ul li:hover a::after{
    transform: translate(-50%,-50%) scale(1);
    letter-spacing: initial; 
 }
 
+#header .ham .bar{
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+
+#header .ham .bar::after,
+#header .ham .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3s ease;
+    transition-property: top,bottom;
+} 
+#header .ham .bar::after{
+    top: 8px;
+}
+#header .ham .bar::before{
+    bottom: 8px;
+}
 /*Header End*/
