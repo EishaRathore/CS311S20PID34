@@ -1,17 +1,18 @@
+package com.za.tutorial.ga.cs.domain;
 public class Instructor{
-    private string id;
-    private string name;
-    public Instructor(string id, string name){
+    private String id;
+    private String name;
+    public Instructor(String id, String name){
         this.id=id;
         this.name=name;
     }
-    public string getId(){
+    public String getId(){
         return id;
     }
-    public string getName(){
+    public String getName(){
         return name;
     }
-    public string toString(){
+    public String toString(){
         return name;
     }
 }

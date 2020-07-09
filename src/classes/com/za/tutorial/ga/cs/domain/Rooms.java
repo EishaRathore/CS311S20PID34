@@ -1,11 +1,12 @@
+package com.za.tutorial.ga.cs.domain;
 public class Rooms{
-    private string number;
+    private String number;
     private int seatingCapacity;
-    public Rooms(string number, int seatingCapacity){
+    public Rooms(String number, int seatingCapacity){
         this.number=number;
         this.seatingCapacity=seatingCapacity;
     }
-    public string getNumber(){
+    public String getNumber(){
         return number;
     }
     public int getSeatingCapacity(){
