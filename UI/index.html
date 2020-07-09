@@ -11,8 +11,17 @@
     <div class="main">
 <h1>LOG IN</h1>
 <form action="">
-    <span class="select">--Select--</span>
-    i.fa.<i class="fa fa-caret-down" aria-hidden="true"></i>
+    <div class="dropHolder">
+        <p>Select</p>
+        <div class="dropdown">
+          <p>Role</p>
+        </div>
+        <ul class="menu">
+          <li>Please Rate</li>
+          <li><i class="fa fa-star"></i> Admin</li>
+          <li><i class="fa fa-heart"></i> Student</li>
+        </ul>
+      </div>
     <input type="text" placeholder="USER NAME">
     <input type="password" placeholder="PASSWORD">
     <input type="submit" value="LOGIN">
@@ -30,5 +39,18 @@
     <div id="overlyArea">
 
     </div>
+
+    <script src="./jQuery.js">
+    </script>
+    <script>$(document).ready(function() {
+        $(".dropdown").click(function() {
+          $(".menu").toggleClass("showMenu");
+          $(".menu > li").click(function() {
+            $(".dropdown > p").html($(this).html());
+            $(".menu").removeClass("showMenu");
+          });
+        });
+      });
+      </script>
 </body>
 </html>
