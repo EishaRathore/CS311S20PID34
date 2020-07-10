@@ -22,7 +22,135 @@ body{
     box-sizing: border-box;
     box-shadow: 8px 8px 50px #000;
 }
+/*--Drop down section*/
+.dropHolder {
+    width: 322px;
+    height: 60px;
+   padding: 0 0 0 20px;
+    border-radius: 10px;
+    font: 18px arial;
+    color: black;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #e234c5;
+    animation: move 3s ease-in-out infinite;
+    position: relative;
+  }
+  
+.dropHolder:hover,
+  .dropHolder:hover::after {
+    animation-play-state: paused;
+  }
+  
+ .dropHolder::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0);
+    display: block;
+    top: 100px;
+    left: 37px;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    animation: moveShadow 3s ease-in-out infinite;
+  }
+  .dropHolder p{
+    float: left;
+    line-height: 35px;
+}
 
+.dropdown > p{
+font-size: 16px;
+}
+.dropdown,
+.dropHolder {
+  background: linear-gradient(#d37bc4, #a9ebeb);
+}
+
+.dropdown {
+  margin-left: 20px;
+  float: left;
+  width: 208px;
+  padding: 0 0 0 20px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  height: 58px;
+  border-left: 1px solid #da4df8;
+  position: relative;
+}
+
+.dropdown:hover {
+  background: linear-gradient(#da4df8, #1cc4d0);
+}
+
+.dropdown::after {
+  content: "▾";
+  font-size: 18px;
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  display: block;
+}
+.dropHolder .menu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 228px;
+    cursor: pointer;
+    opacity: 0;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg) rotateX(5deg) translateY(100px);
+    backface-visibility: hidden;
+    background: linear-gradient(#d37bc4, #a9ebeb);
+    border: 2px solid #0d82b9;
+    border-radius: 10px;
+    transition: all 0.8s;
+    z-index: 5;
+    overflow: hidden;
+    padding: 3px;
+  }
+  
+ .dropHolder .menu li {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    color: #e8f8ff;
+    transition: all 0.3s;
+    list-style: none;
+  }
+  
+ .dropHolder .menu li:hover {
+    background: #61ccfd;
+    padding-left: 20px;
+  }
+  
+ .dropHolder .menu li:last-child {
+    border: none;
+  }
+  
+ .dropHolder .showMenu {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0px);
+  }
+  
+ .dropHolder li > i {
+    float: left;
+    padding-top: 3px;
+    padding-right: 14px;
+  }
+  
+ .dropHolder p > i {
+    position: relative;
+    top: 2px;
+    padding-right: 5px;
+  }
+  
+ .dropHolder i {
+    opacity: 0.8;
+  }
+  
+/*--Drop down section end*/
 h1{
     margin: 0;
     padding: 0;
@@ -148,3 +276,29 @@ opacity: 1;
     top: 0;
     bottom: 0;
 }
+
+
+
+@keyframes move {
+    0%,
+    100% {
+      transform: translateY(-10px);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes moveShadow {
+    0%,
+    100% {
+      transform: translateY(10px);
+      opacity: 0.4;
+    }
+  
+    50% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
