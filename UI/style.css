@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("./images/UET1.jpg") ;
+    background-image: url("./images/comp.jpeg") ; 
     height: 100%;
     background-position: centers ;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@ body{
 .main{
     width: 400px;
     height: 420px;
-    color: #000;
+    color: #fff;
     top: 50%;
     left: 50%;
     padding: 70px 40px;
