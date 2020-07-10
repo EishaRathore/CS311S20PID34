@@ -1,8 +1,8 @@
 package com.za.tutorial.ga.cs.domain;
-public class Rooms{
+public class Room{
     private String number;
     private int seatingCapacity;
-    public Rooms(String number, int seatingCapacity){
+    public Room(String number, int seatingCapacity){
         this.number=number;
         this.seatingCapacity=seatingCapacity;
     }
