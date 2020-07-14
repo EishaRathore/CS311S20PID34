@@ -9,7 +9,7 @@ public class Driver{
     private Data data;
     public static void main(String[] args){
        Driver driver=new Driver();
-       Data.data=new Data();
+       driver.data=new Data();
     }
   /*  private void printAvailableData(){
         System.out.printIn("")

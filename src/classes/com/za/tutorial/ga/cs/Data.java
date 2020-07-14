@@ -10,7 +10,8 @@ import com.za.tutorial.ga.cs.domain.ClassTime;
 
 
 public class Data{
-    private ArrayList<Room> rooms;
+    public static Data data;
+	private ArrayList<Room> rooms;
     private ArrayList<Instructor> instructor;
     private ArrayList<Course> course;
     private ArrayList<Department> dept;
