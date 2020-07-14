@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>LogIn</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./jQuery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 </head>
-<body>
+<body onload="check()">
     <div class="main">
-<h1>LOG IN</h1>
-<form action="">
-    <div class="dropHolder">
-        <p>Select</p>
-        <div class="dropdown">
-          <p>Role</p>
-        </div>
-        <ul class="menu">
-          <li>Please Rate</li>
-          <li><i class="fa fa-star"></i> Admin</li>
-          <li><i class="fa fa-heart"></i> Student</li>
-        </ul>
+     <h1>LOG IN</h1>
+       <div class="dropHolder">
+         <p>Select</p>
+           <div class="dropdown">
+            <p>Role</p>
+            </div>
+          <ul class="menu">
+             <li>Please Select</li>
+             <li><i class="fa fa-star"></i> Admin</li>
+             <li><i class="fa fa-heart"></i> Student</li>
+          </ul>
       </div>
+<form action="">
+   
     <input type="text" placeholder="USER NAME">
     <input type="password" placeholder="PASSWORD">
     <input type="submit" value="LOGIN">
@@ -34,23 +37,10 @@
     <a href="#"><i class="fa fa-facebook"></i></a>
     <a href="#"><i class="fa fa-twitter"></i></a>
     <a href="#"> <i class="fa fa-google"></i></a>
-</div>
+ </div>
     </div>
     <div id="overlyArea">
 
-    </div>
-
-    <script src="./jQuery.js">
-    </script>
-    <script>$(document).ready(function() {
-        $(".dropdown").click(function() {
-          $(".menu").toggleClass("showMenu");
-          $(".menu > li").click(function() {
-            $(".dropdown > p").html($(this).html());
-            $(".menu").removeClass("showMenu");
-          });
-        });
-      });
-      </script>
+ </div>
 </body>
 </html>

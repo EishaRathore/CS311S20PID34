@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-image: url("./images/comp.jpeg") ; 
-    height: 100%;
+    height: 100vh;
     background-position: centers ;
     background-repeat: no-repeat;
     -webkit-background-size:cover;
@@ -104,7 +104,7 @@ font-size: 16px;
     transform: rotateY(180deg) rotateX(5deg) translateY(100px);
     backface-visibility: hidden;
     background: linear-gradient(#d37bc4, #a9ebeb);
-    border: 2px solid #0d82b9;
+    border: 2px solid #d37bc4;
     border-radius: 10px;
     transition: all 0.8s;
     z-index: 5;
@@ -150,6 +150,11 @@ font-size: 16px;
     opacity: 0.8;
   }
   
+  .showMenu{
+    opacity: 1;
+    transform: rotateX(0deg)
+    translateY(0px);
+  }
 /*--Drop down section end*/
 h1{
     margin: 0;
@@ -164,7 +169,7 @@ h1{
 
 .main input{
 width: 100%;
-margin-bottom: 5%;
+margin-bottom: 4%;
 }
 
 .main input[type=text], .main input[type=password]{
@@ -236,7 +241,7 @@ opacity: 1;
 }
 
 .Socials{
-    margin-top: 12%;
+    margin-top:0%;
     text-align: center;
 }
 
