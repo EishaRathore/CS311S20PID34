@@ -5,21 +5,21 @@ import com.za.tutorial.ga.cs.domain.Class;
 import com.za.tutorial.ga.cs.domain.Department;
 
 public class Schedule{
-    private final ArrayList<Class> classes;
+    private  ArrayList<Class> classes;
     private boolean isFitnesssChanged=true;
     private double fitness=-1;
     private int classNum = 0;
     private int numbOfConflicts=0;
-    private final Data data;
+    private  Data data;
     public Data getData(){return data;}
-    public Schedule(final Data  data){
+    public Schedule( Data  data){
         this.data= data;
         classes = new ArrayList<Class>(data.getNumberOfClasses());
     }
     public Schedule initialize(){
         new ArrayList<Department>(data.getDept()).forEach(dept ->{
             dept.getCourses().forEach(course ->{
-                final Class newClass = new Class(classNum++,course,dept);
+                 Class newClass = new Class(classNum++,course,dept);
                 newClass.setClassTime(data.getClassTime().get((int)(data.getClassTime().size()*Math.random())));
                 newClass.setRoom(data.getRooms().get((int)(data.getRooms().size()*Math.random())));
                 newClass.setInstructor(course.getInstructors().get((int)(course.getInstructors().size()* Math.random())));
