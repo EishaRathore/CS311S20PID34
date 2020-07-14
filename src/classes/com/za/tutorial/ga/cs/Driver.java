@@ -7,7 +7,7 @@ public class Driver{
     public static final int TOURNAMENT_SELECTION_SIZE=9;
     public static final int NUMB_OF_ELITE_SCHEDULE=9;
     private Data data;
-    public static void main(string[] args){
+    public static void main(String[] args){
        Driver driver=new Driver();
        Data.data=new Data();
     }
