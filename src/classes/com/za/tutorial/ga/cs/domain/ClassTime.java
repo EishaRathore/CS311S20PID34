@@ -12,4 +12,5 @@ public class ClassTime{
     public String getTime(){
         return time;
     }
+    
 }
