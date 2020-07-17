@@ -261,6 +261,63 @@ letter-spacing: 30px;
 z-index: -1;
  transition: .3s ease letter-spacing; 
 }
+.menu-bar{
+    text-align: center;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 10px;
+    
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.active, .menu-bar ul li:hover{
+    background:crimson;
+    border-radius: 3;
+}
+.menu-bar .fa{
+    margin-right: 8px;
+}
+.sub-menu-1{
+    display: none;
+
+}
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background:crimson;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 10px;
+    
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color:cadetblue;
+}
 #header .ham{
     height: 60px;
     width: 60px;
