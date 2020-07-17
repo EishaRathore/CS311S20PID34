@@ -1,5 +1,11 @@
 body{
-    background: url("./images/comp.jpeg");
-    background: cover;
-    font-family: arial;
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/comp.jpeg") ; 
+    height: 100vh;
+    background-position: centers ;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+      background-size: cover;
+      font-family: poppins;
 }
