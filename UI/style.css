@@ -272,6 +272,12 @@ opacity: 1;
 
 }
 
+.main .message{
+  margin :15px 0 0;
+  color: aliceblue;
+  font-size: 12;
+}
+
 #overlyArea{
     position: absolute;
     background-color: rgba(0, 0, 0,0.5);

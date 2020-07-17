@@ -12,7 +12,7 @@ body{
 }
 .wrap{
   width: 400px;
-    height: 440px;
+    height: 460px;
     background: rgb(51, 50, 50);
     top: 50%;
     left: 50%;
@@ -67,6 +67,12 @@ input[type=submit]:hover{
 }
 input[type=button]{
   color: black;}
+
+.wrap .message{
+    margin :15px 0 0;
+    color: aliceblue;
+    font-size: 12;
+  }
 
   #overlyArea{
     position: absolute;
