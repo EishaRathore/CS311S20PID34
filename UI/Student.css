@@ -318,7 +318,6 @@ z-index: -1;
 .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
     color:cadetblue;
 }
-
 #header .ham{
     height: 60px;
     width: 60px;
@@ -443,10 +442,10 @@ z-index: -1;
     body{
         overflow-x: hidden;
     }
-    .menu-bar{
+    .nav-icons{
         position: absolute;
     } 
-    .menu-bar li{
+    .nav-icons li{
         opacity: 0;
     }
     #header .container{
@@ -455,7 +454,7 @@ z-index: -1;
 
 } 
 @media screen and (max-width:1024px){
-    .menu-bar{
+    .nav-icons{
         width: 60%;
     }
 } 
