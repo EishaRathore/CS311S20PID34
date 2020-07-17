@@ -28,7 +28,8 @@
     <input type="text" placeholder="USER NAME">
     <input type="password" placeholder="PASSWORD">
     <input type="submit" value="LOGIN">
-</form>
+     <p class="message"> Does'nt have account? <a href="./signup.html">Signup</a></p>
+  </form>
 <div class="bottomText">
     <a href="#">Forgot Password? </a>
    <input type="submit" value="SignUp">
@@ -39,6 +40,15 @@
     <a href="#"> <i class="fa fa-google"></i></a>
  </div>
     </div>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+  </script>
+  <script>
+   $('.message a').click(function){
+    $('form').animate({height: "toggle", opacity})
+   }
+  </script>
+
     <div id="overlyArea">
 
  </div>
