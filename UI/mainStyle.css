@@ -248,6 +248,7 @@ body{
     text-transform: uppercase;
     padding: 20px;
     display: block;
+    border-bottom: 1px solid crimson;
 }
 #header .nav-list ul a::after{
  content: attr(data-after);
@@ -288,6 +289,7 @@ z-index: -1;
 #header .nav-list ul li:hover a::after{
    transform: translate(-50%,-50%) scale(1);
    letter-spacing: 0rem;
+   
 }
 
 #header .ham .bar{
@@ -378,6 +380,9 @@ z-index: -1;
     background: linear-gradient(to right top,#29323c 0%,#485563);
     transform: scale(2);
     transition: all 0.5s;
+}
+.active{
+    background: crimson;
 }
 /*Header End*/
 
