@@ -114,3 +114,20 @@ input[type=button]{
     top: 0;
     bottom: 0;
   } 
+
+  @media screen and (min-width:640px){
+    body{
+      overflow-x: hidden;
+    }
+    img{
+      height: 500;
+      width: 333;
+      object-fit: none;
+    }
+
+} 
+@media screen and (max-width:1024px){
+    body{
+        height: 100vh;
+    }
+} 

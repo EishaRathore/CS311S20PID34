@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-image: url("./images/comp.jpeg") ; 
-    height: 100vh;
+    height: 100%;
     background-position: centers ;
     background-repeat: no-repeat;
     -webkit-background-size:cover;
@@ -15,13 +15,42 @@ body{
     height: 445px;
     color: rgb(10, 10, 10);
     background: rgb(51, 50, 50) ;
-    top: 50%;
+    top: 55%;
     left: 50%;
     padding: 70px 40px;
     position: absolute;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
     box-shadow: 8px 8px 50px #000;
+}
+#header {
+  position: sticky;
+    z-index: 10;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+    background: rgba(10, 10, 10, 0.836);
+}
+#header nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color:transparent !important;
+  padding-left: 30px;
+}
+.brand{
+  margin-top: 20px;
+}
+.brand h1{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+.brand h1 span{
+  color:  crimson;
 }
 /*--Drop down section*/
 .dropHolder {
@@ -78,7 +107,7 @@ font-size: 16px;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
   height: 58px;
-  border-left: 1px solid #da4df8;
+  border-left: 1px solid black;
   position: relative;
 }
 
@@ -104,7 +133,7 @@ font-size: 16px;
     transform-style: preserve-3d;
     transform: rotateY(180deg) rotateX(5deg) translateY(100px);
     backface-visibility: hidden;
-    background: linear-gradient(crimson, #3a1e23);
+    background: linear-gradient(rgb(221, 94, 120), #bd1f3c);
     border: 2px solid #361d25;
     border-radius: 10px;
     transition: all 0.8s;
@@ -115,7 +144,7 @@ font-size: 16px;
   
  .dropHolder .menu li {
     padding: 10px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid black;
     color: #000000;
     transition: all 0.3s;
     list-style: none;
@@ -125,7 +154,10 @@ font-size: 16px;
     background: crimson;
     padding-left: 20px;
   }
-  
+  .dropHolder .menu .role:hover {
+    background-color: #000;
+    padding-left: 20px;
+  }  
  .dropHolder .menu li:last-child {
     border: none;
   }
@@ -146,7 +178,11 @@ font-size: 16px;
     top: 2px;
     padding-right: 5px;
   }
-  
+  .dropHolder role > i {
+    position: relative;
+    top: 2px;
+    padding-right: 5px;
+  }
  .dropHolder i {
     opacity: 0.8;
   }
@@ -253,7 +289,7 @@ opacity: 1;
     display: inline-block;
     border: 1px solid #000;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 .Socials a:nth-child(1){
@@ -278,6 +314,12 @@ opacity: 1;
   margin :15px 0 0;
   color: aliceblue;
   font-size: 12;
+}
+
+.main .message a{
+  color: rgb(180, 55, 55);
+  font-weight: bold;
+  font-size: 16px;
 }
 
 #overlyArea{
@@ -315,3 +357,20 @@ opacity: 1;
       opacity: 1;
     }
   }
+
+  @media screen and (min-width:640px){
+    body{
+      overflow-x: hidden;
+    }
+    img{
+      height: 500;
+      width: 333;
+      object-fit: none;
+    }
+
+} 
+@media screen and (max-width:1024px){
+    body{
+        height: 100vh;
+    }
+} 
