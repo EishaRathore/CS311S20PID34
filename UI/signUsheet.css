@@ -55,15 +55,15 @@ input[type=submit]{
     padding: 10px 0;
     border-radius: 20px;
     
-    background: rgb(10, 9, 14);
-    background:  crimson;
+    background: crimson;
+    background: linear-gradient(crimson, rgb(58, 37, 37));
     font-size: 16px;
     font-weight: bold;
 }
 
 input[type=submit]:hover{
-  background: #003366;
-  opacity: 0.7;
+  background: crimson;
+  opacity: 1;
 }
 input[type=button]{
   color: black;}
