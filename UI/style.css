@@ -12,8 +12,9 @@ body{
 
 .main{
     width: 400px;
-    height: 420px;
-    color: #fff;
+    height: 445px;
+    color: rgb(10, 10, 10);
+    background: rgb(51, 50, 50) ;
     top: 50%;
     left: 50%;
     padding: 70px 40px;
@@ -32,7 +33,7 @@ body{
     color: black;
     position: relative;
     box-sizing: border-box;
-    border: 1px solid #e234c5;
+    border: 1px solid #1b121a;
     animation: move 3s ease-in-out infinite;
     position: relative;
   }
@@ -66,7 +67,7 @@ font-size: 16px;
 }
 .dropdown,
 .dropHolder {
-  background: linear-gradient(#d37bc4, #a9ebeb);
+  background: linear-gradient(crimson , #3d2125);
 }
 
 .dropdown {
@@ -82,7 +83,7 @@ font-size: 16px;
 }
 
 .dropdown:hover {
-  background: linear-gradient(#da4df8, #1cc4d0);
+  background: crimson;
 }
 
 .dropdown::after {
@@ -103,8 +104,8 @@ font-size: 16px;
     transform-style: preserve-3d;
     transform: rotateY(180deg) rotateX(5deg) translateY(100px);
     backface-visibility: hidden;
-    background: linear-gradient(#d37bc4, #a9ebeb);
-    border: 2px solid #d37bc4;
+    background: linear-gradient(crimson, #3a1e23);
+    border: 2px solid #361d25;
     border-radius: 10px;
     transition: all 0.8s;
     z-index: 5;
@@ -115,13 +116,13 @@ font-size: 16px;
  .dropHolder .menu li {
     padding: 10px;
     border-bottom: 1px solid #fff;
-    color: #e8f8ff;
+    color: #000000;
     transition: all 0.3s;
     list-style: none;
   }
   
  .dropHolder .menu li:hover {
-    background: #61ccfd;
+    background: crimson;
     padding-left: 20px;
   }
   
@@ -187,18 +188,19 @@ margin-bottom: 4%;
     border: none;
     outline: none;
     height: 40px;
-    background: rgb(204,154,237);
-    background: linear-gradient(90deg, rgba(204,154,237,1) 0%, rgba(255,255,255,1) 54%, rgba(29,225,253,1) 100%);
+    background: crimson;
+    background: linear-gradient( crimson , rgb(46, 34, 34) );
     font-size: 14px;
     font-weight: bold;
 }
 
 .main input[type=submit]:hover{
     cursor: pointer;
-}
+    background: crimson;
+  }
 
 .main input[type=button]{
-    color: black;
+    background: crimson;
 }
 .main a{
     font-size: 14px;
@@ -280,7 +282,7 @@ opacity: 1;
 
 #overlyArea{
     position: absolute;
-    background-color: rgba(0, 0, 0,0.5);
+    background-color: rgba(10, 10, 10, 0.5);
     z-index: -5;
     height: 100%;
     width: 100%;
