@@ -15,4 +15,13 @@ public class Instructor{
     public String toString(){
         return name;
     }
+	public Class getInstructors() {
+		return null;
+	}
+	public String getDepartmentFix() {
+		return null;
+	}
+	public String getCourseFix() {
+		return null;
+	}
 }

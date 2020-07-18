@@ -9,4 +9,7 @@ public class Department{
     }
     public String getName(){ return name;}
     public ArrayList<Course> getCourses(){return courses;}
+	public String getCapacity() {
+		return null;
+	}
 }

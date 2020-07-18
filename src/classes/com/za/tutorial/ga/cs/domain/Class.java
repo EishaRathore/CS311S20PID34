@@ -25,4 +25,7 @@ public class Class {
     public String toString(){
         return "["+dept.getName()+","+course.getNumber()+","+room.getNumber()+","+instructor.getId()+","+classTime.getId()+"]";
     }
+	public String getName() {
+		return null;
+	}
 }

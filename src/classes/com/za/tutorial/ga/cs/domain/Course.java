@@ -17,6 +17,9 @@ public class Course {
     public ArrayList<Instructor> getInstructors() { return instructors;}
     public int getmaxNoOfStudent() { return maxNoOfStudent; }
     public String toString(){ return name;}
+	public String getId() {
+		return null;
+	}
 
 
 }

@@ -1,8 +1,7 @@
 package com.za.tutorial.ga.cs.domain;
 import java.util.ArrayList;
 import com.za.tutorial.ga.cs.Data;
-import com.za.tutorial.ga.cs.domain.Class;
-import com.za.tutorial.ga.cs.domain.Department;
+
 
 public class Schedule{
     private  ArrayList<Class> classes;

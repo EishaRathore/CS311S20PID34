@@ -12,4 +12,7 @@ public class Room{
     public int getSeatingCapacity(){
         return seatingCapacity;
     }
+	public String getId() {
+		return null;
+	}
 }
