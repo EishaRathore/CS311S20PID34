@@ -5,6 +5,8 @@
  */
 // package implementation;
 package com.za.tutorial.ga.cs;
+import java.sql.Connection;
+
 import com.za.tutorial.ga.cs.domain.Schedule;
 public class Driver {
      public static final int POPULATION_SIZE=9;
@@ -15,7 +17,11 @@ public class Driver {
      public static final int TOURNAMENT_SELECTION_SIZE=9;
      public static final int NUMB_OF_ELITE_SCHEDULE=9;
      private Data data;
-     
+     static String databasenme="";
+static String url="jdbc:mysql://localhost:3306/";
+static String username="root";
+
+     static Connection connection=null;
       public static void main(final String args []){
         
        final Driver driver= new Driver();
