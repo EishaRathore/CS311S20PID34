@@ -10,6 +10,7 @@ body{
       background-size: cover;
       font-family: poppins;
 }
+
 .wrap{
   width: 400px;
     height: 460px;
@@ -56,7 +57,8 @@ input[type=submit]{
     border-radius: 20px;
     
     background: rgb(10, 9, 14);
-    background:  crimson;
+  background: linear-gradient(crimson , #3d2125);
+
     font-size: 16px;
     font-weight: bold;
 }
