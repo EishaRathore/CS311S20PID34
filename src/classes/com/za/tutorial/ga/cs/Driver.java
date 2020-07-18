@@ -7,7 +7,6 @@
 package com.za.tutorial.ga.cs;
 import java.sql.Connection;
 
-import com.za.tutorial.ga.cs.domain.Schedule;
 public class Driver {
      public static final int POPULATION_SIZE=9;
      public static final double MUTATION_RATE= 0.1;
@@ -17,7 +16,7 @@ public class Driver {
      public static final int TOURNAMENT_SELECTION_SIZE=9;
      public static final int NUMB_OF_ELITE_SCHEDULE=9;
      private Data data;
-     static String databasenme="";
+     static String database="";
 static String url="jdbc:mysql://localhost:3306/";
 static String username="root";
 
@@ -39,14 +38,14 @@ static String username="root";
         
         System.out.println("Available Rooms=>");
         data.getRooms().forEach(x ->
-                System.out.println("Room :"+ x.getId() + " capacity :" + x.getCapacity()));
+                System.out.println("Room :"+ x.getId() + " capacity :" + x.getSeatingCapacity()));
         System.out.println("Available Instructors=>");
         data.getInstructors().forEach(x ->
                 System.out.println("name :"+ x.getName()+ " id :"+x.getId()));
         
         System.out.println("Available instructorFix=>");
         data.getInstructors().forEach(x->
-                System.out.println("instrcutor "));
+                System.out.println("instructor "));
         
         System.out.println("Available MeetingRooms=>");
         data.getMeetingTime().forEach(x ->
