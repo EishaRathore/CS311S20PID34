@@ -1,17 +1,43 @@
 body{
     margin: 0;
     padding: 0;
-    
     background-image: url(./images/comp.jpeg);
-    height: 100vh;
+    height: 100%;
     background-position: centers ;
     background-repeat: no-repeat;
     -webkit-background-size:cover;
       background-size: cover;
       font-family: poppins;
 }
+#header {
+  position: sticky;
+    z-index: 10;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+    background: rgba(10, 10, 10, 0.836);
+}
+#header nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color:transparent !important;
+  padding-left: 30px;
+}
+
+.brand h1{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+.brand h1 span{
+  color:  crimson;
+}
 .wrap{
-  width: 400px;
+    width: 400px;
     height: 460px;
     background: rgb(51, 50, 50);
     top: 50%;
@@ -70,9 +96,14 @@ input[type=button]{
 
 .wrap .message{
     margin :15px 0 0;
-    color: aliceblue;
+    color: palevioletred;
     font-size: 12;
   }
+
+  .wrap .message a{
+    color: whitesmoke;
+    text-decoration: none;
+  } 
 
   #overlyArea{
     position: absolute;
@@ -82,4 +113,4 @@ input[type=button]{
     width: 100%;
     top: 0;
     bottom: 0;
-  }
+  } 
