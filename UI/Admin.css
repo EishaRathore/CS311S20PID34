@@ -249,6 +249,7 @@ body{
     list-style: none;
     font-family: sans-serif;
 }
+
 #header .nav-list ul a::after{
  content: attr(data-after);
  position:absolute;
