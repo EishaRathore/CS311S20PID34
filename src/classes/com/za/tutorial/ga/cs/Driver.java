@@ -6,7 +6,7 @@
 // package implementation;
 package com.za.tutorial.ga.cs;
 import java.sql.Connection;
-
+import com.za.tutorial.ga.cs.domain.Schedule;
 public class Driver {
      public static final int POPULATION_SIZE=9;
      public static final double MUTATION_RATE= 0.1;
