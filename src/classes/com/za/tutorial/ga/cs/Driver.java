@@ -45,11 +45,29 @@ static String username="root";
                                                                 String.format("%.5f", schedule.getFitness())+
                                                                 "  | "+schedule.getNumbOfConflicts()));
         driver.printScheduleAsTable(population.getSchedule().get(0),generationNumber);
+        driver.classNumb=1;
+        while (population.getSchedule().get(0).getFitness() != 1.0){
+                System.out.println("> Generation #" + ++generationNumber);
+                System.out.print(" Schedule # |                                          ");
+                System.out.print("Classes [dept,class,room,instructor,meeting-time]    ");
+                System.out.println("                                  | Fitness | Conflicts");
+                System.out.print("------------------------------------------------------------------------------");
+                System.out.println("--------------------------------------------------------------------------------");
+                population = geneticAlgorithm.evolve(population).sortByFitness();
+                driver.scheduleNumb = 0;
+                population.getSchedule().forEach(schedule -> System.out.println("      "+driver.scheduleNumb++ +
+                                                                                "    | "+ schedule + " | " +
+                                                                                String.format("%.5f", schedule.getFitness()) + 
+                                                                                " | "+schedule.getNumbOfConflicts()));
+                driver.printScheduleAsTable(population.getSchedule().get(0), generationNumber);
+                driver.classNumb =1;
+        }
     }
+    
     private void printScheduleAsTable(Schedule schedule,int generation){
             ArrayList<com.za.tutorial.ga.cs.domain.Class> classes=schedule.getClasses();
             System.out.println("\n                 ");
-            System.out.println("     Class # |        | Dept                  | Course (number)               ");
+            System.out.println("     Class # | Dept | Course (number, max # of students) |  Room (Capacity) | Instructor (ID) | Meeting Time (ID)  ");
         //     System.out.println("                   ");
         //     System.out.println("--------------------------------------");
             System.out.println("------------------------------------------------------------");
