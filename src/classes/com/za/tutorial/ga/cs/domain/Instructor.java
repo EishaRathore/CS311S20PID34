@@ -18,10 +18,10 @@ public class Instructor{
 	public Class getInstructors() {
 		return null;
 	}
-	public String getDepartmentFix() {
-		return null;
-	}
-	public String getCourseFix() {
-		return null;
-	}
+	// public String getDepartmentFix() {
+	// 	return null;
+	// }
+	// public String getCourseFix() {
+	// 	return null;
+	// }
 }
