@@ -44,13 +44,14 @@ static String username="root";
                                                                 "       | "+schedule+"  |  "+
                                                                 String.format("%.5f", schedule.getFitness())+
                                                                 "  | "+schedule.getNumbOfConflicts()));
+        driver.printScheduleAsTable(population.getSchedule().get(0),generationNumber);
     }
     private void printScheduleAsTable(Schedule schedule,int generation){
             ArrayList<com.za.tutorial.ga.cs.domain.Class> classes=schedule.getClasses();
-            System.out.println("\n                              ");
-            System.out.println("Class # | Dept | Course (number");
-            System.out.println("                                ");
-            System.out.println("--------------------------------------");
+            System.out.println("\n                 ");
+            System.out.println("     Class # |        | Dept                  | Course (number)               ");
+        //     System.out.println("                   ");
+        //     System.out.println("--------------------------------------");
             System.out.println("------------------------------------------------------------");
             classes.forEach(x->{
                     int majorIndex=data.getDept().indexOf(x.getDept());
@@ -58,13 +59,21 @@ static String username="root";
                     int roomsIndex=data.getRooms().indexOf(x.getRoom());
                     int instructorsIndex=data.getInstructors().indexOf(x.getInstructor());
                     int classTimeIndex=data.getClassTime().indexOf(x.getClassTime());
-                    System.out.println("                        ");
-                    System.out.println(String.format("  %1$02d", classNumb)+"   | ");    
-                    System.out.println(String.format("%1$4s", data.getDept().get(majorIndex).getName())+"   | ");
-                    System.out.println(String.format("%1$21s",data.getCourse().get(coursesIndex).getName()+" ("+data.getCourse().get(coursesIndex).getNumber()+" , "+
-                    x.getCourse().getmaxNoOfStudent())+")        | ");
-                            
-            });     
+                    System.out.print("      ");
+                    System.out.print(String.format("  %1$02d", classNumb)+"   | ");    
+                    System.out.print(String.format("%1$4s", data.getDept().get(majorIndex).getName())+"   | ");
+                    System.out.print(String.format("%1$21s",data.getCourse().get(coursesIndex).getName()+" ("+data.getCourse().get(coursesIndex).getNumber()+" , "+
+                    x.getCourse().getmaxNoOfStudent())+")   | ");
+                    System.out.print(String.format("%1$10s",data.getRooms().get(roomsIndex).getNumber()+
+                    "  ("+x.getRoom().getSeatingCapacity())+")   | ");
+                    System.out.print(String.format("%1$15s",data.getInstructors().get(instructorsIndex).getName()+
+                    "   ("+data.getInstructors().get(instructorsIndex).getId()+")")+"  | ");
+                    System.out.println(data.getClassTime().get(classTimeIndex).getTime()+"("+data.getClassTime().get(classTimeIndex).getId()+") ");
+                    classNumb++;        
+            });
+            if(schedule.getFitness()==1) System.out.println("> Solution Found in "+ (generation+1)+" generations");
+            System.out.println("------------------------------------------------------------");
+            System.out.println("------------------------------------------------------------");     
     }
         private void printAvailableData(){
         
