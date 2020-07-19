@@ -3,6 +3,7 @@ body{
     padding: 0;
     background-image: url(./images/comp.jpeg);
     height: 100%;
+    display: flex;
     background-position: centers ;
     background-repeat: no-repeat;
     -webkit-background-size:cover;
@@ -15,7 +16,7 @@ body{
     left: 0;
     top: 0px;
     width: 100%;
-    height: auto;
+    height: 70px;
     box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
     background: rgba(10, 10, 10, 0.836);
 }
@@ -38,9 +39,9 @@ body{
 }
 .wrap{
     width: 400px;
-    height: 460px;
-    background: rgb(51, 50, 50);
-    top: 50%;
+    height: 540px;
+    background: rgba(51, 50, 50, 0.801);
+    top: 56%;
     left: 50%;
     padding: 70px 40px;
     position: absolute;
@@ -53,9 +54,9 @@ h2{
   margin: 0;
     padding: 0;
     font-weight: bold;
-    font-size: 33px;
+    font-size: 30px;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
     font-family: courgette;
     color: #fff;
 }
@@ -65,14 +66,15 @@ input[type=text],input[type=password],input[type=tel]{
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
-  height: 30px;
+  height: 15px;
   font-size: 18px;
   opacity: 3;
   color: #fff;
 }
 input{
   width: 100%;
-  margin-bottom: 4%;
+  margin-bottom: 10%;
+  display: block;
   }
 input[type=submit]{
   border: none;
@@ -100,8 +102,10 @@ input[type=button]{
     font-size: 12;
   }
 
-  .wrap .message a{
+  .wrap .message button{
     color: whitesmoke;
+    border-style: none;
+    background-color: transparent !important;
     text-decoration: none;
   } 
 
@@ -115,6 +119,7 @@ input[type=button]{
     bottom: 0;
   } 
 
+  
   @media screen and (min-width:640px){
     body{
       overflow-x: hidden;
@@ -131,3 +136,6 @@ input[type=button]{
         height: 100vh;
     }
 } 
+
+
+
