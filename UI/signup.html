@@ -3,27 +3,55 @@
 <head>
         <title> Signup Form</title>
     <link rel= "stylesheet"  href= "./signUsheet.css">
-<head>
-<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./PassValidation.js"></script> 
+    <head>
+<body onload="signup.pass.focus()">
   <section id="header">
         
     <nav>
         <div class="brand">
             <h1><span>S</span>chedule<span>G</span>enerator</h1>
-        </div>
+          </div>
     </nav>
    </section>
    <section class="SignUp">
  <div class="wrap">
      <h2>Sign Up</h2>
-     <form>
-       <input type="text"  placeholder="First Name.." required>
-       <input type="text" placeholder="Last Name.." required>
-       <input type="text" placeholder="Email ID.." required>
-       <input type="password" placeholder="Password.." required>
-        <input type="tel" placeholder="Phone Number.." required>
-        <input type="submit" value="Submit">
-        <p class="message">Already have account? <a href="./index.html">Login</a></p>
+     <form id="form" class="form" action="signup.php" method="POST">
+      <div class="form-control success">
+       
+        <input type="text"  name="FirstName" placeholder="First Name.." required>
+      </div>
+      <div class="form-control error">
+        
+        <input type="text" name="lastName" placeholder="Last Name.." required>
+
+      </div>
+      <div class="form-control">
+      
+        <input type="text" name="email" placeholder="Email ID.." required pattern="[a-z0-9._%+-]+@[a-z0-9._]+\.[a-z]{2,4}$">
+       <div class="red-text"><?php echo $errors['email']; ?></div>
+      </div>
+      
+      <div class="form-control">
+       
+        <input type="password" name="pass" placeholder="Password.." required>
+      
+      </div>
+        
+      <div class="form-control">
+       
+        <input type="password" name="cpass" placeholder="Confirm Password.." required>
+      
+      </div>
+        <div class="form-control"> 
+           <input type="tel" name="mblno" placeholder="Phone Number.." required>
+        
+        </div>
+        <input type="submit" name="submit" value="Submit">
+   
+        <p class="message">Already have account? <button>Login</button></p>
     </form>
 
    </div>
