@@ -26,8 +26,10 @@ public class Data{
         rooms=new ArrayList<Room> (Arrays.asList(room1,room2,room3));
         ClassTime classtime1=new ClassTime("CT1","MWF 09:00 - 10:00");
         ClassTime classtime2=new ClassTime("CT2","TTH 11:00 - 12:00");
-        ClassTime classtime3=new ClassTime("CT3","MWF 09:00 - 12:00");
-        classtime=new ArrayList<ClassTime> (Arrays.asList(classtime1,classtime2,classtime3));
+        ClassTime classtime3=new ClassTime("CT3","MWF 10:00 - 11:00");
+        ClassTime classtime4=new ClassTime("CT4","MWF 08:00 - 09:00");
+        ClassTime classtime5=new ClassTime("CT5","TTH 01:00 - 02:00");
+        classtime=new ArrayList<ClassTime> (Arrays.asList(classtime1,classtime2,classtime3,classtime4,classtime5));
         Instructor instructor1=new Instructor("I1","Dr. Amna");
         Instructor instructor2=new Instructor("I2","Dr Awais");
         Instructor instructor3=new Instructor("I3","Dr riaz");
