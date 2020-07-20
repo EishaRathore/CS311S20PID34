@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="Addsub.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Admin</title>
 </head>
@@ -26,11 +26,11 @@
                 </ul>
             </div>
         </li>
-        <li><i class="fa fa-book"></i><a href="#">Subjetcs</a>
+        <li><i class="fa fa-book"></i><a href="#">Courses</a>
             <div class="sub-menu-1">
                 <ul>
-                    <li><i class="fa fa-plus"></i><a href="Addsub.html">Add Subject</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Subject List</a></li>
+                    <li><i class="fa fa-plus"></i><a href="#">Add Course</a></li>
+                    <li><i class="fa fa-list"></i><a href="#">Course List</a></li>
                 </ul>
             </div>
         </li>
@@ -69,7 +69,7 @@
                         <ul>
                             <li><a href="#" data-after="Home">Home</a></i></li>
                             <li><a href="#" data-after="Time">Time Table</a></li>
-                            <li><a href="#" data-after="Subjects">Subjects</a></li>
+                            <li><a href="#" data-after="Course">Subjects</a></li>
                             <li><a href="#About" data-after="About">About Us</a></li>
                             <li><a href="#" data-after="Resources">Resources</a></li>
                             <li><a href="./index.html" data-after="Login">Log in</a></li>
@@ -88,7 +88,17 @@
             <div class="bannerTitle">
                 <h1>Activity Scheduling Tool</h1>
             </div>
-            
+            <div class="wrap">
+     <h2>Add Course</h2>
+
+        <input type="text"  name="CourseName" placeholder="Course Name.." required>        
+        <input type="text" name="Course Code" placeholder="Course Code.." required>
+        <input type="number" name="Max#" placeholder="Max # of student.." required>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+   </div>
+   </section>
         </div>
     </section>
  <!-- Background Section End-->
