@@ -58,7 +58,7 @@ input[type=submit]{
     box-sizing: border-box;
     padding: 10px 0;
     border-radius: 20px;
-    
+    text-decoration: none;
     background: crimson;
     background: linear-gradient(crimson, rgb(58, 37, 37));
     font-size: 16px;
