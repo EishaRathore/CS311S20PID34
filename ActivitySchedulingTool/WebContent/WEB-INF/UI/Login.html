@@ -1,13 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login</title>
+<title>Insert title here</title>
 </head>
-<body>
- <section id="header">
+<body onload="check()">
+      <section id="header">
         
         <nav>
             <div class="brand">
@@ -28,7 +26,7 @@
                  <li><i class="fa fa-heart"></i> Student</li>
               </ul>
           </div>
-    <form action="validation.php" method="POST">
+    <form action="LoginPageProcess" method="POST">
        
         <input type="text" name="userName" placeholder="USER NAME">
         <input type="password" name="Password" placeholder="PASSWORD">
