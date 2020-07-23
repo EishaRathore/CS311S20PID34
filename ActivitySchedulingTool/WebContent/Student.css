@@ -15,7 +15,7 @@ body{
 /* background section*/
 
 #background{
-    background-image: linear-gradient(rgba(26,26,26,0.7),rgba(26,26,26,0.7)),url(./images/back.jpg);
+    background-image: linear-gradient(rgba(26,26,26,0.7),rgba(26,26,26,0.7)),url(back.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -232,24 +232,23 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 1;
+    overflow-x: hidden;
     transition: .5s ease left;
 }
 #header .nav-list ul.active{
     left: 0;
 }
 #header .nav-list ul a{
-    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
     letter-spacing: .2rem;
-    color: #fff;
-    padding: 20px;
-    letter-spacing: .1rem;
-    display: block;
-    border-bottom: 1px solid crimson;
     text-decoration: none;
-    list-style: none;
+    color: white;
     font-family: sans-serif;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
 }
-
 #header .nav-list ul a::after{
  content: attr(data-after);
  position:absolute;
@@ -319,7 +318,6 @@ z-index: -1;
 .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
     color:cadetblue;
 }
-
 #header .ham{
     height: 60px;
     width: 60px;
@@ -444,10 +442,10 @@ z-index: -1;
     body{
         overflow-x: hidden;
     }
-    .menu-bar{
+    .nav-icons{
         position: absolute;
     } 
-    .menu-bar li{
+    .nav-icons li{
         opacity: 0;
     }
     #header .container{
@@ -456,7 +454,7 @@ z-index: -1;
 
 } 
 @media screen and (max-width:1024px){
-    .menu-bar{
+    .nav-icons{
         width: 60%;
     }
 } 

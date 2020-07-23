@@ -4,9 +4,9 @@
         <title> Signup Form</title>
     <link rel= "stylesheet"  href= "./signUsheet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./PassValidation.js"></script> 
+    <script src="PassValidation.js"></script> 
     <head>
-<body onload="signup.pass.focus()">
+<body">
   <section id="header">
         
     <nav>
@@ -18,7 +18,7 @@
    <section class="SignUp">
  <div class="wrap">
      <h2>Sign Up</h2>
-     <form id="form" class="form" action="signup.php" method="POST">
+     <form id="form" class="form" action="" method="POST">
       <div class="form-control success">
        
         <input type="text"  name="FirstName" placeholder="First Name.." required>
@@ -31,7 +31,6 @@
       <div class="form-control">
       
         <input type="text" name="email" placeholder="Email ID.." required pattern="[a-z0-9._%+-]+@[a-z0-9._]+\.[a-z]{2,4}$">
-       <div class="red-text"><?php echo $errors['email']; ?></div>
       </div>
       
       <div class="form-control">

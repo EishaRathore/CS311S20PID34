@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jQuery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 </head>
-<body onload="check()">
+<body>
       <section id="header">
         
         <nav>
@@ -26,12 +31,12 @@
                  <li><i class="fa fa-heart"></i> Student</li>
               </ul>
           </div>
-    <form action="LoginPageProcess" method="POST">
+    <form action="" method="POST">
        
         <input type="text" name="userName" placeholder="USER NAME">
         <input type="password" name="Password" placeholder="PASSWORD">
         <input type="submit" value="LOGIN">
-         <p class="message"> Does'nt have account? <a href="./signup.html">Signup</a></p>
+         <p class="message"> Does'nt have account? <a href="#">Signup</a></p>
       </form>
     <div class="bottomText">
         <a href="forgot.html">Forgot Password? </a>

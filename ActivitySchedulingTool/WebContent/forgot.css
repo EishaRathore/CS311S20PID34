@@ -1,9 +1,9 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(./images/comp.jpeg);
-    height: 100%;
-    display: flex;
+    
+    background-image: url(comp.jpeg);
+    height: 100vh;
     background-position: centers ;
     background-repeat: no-repeat;
     -webkit-background-size:cover;
@@ -16,7 +16,7 @@ body{
     left: 0;
     top: 0px;
     width: 100%;
-    height: 70px;
+    height: auto;
     box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
     background: rgba(10, 10, 10, 0.836);
 }
@@ -37,11 +37,12 @@ body{
 .brand h1 span{
   color:  crimson;
 }
+
 .wrap{
-    width: 400px;
-    height: 540px;
-    background: rgba(51, 50, 50, 0.801);
-    top: 56%;
+  width: 400px;
+    height: 460px;
+    background: rgb(51, 50, 50);
+    top: 55%;
     left: 50%;
     padding: 70px 40px;
     position: absolute;
@@ -54,27 +55,26 @@ h2{
   margin: 0;
     padding: 0;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 33px;
     text-align: center;
-    margin-bottom: 8%;
+    margin-bottom: 10%;
     font-family: courgette;
     color: #fff;
 }
-input[type=text],input[type=password],input[type=tel]{
+input[type=password],input[type=email]{
   border: none;
   width: 100%;
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
-  height: 15px;
+  height: 30px;
   font-size: 18px;
   opacity: 3;
   color: #fff;
 }
 input{
   width: 100%;
-  margin-bottom: 10%;
-  display: block;
+  margin-bottom: 4%;
   }
 input[type=submit]{
   border: none;
@@ -83,32 +83,32 @@ input[type=submit]{
     padding: 10px 0;
     border-radius: 20px;
     
-    background: crimson;
-    background: linear-gradient(crimson, rgb(58, 37, 37));
+    background: rgb(10, 9, 14);
+  background: linear-gradient(crimson , #3d2125);
+
     font-size: 16px;
     font-weight: bold;
 }
 
 input[type=submit]:hover{
-  background: crimson;
-  opacity: 1;
+  background: #003366;
+  opacity: 0.7;
 }
 input[type=button]{
   color: black;}
 
 .wrap .message{
     margin :15px 0 0;
-    color: palevioletred;
+    color: aliceblue;
     font-size: 12;
   }
-
+  
   .wrap .message button{
     color: whitesmoke;
     border-style: none;
     background-color: transparent !important;
     text-decoration: none;
   } 
-
   #overlyArea{
     position: absolute;
     background-color: rgba(0, 0, 0,0.5);
@@ -117,25 +117,4 @@ input[type=button]{
     width: 100%;
     top: 0;
     bottom: 0;
-  } 
-
-  
-  @media screen and (min-width:640px){
-    body{
-      overflow-x: hidden;
-    }
-    img{
-      height: 500;
-      width: 333;
-      object-fit: none;
-    }
-
-} 
-@media screen and (max-width:1024px){
-    body{
-        height: 100vh;
-    }
-} 
-
-
-
+  }

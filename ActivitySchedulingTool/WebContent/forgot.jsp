@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <title> Forgot Password</title>
-    <link rel= "stylesheet"  href= "./forgot.css">
+    <link rel= "stylesheet"  href= "forgot.css">
 <head>
 <body>
   <section id="header">
@@ -21,7 +21,7 @@
        <input type="password" placeholder="Confirm New Password.." required>
        
         <input type="submit" value="Login">
-        <p class="message">Already have account?<a href="./index.html">Login</a></p>
+        <p class="message">Already have account?<button>Login</button></p>
     </form>
 
    </div>

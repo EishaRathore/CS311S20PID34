@@ -15,7 +15,7 @@ body{
 /* background section*/
 
 #background{
-    background-image: linear-gradient(rgba(26,26,26,0.7),rgba(26,26,26,0.7)),url(./images/back.jpg);
+    background-image: linear-gradient(rgba(26,26,26,0.7),rgba(26,26,26,0.7)),url(back.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;

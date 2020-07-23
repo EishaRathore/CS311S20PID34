@@ -45,14 +45,14 @@
                     <li><i class="fa fa-ravelry"></i><a href="#">Mission</a></li>
                     <li><i class="fa fa-eercast"></i><a href="#">Vision</a></li>
                     <li><i class="fa fa-angellist"></i><a href="#">Team</a></li>
-                    <li><i class="fa fa-phone"></i><a href="#Contact">Contac Us</a></li>
+                    <li><i class="fa fa-phone"></i><a href="#">Contac Us</a></li>
 
                 </ul>
             </div>
         </li>
 
         
-        <li><i class="fa fa-sign-in"></i><a href="index.html">Log In</a></li>
+        <li><i class="fa fa-sign-in"></i><a href="#">Log In</a></li>
     </ul>
 </div>
             <div class="header container">
@@ -62,9 +62,9 @@
                         <div class="ham"><div class="bar"></div></div>
                         <ul>
                             <li><a href="#" data-after="Home">Home</a></li>
-                            <li><a href="#About" data-after="About">About Us</a></li>
-                            <li><a href="#Contact" data-after="contact">Contact</a></li>
-                            <li><a href="./index.html" data-after="login">Log in</a></li>
+                            <li><a href="#" data-after="About">About Us</a></li>
+                            <li><a href="#" data-after="contact">Contact</a></li>
+                            <li><a href="#" data-after="login">Log in</a></li>
                         </ul>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
         <div class="title"><h1>Contact <span>Info</span></h1></div>
         <div class="ContactItems">
             <div class="ContactItem">
-                <div class="Icon"><img src="./images/phone_50px.png"></div>
+                <div class="Icon"><img src="phone_50px.png"></div>
                 <div class="Contact-Info">
                     <h1>Phone</h1>
                     <h2>0329 8981245</h2>
@@ -120,7 +120,7 @@
         </div>
          <div class="ContactItems">
                 <div class="ContactItem">
-                    <div class="Icon"><img src="./images/Important Mail_50px.png"></div>
+                    <div class="Icon"><img src="Important Mail_50px.png"></div>
                    <div class="Contact-Info"> <h1>Email</h1>
                     <h2>eisharathore5@gmail.com</h2>
                     <h2>manahil@gmail.com</h2>
@@ -131,7 +131,7 @@
             </div>
                 <div class="ContactItems">
                     <div class="ContactItem">
-                        <div class="Icon"><img src="./images/Address_50px.png"></div>
+                        <div class="Icon"><img src="Address_50px.png"></div>
                         <div class="Contact-Info">
                             <h1>Address</h1>
                             <h2>Shad Bagh Lahore</h2>
@@ -154,13 +154,13 @@
              <h2>Find Us on Social Media</h2>
              <div class="social-icon">
                  <div class="social-item">
-                     <a href="#"><img src="./images/Facebook Old_48px.png" ></a>
+                     <a href="#"><img src="Facebook Old_48px.png" ></a>
                  </div>
                  <div class="social-item">
-                    <a href="#"><img src="./images/twitter_48px.png" ></a>
+                    <a href="#"><img src="twitter_48px.png" ></a>
                 </div>
                 <div class="social-item">
-                    <a href="#"><img src="./images/github_32px.png" ></a>
+                    <a href="#"><img src="github_32px.png" ></a>
                 </div>
              </div>
         </div>
@@ -168,6 +168,6 @@
     </div>
 </section>
 <!--Footer End-->
-<script src="./app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
