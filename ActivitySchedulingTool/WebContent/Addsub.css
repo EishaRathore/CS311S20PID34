@@ -1,9 +1,14 @@
   body{
     margin: 0;
     padding: 0;
-    font-family: poppins;
     box-sizing: border-box;
     height: 100%;
+    background-image: url(comp.jpeg);
+      background-position: centers ;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+      background-size: cover;
+      font-family: poppins;
 }
 .container{
     min-height: 100vh;
@@ -461,7 +466,7 @@ z-index: -1;
     align-items: center;
     min-height: 8vh;
     background-color:transparent !important;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 .nav-icons{
     display: flex;

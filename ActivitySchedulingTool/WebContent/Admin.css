@@ -58,6 +58,7 @@ body{
 }
 #About{
     background: linear-gradient(to bottom, #ccffff 0%, #ff99cc 100%);
+    
 }
 
 #About svg{
@@ -389,7 +390,7 @@ z-index: -1;
     align-items: center;
     min-height: 8vh;
     background-color:transparent !important;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 .nav-icons{
     display: flex;
@@ -462,7 +463,7 @@ z-index: -1;
 } 
 
 /*media Query for tablet*/
-@media only screen and (min-width:10000px){
+@media only screen and (min-width:500px){
     h1.SectionTitle{
         font-size: 6rem;
         
