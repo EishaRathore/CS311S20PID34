@@ -7,8 +7,8 @@ import java.util.Properties;
 
 public class registerDao {
 	Properties info = new Properties();
-	  private String driver = "com.mysql.cj.jdbc.Driver";
-		private  String url = "jdbc:mysql://localhost:3306/loginuser";
+	  private String driver = "com.mysql.jdbc.Driver";
+		private  String url = "jdbc:mysql://localhost:3306/loginuser?useSSL=false";
 		  public void loadDriver(String dbDriver) {
 	    	   try {
 				Class.forName(dbDriver);

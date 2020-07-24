@@ -45,6 +45,7 @@ public class register extends HttpServlet {
 		Member member = new Member(role,firstname,lastname,email,pass,cpass,mblno);
 	registerDao rdao=new registerDao();
 	String result=rdao.insert(member);
-	response.getWriter().print(result);	}
+	response.getWriter().print(result);	
+	}
 
 }
