@@ -227,6 +227,9 @@ input[type=button]{
     padding-top: 50px;
     padding-bottom: 10px;
 }
+.brand{
+	margin-left:20px;
+}
 
 .brand h1{
     font-size: 1.5rem;

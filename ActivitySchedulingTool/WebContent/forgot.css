@@ -57,7 +57,7 @@ h2{
     font-weight: bold;
     font-size: 33px;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 14%;
     font-family: courgette;
     color: #fff;
 }
@@ -74,7 +74,7 @@ input[type=password],input[type=email]{
 }
 input{
   width: 100%;
-  margin-bottom: 4%;
+  margin-bottom: 10%;
   }
 input[type=submit]{
   border: none;
@@ -97,18 +97,6 @@ input[type=submit]:hover{
 input[type=button]{
   color: black;}
 
-.wrap .message{
-    margin :15px 0 0;
-    color: aliceblue;
-    font-size: 12;
-  }
-  
-  .wrap .message button{
-    color: whitesmoke;
-    border-style: none;
-    background-color: transparent !important;
-    text-decoration: none;
-  } 
   #overlyArea{
     position: absolute;
     background-color: rgba(0, 0, 0,0.5);

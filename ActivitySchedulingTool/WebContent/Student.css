@@ -387,7 +387,7 @@ z-index: -1;
     align-items: center;
     min-height: 8vh;
     background-color:transparent !important;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 .nav-icons{
     display: flex;
