@@ -45,9 +45,22 @@ public void insertUser(user user) throws SQLException {
     preparedStatement.setString(2, user.getFirst());
     preparedStatement.setString(3, user.getLast() );
     preparedStatement.setString(4, user.getEmail());
-    preparedStatement.setString(4, user.getPassword());
-    preparedStatement.setString(4, user.getCpassword());
-    preparedStatement.setString(4, user.getMblnumber());
-    
+    preparedStatement.setString(5, user.getPassword());
+    preparedStatement.setString(6, user.getCpassword());
+    preparedStatement.setString(7, user.getMblnumber());
+    preparedStatement.executeUpdate();
+	}catch(Exception e) {
+		e.printStackTrace(); }
 	}
+}
+public boolean update(user user)throws SQLException{
+	boolean rowUpdated;
+	try(Connection connection =getConnection();
+			PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);){
+		    statement.setNString(1, user.getRole());
+		    statement.setNString(2, user.getFirst());
+		    statement.setNString(3, user.getLast());
+		    statement.setNString(1, user.getName());
+	}
+			)
 }
