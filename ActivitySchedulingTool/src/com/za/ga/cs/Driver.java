@@ -15,7 +15,7 @@ public class Driver {
      private Data data;
 	private int scheduleNumb=0;
 	private int classNumb = 1;
-
+/*
       public static void main(String args []){
         
        Driver driver= new Driver();
@@ -104,5 +104,6 @@ public class Driver {
         System.out.println("---------------------------------------------------------------------------------------------\n");
         
         
-    }   
+    }*/
+       
 }
