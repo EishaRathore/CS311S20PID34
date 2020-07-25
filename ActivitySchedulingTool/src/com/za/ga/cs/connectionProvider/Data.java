@@ -18,7 +18,7 @@ public class Data {
     private ArrayList<ClassTime> classtime;
 
     private int numberOfClasses = 0;
-    public Data(){initialize();}
+    /*public Data(){initialize();}
     private Data initialize(){
         Rooms room1= new Rooms("R1",50);
         Rooms room2= new Rooms("R2",50);
@@ -56,5 +56,6 @@ public class Data {
     public ArrayList<Course> getCourse(){return course;}
     public ArrayList<Department> getDept(){return dept;}
     public ArrayList<ClassTime> getClassTime(){return classtime;}
-    public int getNumberOfClasses(){return this.numberOfClasses;}
+    public int getNumberOfClasses(){return this.numberOfClasses;}*/
+    	
 }
