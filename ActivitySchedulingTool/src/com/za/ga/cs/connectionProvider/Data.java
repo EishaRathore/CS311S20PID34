@@ -91,7 +91,22 @@ public class Data {
         return instructor;
     }
     
-
+    public ArrayList<Course> selectCourses(Connection connection) throws SQLException{
+        ArrayList<Course> course = new ArrayList<Course>();
+        ResultSet courseRS = connection.createStatement().executeQuery("select * from course");
+        while ( courseRS.next()){
+            ResultSet courseInstructorRS = connection.createStatement().executeQuery("Select * from course_insrtuctor where course_numb= "+courseRS.getString("number")+"'");
+            ArrayList<Instructor> courseInstructors = new ArrayList<Instructor>();
+            while (courseInstructorRS.next())
+            for(int i=0;i<instructor.size();i++)
+            if (instructor.get(i).getId().equals(courseInstructorRS.getString("instructor_id")))
+            courseInstructors.add(instructor.get(i));
+            course.add(new Course(courseRS.getString("number"),courseRS.getString("name"), courseInstructors, courseRS.getInt("max_num_of_students")));
+        }
+        return course;
+    }
+    
+    
 }
 
 
