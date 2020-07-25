@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Table</title>
+    <link href="Addtable.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <table border="table table-bordered table-stripped table-condensed" align="center">
+        <tr>
+            <th>Class Number</th>
+            <th>Department</th>
+            <th>Course</th>
+            <th>Room</th>
+            <th>Instructor</th>
+            <th>Meeting Time</th>
+        </tr>
+        <tr>
+                <%
+                try{
+                    Class.forName("SQL").newInstance();
+                    Connection conn=DriverManager.getConnection("localhostname");
+                    String query="query";
+                    String stm=conn.createStatement();
+                    ResultSet rs=stm.executeQuery(query);
+                    while(rs.next())
+                    {
+                        %>
+                        <td><%=rs.getInt("column")%></td>
+                        <td><%=rs.getString("column")%></td>
+                        <td><%=rs.getInt("column")%></td>
+                        <td><%=rs.getInt("column")%></td>
+                        <%
+                    }
+                }
+                catch(Exception e){
+                    out.println("Exception: "+e.getMessage());
+                    e.printStackTrace();
+                }
+                %>
+        </tr>
+
+    </table>
+    
+</body>
+</html>
