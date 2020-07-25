@@ -3,17 +3,14 @@ package com.za.ga.cs.usermng.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-//import java.util.ArrayList;
-//import java.util.List;
-//import java.util.Properties;
 import com.za.ga.cs.usermng.model.user;
 
 public class userDao {
-	 public int registerUser(user user) throws ClassNotFoundException{
-		 String INSERT_USERS_SQL="INSERT INTO userdata "+" (role,firstname,lastname,email,password,cpassword,mblnumber) VALUES"+"(?,?,?,?,?,?,?);";
-		 int result = 0;
+	 public  boolean registerUser(user user) throws ClassNotFoundException{
+		 boolean status = false;
+		 String INSERT_USERS_SQL="INSERT INTO userdata"+" (role,firstname,lastname,email,password,cpassword,mblnumber) VALUES"+"(?,?,?,?,?,?,?);";
 		 
 		 Class.forName("com.mysql.jdbc.Driver");
 		 try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Scheduling?userSSL=false","root","");
@@ -29,33 +26,31 @@ public class userDao {
 			    preparedStatement.setString(7, user.getMblnumber());
 		 System.out.println(preparedStatement);
 		 //execute the query or update query
-		 result = preparedStatement.executeUpdate();
+		 ResultSet rs= preparedStatement.executeQuery();
+		 status = rs.next();
 		 
-		 }catch(Exception e) {
-			 e.printStackTrace();
+		 }catch(SQLException e) {
+			 printSQLException(e);
 		 }
-		 return result;
+		 return status;
 	 }
-		private  String url = "jdbc:mysql://localhost:3306/loginuser";	
-		public static final String INSERT_USERS_SQL="INSERT INTO userdata"+" (role,firstname,lastname,email,password,cpassword,mblnumber) VALUES"+"(?,?,?,?,?,?,?);";
-		public static final String SELECT_ALL_USERS="SELECT * FROM userdata";
-		public static final String SELECT_USER_BY_ID="SELECT id,role,firstname,lastname,email,password,cpassword,mblnumber FROM userdata WHERE id=?;";
-		public static final String DELETE_USERS_SQL="DELETE FROM userdata where id=?";
-		public static final String UPDATE_USERS_SQL="UPDATE userdata set role= ?, firstname=?,lastname=?,email=?,password=?,cpassword=?,mblnumber=? where id = ?;";
 
-protected Connection getConnection() {
-	Connection connection = null;
-	try {
-		Class.forName("com.mysql.jdbc.Driver");
-		connection=DriverManager.getConnection(url,"root","");
-	}catch(SQLException e) {
-		e.printStackTrace();
-	}catch(ClassNotFoundException e) {
-		e.printStackTrace();
-	}
-	return connection;
-}}
-
+private void printSQLException(SQLException ex) {
+    for (Throwable e: ex) {
+        if (e instanceof SQLException) {
+            e.printStackTrace(System.err);
+            System.err.println("SQLState: " + ((SQLException) e).getSQLState());
+            System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
+            System.err.println("Message: " + e.getMessage());
+            Throwable t = ex.getCause();
+            while (t != null) {
+                System.out.println("Cause: " + t);
+                t = t.getCause();
+            }
+        }
+    }
+}
+}
 /*public void insertUser(user user) throws SQLException {
 	try(Connection connection = getConnection();
 	PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)){

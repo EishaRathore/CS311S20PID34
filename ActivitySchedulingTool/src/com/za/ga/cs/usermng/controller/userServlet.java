@@ -35,7 +35,7 @@ public class userServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB_INF/SignUp.html");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("SignUp.html");
 		dispatcher.forward(request, response);
 	}
 
@@ -43,7 +43,7 @@ public class userServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String role=request.getParameter("role");
+		String Role=request.getParameter("role");
 		String firstname=request.getParameter("FirstName");
 		String lname=request.getParameter("lastName");
 		String Email=request.getParameter("email");
@@ -51,7 +51,7 @@ public class userServlet extends HttpServlet {
 		String cpassword=request.getParameter("pass");
 		String mblnumber=request.getParameter("mblno");
 		user user = new user();
-		user.setRole(role);
+		user.setRole(Role);
 		user.setFirst(firstname);
 		user.setLast(lname);
 		user.setEmail(Email);
@@ -61,23 +61,32 @@ public class userServlet extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		try {
 			if(userdao.registerUser(user)) {
-				
+				out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>");
+				out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js\"></script>");
+				out.println("<script>");
+				out.println("$(document).ready(function(){");
+				out.println("swal('WELCOME','Successfull !'','success');");
+				out.println("});");
+				out.println("</script>");
+			}else {
+				out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>");
+				out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js\"></script>");
+				out.println("<script>");
+				out.println("$(document).ready(function(){");
+				out.println("swal('not added','Error !'','fail');");
+				out.println("});");
+				out.println("</script>");
 			}
-			userdao.registerUser(user); 
-			out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>");
-			out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js\"></script>");
-			out.println("<script>");
-			out.println("$(document).ready(function(){");
-			out.println("swal('WELCOME','Successfull !'','success');");
-			out.println("});");
-			out.println("</script>");
+			
+			
+			
 		} catch (ClassNotFoundException e) {
 			
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB_INF/Login.html");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("Login.html");
 		dispatcher.forward(request, response);
 	}
 

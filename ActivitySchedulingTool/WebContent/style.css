@@ -87,7 +87,7 @@ font-size: 16px;
 }
 
 .dropdown::after {
-  content: "▾";
+  content: "v";
   font-size: 18px;
   position: absolute;
   right: 20px;
