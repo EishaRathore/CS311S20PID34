@@ -24,6 +24,27 @@ body{
     box-shadow: 8px 8px 50px #000;
 }
 /*--Drop down section*/
+option{
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+   background: rgb(220, 50, 60);
+   font-family: sans-serif;
+
+}
+.select::after{
+  content: '\25bc';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: rgb(220, 20, 60);
+  pointer-events: none;
+}
+.select:hover::after{
+  color: #1b121a;
+}
 .dropHolder {
     width: 322px;
     height: 60px;
