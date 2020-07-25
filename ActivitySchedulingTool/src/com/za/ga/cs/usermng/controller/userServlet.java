@@ -1,4 +1,4 @@
-package com.za.ga.cs.db.servlet;
+package com.za.ga.cs.usermng.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class register
+ * Servlet implementation class userServlet
  */
-@WebServlet("/register")
-public class register extends HttpServlet {
+@WebServlet("/userServlet")
+public class userServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public register() {
+    public userServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,18 +34,8 @@ public class register extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String role=request.getParameter("role");
-		String firstname=request.getParameter("FirstName");
-		String lastname=request.getParameter("lastName");
-		String email=request.getParameter("email");
-		String pass=request.getParameter("pass");
-		String cpass=request.getParameter("cpass");
-		String mblno=request.getParameter("mblno");
-		
-		Member member = new Member(role,firstname,lastname,email,pass,cpass,mblno);
-	registerDao rdao=new registerDao();
-	String result=rdao.insert(member);
-	response.getWriter().print(result);	
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

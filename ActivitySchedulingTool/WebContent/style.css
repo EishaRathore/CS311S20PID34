@@ -12,7 +12,7 @@ body{
 
 .main{
     width: 400px;
-    height: 445px;
+    height: 465px;
     color: rgb(10, 10, 10);
     background: rgb(51, 50, 50) ;
     top: 55%;
@@ -23,6 +23,148 @@ body{
     box-sizing: border-box;
     box-shadow: 8px 8px 50px #000;
 }
+/*--Drop down section*/
+.dropHolder {
+    width: 322px;
+    height: 60px;
+   padding: 0 0 0 20px;
+    border-radius: 10px;
+    font: 18px arial;
+    color: black;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #1b121a;
+    animation: move 3s ease-in-out infinite;
+    position: relative;
+    margin-top:0px;
+  }
+  
+.dropHolder:hover, .dropHolder:hover::after {
+    animation-play-state: paused;
+  }
+  
+ .dropHolder::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0);
+    display: block;
+    top: 100px;
+    left: 37px;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    animation: moveShadow 3s ease-in-out infinite;
+  }
+  .dropHolder p{
+    float: left;
+    line-height: 35px;
+}
+
+.dropdown > p{
+font-size: 16px;
+}
+.dropdown,
+.dropHolder {
+  background: linear-gradient(crimson , #3d2125);
+}
+
+.dropdown {
+  margin-left: 20px;
+  float: left;
+  width: 208px;
+  padding: 0 0 0 20px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  height: 58px;
+  border-left: 1px solid black;
+  position: relative;
+}
+
+.dropdown:hover {
+  background: crimson;
+}
+
+.dropdown::after {
+  content: "▾";
+  font-size: 18px;
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  display: block;
+}
+.dropHolder .menu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 228px;
+    cursor: pointer;
+    opacity: 0;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg) rotateX(5deg) translateY(100px);
+    backface-visibility: hidden;
+    background: linear-gradient(rgb(221, 94, 120), #bd1f3c);
+    border: 2px solid #361d25;
+    border-radius: 10px;
+    transition: all 0.8s;
+    z-index: 5;
+    overflow: hidden;
+    padding: 3px;
+  }
+  
+ .dropHolder .menu li {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    color: #000000;
+    transition: all 0.3s;
+    list-style: none;
+  }
+  
+ .dropHolder .menu li:hover {
+    background: crimson;
+    padding-left: 20px;
+  }
+  .dropHolder .menu .role:hover {
+    background-color: #000;
+    padding-left: 20px;
+  }  
+ .dropHolder .menu li:last-child {
+    border: none;
+  }
+  
+ .dropHolder .showMenu {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0px);
+  }
+  
+ .dropHolder li > i {
+    float: left;
+    padding-top: 3px;
+    padding-right: 14px;
+  }
+  
+ .dropHolder p > i {
+    position: relative;
+    top: 2px;
+    padding-right: 5px;
+  }
+  .dropHolder role > i {
+    position: relative;
+    top: 2px;
+    padding-right: 5px;
+  }
+ .dropHolder i {
+    opacity: 0.8;
+  }
+  
+  .showMenu{
+    opacity: 1;
+    transform: rotateX(0deg)
+    translateY(0px);
+  }
+/*--Drop down section end*/
+
 #header {
   position: sticky;
     z-index: 10;
@@ -61,6 +203,11 @@ h1{
     margin-bottom: 15%;
     font-family: courgette;
     color: #fff;
+}
+h4{
+	color:red;
+	margin-top:0px;
+	margin-bottom:0px;
 }
 
 .main input{
@@ -206,4 +353,28 @@ opacity: 1;
     body{
         height: 100vh;
     }
-} 
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveShadow {
+  0%,
+  100% {
+    transform: translateY(10px);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+ 

@@ -1,24 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Registerjsp</title>
-</head>
-<body>
+<%@ page import = "com.za.ga.cs.connectionProvider.dbConnection" %>
 <%@ page import = "java.sql.*" %>
-<%@ page import = "javax.sql.*" %>
 <%
+String role=request.getParameter("role");
 String firstname=request.getParameter("FirstName");
-session.putValue("FirstName",firstname);
 String lname=request.getParameter("lastName");
 String Email=request.getParameter("email");
 String password=request.getParameter("pass");
 String cpassword=request.getParameter("pass");
 String mblnumber=request.getParameter("mblno");
-Class.forName("com.mysql.jdbc.Driver");
 
+try{
+	Connection con=dbConnection.getCon();
+	Statement st=con.createStatement();
+	st.executeUpdate("insert into userdata (role,firstname,lastname,email,pass,cpass,mblnum) values('"+role+"','"+firstname+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"')");
+	response.sendRedirect("Login.html");
+}catch(Exception e){
+	out.println(e);
+}
 %>
-</body>
-</html>

@@ -18,7 +18,7 @@
     <section class="SignUp">
  <div class="wrap">
      <h2>Sign Up</h2>
-     <form id="form" class="form" action="register" method="POST">
+     <form id="form" class="form" onsubmit="return validform()" action="signupAction.jsp" method="POST">
     <div class="form-control success">
        
         <input type="text"  name="role" placeholder="Role (Admin or Student)" required>
