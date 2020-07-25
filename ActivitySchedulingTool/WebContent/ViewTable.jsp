@@ -1,13 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Table</title>
-    <link href="Addtable.css" rel="stylesheet" type="text/css">
+<meta charset="ISO-8859-1">
+ <title>View Table</title>
+    <link  rel="stylesheet" type="text/css" href="Addtable.css">
 </head>
 <body>
-    <table border="table table-bordered table-stripped table-condensed" align="center">
+ <table border="table table-bordered table-stripped table-condensed" align="center">
         <tr>
             <th>Class Number</th>
             <th>Department</th>

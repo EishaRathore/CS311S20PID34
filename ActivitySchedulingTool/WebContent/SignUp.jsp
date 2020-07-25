@@ -5,6 +5,7 @@
 <title> Signup Form</title>
 <link rel= "stylesheet"  href= "SignUp.css">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="jQuery.js"></script>
 </head>
 <body>
  <section id="header">
@@ -18,7 +19,7 @@
     <section class="SignUp">
  <div class="wrap">
      <h2>Sign Up</h2>
-     <form action="<%=request.getContextPath()%>/SignUp" method="post">
+     <form action="signupAction.jsp" method="post">
     <div class="form-control success">
        
         <input type="text"  name="role" placeholder="Role (Admin or Student)" required>
@@ -52,9 +53,9 @@
            <input type="tel" name="mblno" placeholder="Phone Number.." required>
         
         </div>
-        <input type="submit" name="submit" value="Submit">
+        <button type="submit" class="submit" href="Login.html">Submit</button>
    
-        <p class="message">Already have account? <button>Login</button></p>
+        <p class="message">Already have account? <button >Login</button></p>
     </form>
 
    </div>
@@ -62,6 +63,5 @@
    <div id="overlyArea">
 
    </div>
-   
 </body>
 </html>

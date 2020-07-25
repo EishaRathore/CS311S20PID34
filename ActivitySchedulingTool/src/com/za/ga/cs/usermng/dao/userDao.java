@@ -16,7 +16,6 @@ public class userDao {
 		 try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Scheduling?userSSL=false","root","");
 				//create a statement using connection object
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
-			    preparedStatement.setInt(1,1);
 			    preparedStatement.setString(1, user.getRole());
 			    preparedStatement.setString(2, user.getFirst());
 			    preparedStatement.setString(3, user.getLast() );
@@ -26,6 +25,7 @@ public class userDao {
 			    preparedStatement.setString(7, user.getMblnumber());
 		 System.out.println(preparedStatement);
 		 //execute the query or update query
+		 preparedStatement.executeUpdate();
 		 ResultSet rs= preparedStatement.executeQuery();
 		 status = rs.next();
 		 
