@@ -1,8 +1,12 @@
 package com.za.ga.cs.usermng.model;
 
-public class user {
+import java.io.Serializable;
+
+public class user implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int id;
 	 private String  role,first, last,email,password,cpassword,mblnumber;
+	 
 	 
 	 
 	public user() {

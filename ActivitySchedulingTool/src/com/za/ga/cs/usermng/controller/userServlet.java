@@ -16,7 +16,7 @@ import com.za.ga.cs.usermng.model.user;
 /**
  * Servlet implementation class userServlet
  */
-@WebServlet("/SignUp.jsp")
+@WebServlet("/SignUp")
 public class userServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        private userDao userdao= new userDao();
@@ -60,6 +60,9 @@ public class userServlet extends HttpServlet {
 		user.setMblnumber(mblnumber);
 		PrintWriter out=response.getWriter();
 		try {
+			if(userdao.registerUser(user)) {
+				
+			}
 			userdao.registerUser(user); 
 			out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>");
 			out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js\"></script>");
