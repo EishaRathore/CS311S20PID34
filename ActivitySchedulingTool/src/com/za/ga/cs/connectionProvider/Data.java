@@ -18,6 +18,7 @@ public class Data {
     private ArrayList<ClassTime> classtime;
 
     private int numberOfClasses = 0;
+    
     /*public Data(){initialize();}
     private Data initialize(){
         Rooms room1= new Rooms("R1",50);
