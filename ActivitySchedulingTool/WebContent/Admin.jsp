@@ -39,8 +39,11 @@
                 <ul>
                     <li><i class="fa fa-plus"></i><a href="AddInstructor.html">Add Faculty</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddRoom.html">Add Rooms</a></li>
+                     <li><i class="fa fa-plus"></i><a href="AddDepartment.html">Add Department</a></li>
                     <li><i class="fa fa-list"></i><a href="#">Faculty List</a></li>
                     <li><i class="fa fa-list"></i><a href="#">Rooms List</a></li>
+                    <li><i class="fa fa-list"></i><a href="#">Department List</a></li>
+                    
                 </ul>
             </div>
         </li>
@@ -50,7 +53,7 @@
                     <li><i class="fa fa-ravelry"></i><a href="#">Mission</a></li>
                     <li><i class="fa fa-eercast"></i><a href="#">Vision</a></li>
                     <li><i class="fa fa-angellist"></i><a href="#">Team</a></li>
-                    <li><i class="fa fa-phone"></i><a href="#Contact">Contac Us</a></li>
+                    <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
 
                 </ul>
             </div>
