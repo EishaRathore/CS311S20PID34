@@ -106,7 +106,20 @@ public class Data {
         return course;
     }
     
-    
+    public ArrayList<Department> selectDepartments(Connection connection) throws SQLException{
+        ArrayList<Department> dept = new ArrayList<Department>();
+        ResultSet deptRS = connection.createStatement().executeQuery("select * from dept");
+        while ( deptRS.next()){
+            ResultSet deptCourseRS = connection.createStatement().executeQuery("Select * from dept_course where dept_name= "+deptRS.getString("name")+"'");
+            ArrayList<Course> deptCourses = new ArrayList<Course>();
+            while (deptCourseRS.next())
+            for(int i=0;i<course.size();i++)
+            if (course.get(i).getNumber().equals(deptCourseRS.getString("course_numb")))
+            deptCourses.add(course.get(i));
+            dept.add(new Department(deptRS.getString("name"), deptCourses));
+        }
+        return dept;
+    }
 }
 
 
