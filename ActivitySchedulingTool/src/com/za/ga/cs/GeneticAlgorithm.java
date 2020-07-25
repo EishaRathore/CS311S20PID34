@@ -3,6 +3,8 @@ package com.za.ga.cs;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
+import com.za.ga.cs.connectionProvider.Data;
+
 public class GeneticAlgorithm {
 	 private Data data;
 	    public GeneticAlgorithm(Data data){this.data = data;}

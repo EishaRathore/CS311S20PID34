@@ -1,4 +1,4 @@
-package com.za.ga.cs;
+package com.za.ga.cs.connectionProvider;
 
 import java.util.ArrayList;
 import java.util.Arrays;
