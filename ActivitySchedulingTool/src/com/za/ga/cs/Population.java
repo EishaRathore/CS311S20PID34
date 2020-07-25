@@ -3,6 +3,8 @@ package com.za.ga.cs;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
+import com.za.ga.cs.connectionProvider.Data;
+
 public class Population {
 	 private final ArrayList<Schedule> schedules;
 	    public Population(final int size, final Data data){

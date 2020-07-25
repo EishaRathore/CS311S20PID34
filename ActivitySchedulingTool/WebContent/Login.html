@@ -20,17 +20,18 @@
        </section>
         <div class="main">
          <h1>LOG IN</h1>
-           <div class="dropHolder">
-             <p>Select</p>
+         <select class="dropHolder">           
                <div class="dropdown">
-                <p>Role</p>
+
                 </div>
-              <ul class="menu">
-                 <li class="role">Role</li>
-                 <li><i class="fa fa-star"></i> Admin</li>
-                 <li><i class="fa fa-heart"></i> Student</li>
-              </ul>
-          </div>
+              <div class="menu">
+                 <option class="fa fa-star">Admin</option>
+                 <option class="fa fa-heart">Student</option>
+                <!-- <li><i class="fa fa-star"></i> Admin</li> -->
+                <!-- <li><i class="fa fa-heart"></i> Student</li>  -->
+              </div>
+              </select>
+              
     <form action="LoginAction.jsp" method="POST">
        
         <input type="text" name="userName" placeholder="USER NAME">

@@ -1,6 +1,10 @@
 package com.za.ga.cs;
 
 import java.util.ArrayList;
+import java.sql.*;
+import javax.swing.JOptionPane;
+
+import com.za.ga.cs.connectionProvider.Data;
 
 public class Driver {
 	 public static final int POPULATION_SIZE=9;
