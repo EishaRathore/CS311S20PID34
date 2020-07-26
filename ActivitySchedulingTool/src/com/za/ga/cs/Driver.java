@@ -119,7 +119,7 @@ public class Driver {
         private void printCourse(){
                 System.out.println("course: |name  |max # of students |qualified instructors");
                 System.out.println("--------------------------------------------------------------------------");
-                data.getcourse().forEach( x-> System.out.printIn(x.getNumber() + "\t|"+ 
+                data.getCourses().forEach( x-> System.out.printIn(x.getNumber() + "\t|"+ 
                         x.getName()+ "\t|"+ x.getmaxNoOfStudent()+"\t\t  |"+x.getInstructor()));
                 System.out.println(); 
         }
@@ -129,6 +129,11 @@ public class Driver {
                 data.getRooms().forEach(x -> System.out.println(x.getNumber()+ "    |"+ x.getSeatingCapacity()));
                 System.out.println();
         }
-        
+        private void printInstructor(){
+                System.out.println("instructor: |name             ");
+                System.out.println("-------------------------------");
+                data.getInstructor().forEach(x -> System.out.println(x.getId()+ "         |"+ x.getName()));
+                System.out.println();
+        }
 
 }
