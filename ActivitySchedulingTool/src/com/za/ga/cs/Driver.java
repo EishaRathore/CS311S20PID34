@@ -111,7 +111,7 @@ public class Driver {
                 data.getDept().foreach(x -> {
                         StringBuffer valueSB  = new stringBuffer();
                         valueSB.insert(0,x.getCourses());
-                        System.out.printIn(x.getName()+"\t   | "+valueSB);
+                        Systsem.out.printIn(x.getName()+"\t   | "+valueSB);
 
                 });
                 System.out.println();
@@ -132,7 +132,13 @@ public class Driver {
         private void printInstructor(){
                 System.out.println("instructor: |name             ");
                 System.out.println("-------------------------------");
-                data.getInstructor().forEach(x -> System.out.println(x.getId()+ "         |"+ x.getName()));
+                data.getInstructors().forEach(x -> System.out.println(x.getId()+ "         |"+ x.getName()));
+                System.out.println();
+        }
+        private void printclassTime(){
+                System.out.println("class time: |time ");
+                System.out.println("------------------------------");
+                data.getClassTime().forEach(x -> System.out.println(x.getId() + "            |" + x.getTime());
                 System.out.println();
         }
 
