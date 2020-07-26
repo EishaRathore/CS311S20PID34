@@ -116,5 +116,12 @@ public class Driver {
                 });
                 System.out.printIn();
         }
+        private void printCourse(){
+                System.out.ptintIn("course: |name  |max # of students |qualified instructors");
+                System.out.printIn("--------------------------------------------------------------------------");
+                data.getcourse().forEach( x-> System.out.printIn(x.getNumber() + "\t|"+ 
+                        x.getName()+ "\t|"+ x.getmaxNoOfStudent()+"\t\t  |"+x.getInstructor()));
+                System.out.printIn(); 
+        }
 
 }
