@@ -105,5 +105,16 @@ public class Driver {
         
         
     }*/
-       
+        private void printDept(){
+                System .out.println("department: | "+"courses offered");
+                System.out.println("---------------------------------");
+                data.getDept().foreach(x -> {
+                        StringBuffer valueSB  = new stringBuffer();
+                        valueSB.insert(0,x.getCourses());
+                        System.out.printIn(x.getName()+"\t   | "+valueSB);
+
+                });
+                System.out.printIn();
+        }
+
 }
