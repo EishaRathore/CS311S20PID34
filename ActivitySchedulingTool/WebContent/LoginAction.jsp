@@ -4,23 +4,32 @@
 <%
 String firstname = request.getParameter("userName");
 session.putValue("username",firstname);
+out.println(firstname);
 String password = request.getParameter("Password");
-String Role=request.getParameter("role");
+out.println(password);
+String role = request.getParameter("Role");
+out.println(role);
+String role1 = request.getParameter("role");
+out.println(role1);
 try{
 	Connection con=dbConnection.getCon();
 	Statement st=con.createStatement();
 	ResultSet rs=st.executeQuery("select * from userdata where firstname='"+firstname+"'");
 			if(rs.next()){
 				if(rs.getString(5).equals(password)){
+					if(rs.getString(8).equals(role)){response.sendRedirect("Admin.jsp");}
+					else{
+						
+						out.println("Incorrect Role!Try Again.");
+					}
 					
-					response.sendRedirect("Admin.jsp");
 				}else{
 					out.println("invalid Password! try Again.");
 				}
 			}		
 	
 }catch(Exception e){
-	e.printStackTrace();
-	out.println("Error"+e.getMessage());
+	//e.printStackTrace();
+	//out.println("Error"+e.getMessage());
 }
 %>
