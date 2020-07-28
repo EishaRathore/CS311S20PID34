@@ -10,11 +10,11 @@ String cpassword=request.getParameter("pass");
 String mblnumber=request.getParameter("mblno");
 
 try{
+	dbConnection db=new dbConnection();
 	out.println("in try");
 	Connection con=dbConnection.getCon();
-	Statement st=con.createStatement();
-	st.executeUpdate("insert into userdata (role,firstname,lastname,email,pass,cpass,mblnum) values('"+role+"','"+firstname+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"')");
-	response.sendRedirect("Login.html");
+	db.createTable();
+	
 }catch(Exception e){
 	out.println(e);
 }

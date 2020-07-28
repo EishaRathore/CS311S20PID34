@@ -1,14 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Addsub.css">
+<meta charset="ISO-8859-1">
+   <link rel="stylesheet" href="Addsub.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Admin</title>
+    <title>Add Department</title>
 </head>
 <body>
-    <!--Header Start-->
+
+  <!--Header Start-->
     <section id="header">
         
         <nav>
@@ -75,7 +77,7 @@
                             <li><a href="#" data-after="Course">Subjects</a></li>
                             <li><a href="#" data-after="About">About Us</a></li>
                             <li><a href="#" data-after="Resources">Resources</a></li>
-                            <li><a href="" data-after="Login">Log in</a></li>
+                            <li><a href="#" data-after="Login">Log in</a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,21 +90,20 @@
      <!-- Background Section Start-->
     <section id="background">
         <div class="background container">
+        <form action="AddDeptAction.jsp" method="POST">
             <div class="wrap">
-     <h2>Add Course</h2>
+     <h2>Add Department</h2>
 
-        <input type="text"  name="CourseName" placeholder="Course Name.." required>        
-        <input type="text" name="Course Code" placeholder="Course Code.." required>
-        <input type="number" name="Max#" placeholder="Max # of student.." required>
-        <input type="text" name="Dept" placeholder="Department Name.." required>
-         <input type="submit" name="submit" value="Submit">
+        <input type="text"  name="DepartmentName" placeholder="DepartmentName" required>        
+         <input type="submit" name="submit" href="#" value="Submit">
+
    </div>
-        </div>
-    </section>
+   </form>
+   </div>
+   </section>
  <!-- Background Section End-->
-
  
-<!--Footer Start-->
+ <!--Footer Start-->
 <section id="footer">
     <div class="footer container">
         <div class="brand">
@@ -124,6 +125,8 @@
     </div>
 </section>
 <!--Footer End-->
-<script src="./app.js"></script>
+
+<script src="app.js"></script>
+
 </body>
 </html>

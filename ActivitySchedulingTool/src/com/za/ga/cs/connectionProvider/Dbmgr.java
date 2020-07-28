@@ -64,7 +64,7 @@ public class Dbmgr {
 
     public   Dbmgr() throws  SQLException { initialize();}
     private Dbmgr initialize() throws SQLException {
-        Connection connection = DriverManager.getConnection(url);
+        Connection connection = DriverManager.getConnection("");
         rooms = selectRooms(connection);
         classtime = selectClassTime(connection);
         instructor =selectInstructors(connection);

@@ -1,14 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.sql.*" %>
+    <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mainStyle.css">
+<meta charset="ISO-8859-1">
+ <link rel="stylesheet" href="mainStyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Home</title>
+<title>Home</title>
 </head>
 <body>
+<%
+
+try {
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306","root","");
+Statement statement = con.createStatement();
+String query = "CREATE DATABASE IF NOT EXISTS test5";
+statement.executeUpdate(query);
+out.println("Database test created sucessfully.");
+statement.close();
+}
+catch (Exception e)
+{
+out.println("An error occurred.");
+}
+
+%>
+<%
+
+try {
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test5","root","");
+	out.println("databaes");
+	 Statement statement=con.createStatement();
+	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS userdata(id int NOT NULL AUTO_INCREMENT,firstname varchar(255),lastname varchar(255),email varchar(255),pass varchar(255),cpass varchar(255),mblnum varchar(255),role varchar(255),PRIMARY KEY(id))");
+	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS rooms(id int NOT NULL AUTO_INCREMENT,room_no varchar(255),room_capacity varchar(255),PRIMARY KEY(id))");
+	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS course(id int NOT NULL AUTO_INCREMENT,Cname varchar(255),code varchar(255),seating_capacity varchar(255),PRIMARY KEY(id))");
+	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept(id int NOT NULL AUTO_INCREMENT,dname varchar(255),PRIMARY KEY(id))");
+	statement.executeUpdate("CREATE TABLE IF NOT EXISTS faculty(id int NOT NULL AUTO_INCREMENT,Iname varchar(255),PRIMARY KEY(id))");
+	statement.executeUpdate("CREATE TABLE IF NOT EXISTS meetingtime(id int NOT NULL AUTO_INCREMENT,meeting_time varchar(255),PRIMARY KEY(id))");
+	  out.println("Successfully created test_table");
+statement.close();
+}
+catch (Exception e)
+{
+out.println("An error occurred.");
+}
+
+%>
+
     <!--Header Start-->
     <section id="header">
         
@@ -134,6 +177,7 @@
     </div>
 </section>
 <!--Footer End-->
+
 <script src="./app.js"></script>
 </body>
 </html>

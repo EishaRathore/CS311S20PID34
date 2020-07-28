@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Addsub.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Add Rooms</title>
+    <title>Admin</title>
 </head>
 <body>
     <!--Header Start-->
@@ -75,7 +75,7 @@
                             <li><a href="#" data-after="Course">Subjects</a></li>
                             <li><a href="#" data-after="About">About Us</a></li>
                             <li><a href="#" data-after="Resources">Resources</a></li>
-                            <li><a href="#" data-after="Login">Log in</a></li>
+                            <li><a href="" data-after="Login">Log in</a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,20 +88,23 @@
      <!-- Background Section Start-->
     <section id="background">
         <div class="background container">
-        <form action="AddRAction.jsp" method="POST">
+        <form action="AddCourseAction.jsp" method="POST">
             <div class="wrap">
-     <h2>Add Department</h2>
-
-        <input type="text"  name="DepartmentName" placeholder="DepartmentName" required>        
-         <input type="submit" name="submit" value="Submit">
-
+            
+     <h2>Add Course</h2>
+       <input type="text"  name="name" placeholder="Course Name.." required>  
+        <input type="text" name="CourseCode" placeholder="Course Code.." required>
+        <input type="number" name="Max" placeholder="Max # of student.." required>
+              
+         <input type="submit" name="submit" href="#" value="Submit">
    </div>
    </form>
-   </div>
-   </section>
+        </div>
+    </section>
  <!-- Background Section End-->
+
  
- <!--Footer Start-->
+<!--Footer Start-->
 <section id="footer">
     <div class="footer container">
         <div class="brand">
@@ -123,7 +126,6 @@
     </div>
 </section>
 <!--Footer End-->
-
-<script src="app.js"></script>
+<script src="./app.js"></script>
 </body>
 </html>

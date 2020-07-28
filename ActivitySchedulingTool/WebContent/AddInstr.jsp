@@ -1,14 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Addsub.css">
+<meta charset="ISO-8859-1">
+ <link rel="stylesheet" href="Addsub.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Add Instructor</title>
 </head>
 <body>
-    <!--Header Start-->
+
+  <!--Header Start-->
     <section id="header">
         
         <nav>
@@ -61,7 +63,7 @@
         </li>
 
         
-        <li><i class="fa fa-sign-in"></i><a href="#">Log In</a></li>
+        <li><i class="fa fa-sign-in"></i><a href="index.html">Log In</a></li>
     </ul>
 </div>
             <div class="header container">
@@ -88,18 +90,20 @@
      <!-- Background Section Start-->
     <section id="background">
         <div class="background container">
+        <form action="AddInstructorAction.jsp" method="POST">
             <div class="wrap">
-     <h2>Add Instrustor</h2>
+     <h2>Add Instructor</h2>
 
-        <input type="text"  name="InstructorName" placeholder="Instrustor Name" required>        
-        <input type="text" name="Course" placeholder="Course.." required>
-        <input type="submit" name="submit" value="Submit">
-    </div>
-    </div>
-    </section>
+        <input type="text"  name="InstructorName" placeholder="Instructor Name" required>        
+         <input type="submit" name="submit" href="#" value="Submit">
+
+   </div>
+   </form>
+   </div>
+   </section>
  <!-- Background Section End-->
-
-<!--Footer Start-->
+ 
+ <!--Footer Start-->
 <section id="footer">
     <div class="footer container">
         <div class="brand">
@@ -121,6 +125,8 @@
     </div>
 </section>
 <!--Footer End-->
+
 <script src="app.js"></script>
+
 </body>
 </html>
