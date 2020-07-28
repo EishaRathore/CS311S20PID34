@@ -56,7 +56,7 @@
         </div>
         <button type="submit" class="submit" href="#">Submit</button>
    
-        <p class="message">Already have account? <button href="Login.html">Login</button></p>
+        <p class="message">Already have account? <a href="Login.html">Login</a></p>
     </form>
 
    </div>

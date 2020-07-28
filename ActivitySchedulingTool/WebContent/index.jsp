@@ -62,7 +62,7 @@ out.println("An error occurred.");
 <div class="menu-bar">
     <ul>
         <li><i class="fa fa-home"></i><a href="#header">Home</a></li>
-        <li><i class="fa fa-user"></i><a href="#">About Us</a></li>
+        <li><i class="fa fa-user"></i><a href="#About">About Us</a></li>
                 <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
         <li><i class="fa fa-sign-in"></i><a href="Login.html">Log In</a></li>
     </ul>
@@ -74,8 +74,8 @@ out.println("An error occurred.");
                         <div class="ham"><div class="bar"></div></div>
                         <ul>
                             <li><a href="#header" data-after="Home">Home</a></li>
-                            <li><a href="#" data-after="About">About Us</a></li>
-                            <li><a  href="#" onclick="javascript:myFunc()">Contact</a></li>
+                            <li><a href="#About" data-after="About">About Us</a></li>
+                            <li><a  href="#Contact" onclick="javascript:myFunc()">Contact</a></li>
                             <li><a href="Login.html" data-after="login">Log in</a></li>
                         </ul>
                     </div>

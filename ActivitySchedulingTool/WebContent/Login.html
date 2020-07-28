@@ -3,18 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogIn</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="jQuery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    function select(){
-    	var d= document.getElementbyId("select");
-    	var displaytext=d.options[d.selectedIndex].txt;
-    	document.getElementbyId("txtvalue").value=displaytext;
-    }
-    </script> 
+    <title>LogIn</title>
+   
 </head>
 <body onload="check()">
       <section id="header">
@@ -26,11 +20,7 @@
        </section>
         <div class="main">
          <h1>LOG IN</h1>
-         <select id="seclect" onchange="select();">
-          <option disabled selected value> -- select an option -- </option>
-         <option>Admin</option>
-          <option>Student</option>
-         </select>
+        
          <select class="dropHolder" required>           
                <div class="dropdown">
 
@@ -45,11 +35,10 @@
               </select>
               
     <form action="LoginAction.jsp" method="POST">
-       <input type="text" name="Role" id="txtvalue">
-        <input type="text" name="userName" placeholder="USER NAME">
-        <input type="password" name="Password" placeholder="PASSWORD">
+        <input type="text" name="userName" placeholder="USER NAME" required>
+        <input type="password" name="Password" placeholder="PASSWORD" required>
         <input type="submit" value="LOGIN">
-         <p class="message"> Does'nt have account? <a href="SignUp.jsp">Signup</a></p>
+         <p class="message"> Does'nt have account? <a href="Signuppage.jsp">Signup</a></p>
       </form>
     <div class="bottomText">
         <a href="forgot.html">Forgot Password? </a>
@@ -60,9 +49,6 @@
         <a href="#"> <i class="fa fa-google"></i></a>
      </div>
         </div>
-    
-       <script src="https://code.jquery.com/jquery-3.5.1.min.js">
-      </script>
     
         <div id="overlyArea">
     

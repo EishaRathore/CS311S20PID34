@@ -98,21 +98,21 @@ input{
   background: crimson;
   opacity: 1;
 }
-input[type=button]{
-  color: black;}
+.main input[type=button]{
+    background: crimson;
+}
 
-.wrap .message{
-    margin :15px 0 0;
-    color: palevioletred;
-    font-size: 12;
-  }
+.main .message{
+  margin :15px 0 0;
+  color: aliceblue;
+  font-size: 12;
+}
 
-  .wrap .message button{
-    color: whitesmoke;
-    border-style: none;
-    background-color: transparent !important;
-    text-decoration: none;
-  } 
+.main .message a{
+  color: rgb(180, 55, 55);
+  font-weight: bold;
+  font-size: 16px;
+}
 
 #doubleoverlay.active{
 	opacity:1;

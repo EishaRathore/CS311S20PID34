@@ -19,19 +19,19 @@
             </div>
 <div class="menu-bar">
     <ul>
-        <li><i class="fa fa-home"></i><a href="#">Home</a></li>
+         <li><i class="fa fa-home"></i><a href="#header">Home</a></li>
         <li><i class="fa fa-calendar"></i><a href="#">Time Table</a>
             <div class="sub-menu-1">
                 <ul>
-                    <li><i class="fa fa-plus"></i><a href="#">Add Time Table</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Time Table List</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddTime.html">Add Time Table</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewTable.jsp">Time Table List</a></li>
                 </ul>
             </div>
         </li>
         <li><i class="fa fa-book"></i><a href="#">Courses</a>
             <div class="sub-menu-1">
                 <ul>
-                    <li><i class="fa fa-plus"></i><a href="#">Add Course</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddCourse.html">Add Course</a></li>
                     <li><i class="fa fa-list"></i><a href="#">Course List</a></li>
                 </ul>
             </div>
@@ -39,9 +39,9 @@
         <li><i class="fa fa-users"></i><a href="#">Resources</a>
             <div class="sub-menu-1">
                 <ul>
-                    <li><i class="fa fa-plus"></i><a href="AddInstructor.html">Add Faculty</a></li>
+                  <li><i class="fa fa-plus"></i><a href="AddInstr.jsp">Add Faculty</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddRoom.html">Add Rooms</a></li>
-                    <li><i class="fa fa-plus"></i><a href="AddDepartment.html">Add Department</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddDept.jsp">Add Department</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddTime.html">Add Class Time</a></li>
                     <li><i class="fa fa-list"></i><a href="#">Faculty List</a></li>
                     <li><i class="fa fa-list"></i><a href="#">Rooms List</a></li>
@@ -56,14 +56,14 @@
                     <li><i class="fa fa-ravelry"></i><a href="#">Mission</a></li>
                     <li><i class="fa fa-eercast"></i><a href="#">Vision</a></li>
                     <li><i class="fa fa-angellist"></i><a href="#">Team</a></li>
-                    <li><i class="fa fa-phone"></i><a href="#">Contact Us</a></li>
+                    <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
 
                 </ul>
             </div>
         </li>
 
         
-        <li><i class="fa fa-sign-in"></i><a href="index.html">Log In</a></li>
+        <li><i class="fa fa-sign-in"></i><a href="Login.html">Log In</a></li>
     </ul>
 </div>
             <div class="header container">
@@ -72,12 +72,12 @@
                     <div class="nav-list">
                         <div class="ham"><div class="bar"></div></div>
                         <ul>
-                            <li><a href="#" data-after="Home">Home</a></li>
+                            <li><a href="#header" data-after="Home">Home</a></li>
                             <li><a href="#" data-after="Time">Time Table</a></li>
                             <li><a href="#" data-after="Course">Subjects</a></li>
-                            <li><a href="#" data-after="About">About Us</a></li>
+                            <li><a href="#About" data-after="About">About Us</a></li>
                             <li><a href="#" data-after="Resources">Resources</a></li>
-                            <li><a href="#" data-after="Login">Log in</a></li>
+                            <li><a href="Login.html" data-after="Login">Log in</a></li>
                         </ul>
                     </div>
                 </div>

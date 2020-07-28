@@ -12,10 +12,10 @@ body{
 
 .main{
     width: 400px;
-    height: 465px;
+    height: 480px;
     color: rgb(10, 10, 10);
     background: rgb(51, 50, 50) ;
-    top: 55%;
+    top: 40%;
     left: 50%;
     padding: 70px 40px;
     position: absolute;
