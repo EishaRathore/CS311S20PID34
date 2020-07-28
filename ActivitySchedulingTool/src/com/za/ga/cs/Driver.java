@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-import com.za.ga.cs.connectionProvider.Data;
+import com.za.ga.cs.connectionProvider.Dbmgr;
 
 public class Driver {
 	 public static final int POPULATION_SIZE=9;
@@ -12,7 +12,7 @@ public class Driver {
      public static final double CROSSOVER_RATE=0.9;
      public static final int TOURNAMENT_SELECTION_SIZE=9;
      public static final int NUMB_OF_ELITE_SCHEDULE=9;
-     private Data data;
+     private Dbmgr data;
 	private int scheduleNumb=0;
 	private int classNumb = 1;
 /*
@@ -108,10 +108,10 @@ public class Driver {
         private void printDept(){
                 System .out.println("department: | "+"courses offered");
                 System.out.println("---------------------------------");
-                data.getDept().foreach(x -> {
-                        StringBuffer valueSB  = new stringBuffer();
+                data.getDept().forEach(x -> {
+                        StringBuffer valueSB  = new StringBuffer();
                         valueSB.insert(0,x.getCourses());
-                        Systsem.out.printIn(x.getName()+"\t   | "+valueSB);
+                        System.out.println(x.getName()+"\t   | "+valueSB);
 
                 });
                 System.out.println();
@@ -119,8 +119,8 @@ public class Driver {
         private void printCourse(){
                 System.out.println("course: |name  |max # of students |qualified instructors");
                 System.out.println("--------------------------------------------------------------------------");
-                data.getCourses().forEach( x-> System.out.printIn(x.getNumber() + "\t|"+ 
-                        x.getName()+ "\t|"+ x.getmaxNoOfStudent()+"\t\t  |"+x.getInstructor()));
+                data.getCourse().forEach( x-> System.out.println(x.getNumber() + "\t|"+ 
+                        x.getName()+ "\t|"+ x.getmaxNoOfStudent()+"\t\t  |"+x.getInstructors()));
                 System.out.println(); 
         }
         private void printRoom(){
@@ -138,7 +138,7 @@ public class Driver {
         private void printclassTime(){
                 System.out.println("class time: |time ");
                 System.out.println("------------------------------");
-                data.getClassTime().forEach(x -> System.out.println(x.getId() + "            |" + x.getTime());
+                data.getClassTime().forEach(x -> System.out.println(x.getId() + "            |" + x.getTime()));
                 System.out.println();
         }
 

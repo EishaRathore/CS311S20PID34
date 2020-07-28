@@ -1,5 +1,6 @@
 package com.za.ga.cs.connectionProvider;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,8 +13,8 @@ import com.za.ga.cs.domain.Department;
 import com.za.ga.cs.domain.Instructor;
 import com.za.ga.cs.domain.Rooms;
 
-public class Data {
-	public static Data data;
+public class Dbmgr {
+	public static Dbmgr data;
 	private ArrayList<Rooms> rooms;
     private ArrayList<Instructor> instructor;
     private ArrayList<Course> course;
@@ -52,17 +53,17 @@ public class Data {
        dept=new ArrayList<Department> (Arrays.asList(dept1,dept2,dept3));
        dept.forEach(x -> numberOfClasses += x.getCourses().size());
        return this;
-    } 
+    } */
 
     public ArrayList<Rooms> getRooms(){return rooms;}
     public ArrayList<Instructor> getInstructors(){return instructor;}
     public ArrayList<Course> getCourse(){return course;}
     public ArrayList<Department> getDept(){return dept;}
     public ArrayList<ClassTime> getClassTime(){return classtime;}
-    public int getNumberOfClasses(){return this.numberOfClasses;}*/
+    public int getNumberOfClasses(){return this.numberOfClasses;}
 
-    public   Data() throws  SQLException { initialize();}
-    private Data initialize() throws SQLException {
+    public   Dbmgr() throws  SQLException { initialize();}
+    private Dbmgr initialize() throws SQLException {
         Connection connection = DriverManager.getConnection(url);
         rooms = selectRooms(connection);
         classtime = selectClassTime(connection);
@@ -72,16 +73,16 @@ public class Data {
         dept.forEach(x -> numberOfClasses += x.getCourses().size());
         return this;
     }
-    public ArrayList<Rooms> selecRooms(Connection connection) throws SQLException{
+    public ArrayList<Rooms> selectRooms(Connection connection) throws SQLException{
         ArrayList<Rooms> rooms = new ArrayList<Rooms>();
         ResultSet roomRS = connection.createStatement().executeQuery("select *from room");
-        while (roomRS.next()) rooms.add(new Room(roomRS.getString("number"), roomRS.getInt("seating_capacity")));
+        while (roomRS.next()) rooms.add(new Rooms(roomRS.getString("number"), roomRS.getInt("seating_capacity")));
         return rooms;
     }
-    public ArrayList<ClassTime> selectClassTimes(Connection connection) throws SQLException{
-        ArrayList<ClassTime> classtime = new ArrayList<Classtime>();
+    public ArrayList<ClassTime> selectClassTime(Connection connection) throws SQLException{
+        ArrayList<ClassTime> classtime = new ArrayList<ClassTime>();
         ResultSet classTimeRS = connection.createStatement().executeQuery("select * from class_time");
-        while (classTimeRS.next()) classtime.add(new classtime(classTimeRS.getString("id"), classTimeRS.getInt("time")));
+        while (classTimeRS.next()) classtime.add(new ClassTime(classTimeRS.getString("id"), classTimeRS.getInt("time")));
         return classtime;
     }
     public ArrayList<Instructor> selectInstructors(Connection connection) throws SQLException{

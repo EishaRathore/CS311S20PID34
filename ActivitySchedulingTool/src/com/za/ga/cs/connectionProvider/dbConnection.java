@@ -8,7 +8,7 @@ public static Connection getCon() {
 		
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/activityscheduling","root","");
-		//JOptionPane.showMessageDialog(null, "connected to database");
+		JOptionPane.showMessageDialog(null, "connected to database");
 		return con;
 	}catch(Exception e) {
 		 JOptionPane.showMessageDialog(null, "inside catch ");

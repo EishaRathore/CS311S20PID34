@@ -3,11 +3,11 @@ package com.za.ga.cs;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
-import com.za.ga.cs.connectionProvider.Data;
+import com.za.ga.cs.connectionProvider.Dbmgr;
 
 public class GeneticAlgorithm {
-	 private Data data;
-	    public GeneticAlgorithm(Data data){this.data = data;}
+	 private Dbmgr data;
+	    public GeneticAlgorithm(Dbmgr data){this.data = data;}
 	    public Population evolve(Population population){
 	        return mutatePopulation(crossoverPopulation(population));
 	    }

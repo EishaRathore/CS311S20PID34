@@ -3,11 +3,11 @@ package com.za.ga.cs;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
-import com.za.ga.cs.connectionProvider.Data;
+import com.za.ga.cs.connectionProvider.Dbmgr;
 
 public class Population {
 	 private final ArrayList<Schedule> schedules;
-	    public Population(final int size, final Data data){
+	    public Population(final int size, final Dbmgr data){
 	        schedules=new ArrayList<Schedule>(size);
 	        IntStream.range(0,size).forEach(x -> schedules.add(new Schedule(data).initialize()));
 

@@ -2,7 +2,7 @@ package com.za.ga.cs;
 
 import java.util.ArrayList;
 
-import com.za.ga.cs.connectionProvider.Data;
+import com.za.ga.cs.connectionProvider.Dbmgr;
 import com.za.ga.cs.domain.Class;
 import com.za.ga.cs.domain.Department;
 
@@ -12,9 +12,9 @@ public class Schedule{
 	    private double fitness=-1;
 	    private int classNum = 0;
 	    private int numbOfConflicts=0;
-	    private  Data data;
-	    public Data getData(){return data;}
-	    public Schedule( Data  data){
+	    private  Dbmgr data;
+	    public Dbmgr getData(){return data;}
+	    public Schedule( Dbmgr  data){
 	        this.data= data;
 	        classes = new ArrayList<Class>(data.getNumberOfClasses());
 	    }
