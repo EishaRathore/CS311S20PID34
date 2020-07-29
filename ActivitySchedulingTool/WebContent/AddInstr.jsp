@@ -86,6 +86,22 @@
        
     </section>
     <!--Header End-->
+     <!-- Background Section Start-->
+    <section id="background">
+        <div class="background container">
+        <form action="AddInstructorAction.jsp" method="POST">
+            <div class="wrap">
+     <h2>Add Instructor</h2>
+
+        <input type="text"  name="InstructorName" placeholder="Instructor Name" required>   
+        <input type="text"  name="InstructorName" placeholder="Course Name" required>        
+         <input type="submit" name="submit" href="#" value="Submit">
+
+   </div>
+   </form>
+   </div>
+   </section>
+ <!-- Background Section End-->
    <section id="Mission">
       <div class="Mission container">
         <div class="Mission">
@@ -119,21 +135,6 @@
       </div>
       </div>
     
-     <!-- Background Section Start-->
-    <section id="background">
-        <div class="background container">
-        <form action="AddInstructorAction.jsp" method="POST">
-            <div class="wrap">
-     <h2>Add Instructor</h2>
-
-        <input type="text"  name="InstructorName" placeholder="Instructor Name" required>        
-         <input type="submit" name="submit" href="#" value="Submit">
-
-   </div>
-   </form>
-   </div>
-   </section>
- <!-- Background Section End-->
  
  <!--Footer Start-->
 <section id="footer">
