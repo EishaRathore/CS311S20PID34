@@ -64,7 +64,7 @@ public class Dbmgr {
 
     public   Dbmgr() throws  SQLException { initialize();}
     private Dbmgr initialize() throws SQLException {
-        Connection connection = DriverManager.getConnection("");
+        Connection connection = dbConnection.getCon();
         rooms = selectRooms(connection);
         classtime = selectClassTime(connection);
         instructor =selectInstructors(connection);
@@ -75,20 +75,20 @@ public class Dbmgr {
     }
     public ArrayList<Rooms> selectRooms(Connection connection) throws SQLException{
         ArrayList<Rooms> rooms = new ArrayList<Rooms>();
-        ResultSet roomRS = connection.createStatement().executeQuery("select *from room");
-        while (roomRS.next()) rooms.add(new Rooms(roomRS.getString("number"), roomRS.getInt("seating_capacity")));
+        ResultSet roomRS = connection.createStatement().executeQuery("select *from rooms");
+        while (roomRS.next()) rooms.add(new Rooms(roomRS.getString("room_no"), roomRS.getString("room_capacity")));
         return rooms;
     }
     public ArrayList<ClassTime> selectClassTime(Connection connection) throws SQLException{
         ArrayList<ClassTime> classtime = new ArrayList<ClassTime>();
-        ResultSet classTimeRS = connection.createStatement().executeQuery("select * from class_time");
-        while (classTimeRS.next()) classtime.add(new ClassTime(classTimeRS.getString("id"), classTimeRS.getInt("time")));
+        ResultSet classTimeRS = connection.createStatement().executeQuery("select * from meetingtime");
+        while (classTimeRS.next()) classtime.add(new ClassTime(classTimeRS.getString("id"), classTimeRS.getString("meeting_time")));
         return classtime;
     }
     public ArrayList<Instructor> selectInstructors(Connection connection) throws SQLException{
         ArrayList<Instructor> instructor = new ArrayList<Instructor>();
-        ResultSet instructorsRS = connection.createStatement().executeQuery("select * from instructor");
-        while ( instructorsRS.next()) instructor.add(new Instructor(instructorsRS.getString("id"),instructorsRS.getString("name")));
+        ResultSet instructorsRS = connection.createStatement().executeQuery("select * from faculty");
+        while ( instructorsRS.next()) instructor.add(new Instructor(instructorsRS.getInt("id"),instructorsRS.getString("Iname")));
         return instructor;
     }
     

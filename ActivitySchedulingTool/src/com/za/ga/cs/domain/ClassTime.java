@@ -2,15 +2,15 @@ package com.za.ga.cs.domain;
 
 public class ClassTime {
 	    private String id;
-	    private int time;
-	    public ClassTime(String id, int i){
+	    private String time;
+	    public ClassTime(String id, String string){
 	        this.id=id;
-	        this.time=i;
+	        this.time=string;
 	    }
 	    public String getId(){
 	        return id;
 	    }
-	    public int getTime(){
+	    public String getTime(){
 	        return time;
 	    }
 }
