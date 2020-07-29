@@ -102,14 +102,22 @@ PreparedStatement st;
        <input type="text"  name="name" placeholder="Course Name.." required>  
         <input type="text" name="CourseCode" placeholder="Course Code.." required>
         <input type="number" name="Max" placeholder="Max # of student.." required>
-        <select>
-      
+        <form action="">
+        Menu:<select>
+        <%
+        try{
 	    while(rs.next()){
 		%><option value="<%rs.getString("dname")%>">
 			<%rs.getString("dname")%>	
 		</option>
 		<%
-	}
+
+            }
+                    catch(Exception e){
+                out.print(e.getMeddage());
+                    }
+        %>
+ 
         </select>
 
          <input type="submit" name="submit" href="#" value="Submit">
