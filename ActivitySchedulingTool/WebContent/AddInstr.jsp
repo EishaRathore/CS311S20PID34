@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
- <link rel="stylesheet" href="Addsub.css">
+ <link rel="stylesheet" href="AddCourse.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Add Instructor</title>
 </head>
