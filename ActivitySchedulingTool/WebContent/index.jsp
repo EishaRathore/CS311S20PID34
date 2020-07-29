@@ -42,7 +42,7 @@ try {
 	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept(id int NOT NULL AUTO_INCREMENT,dname varchar(255),PRIMARY KEY(id))");
 	statement.executeUpdate("CREATE TABLE IF NOT EXISTS faculty(id int NOT NULL AUTO_INCREMENT,Iname varchar(255),CourseID varchar(255),PRIMARY KEY(id),FOREIGN KEY (CourseID) REFERENCES course(id))");
 	statement.executeUpdate("CREATE TABLE IF NOT EXISTS meetingtime(id int NOT NULL AUTO_INCREMENT,meeting_time varchar(255),PRIMARY KEY(id))");
-     statement.executeUpdate("CREATE TABLE IF NOT EXISTS userdata(id int NOT NULL AUTO_INCREMENT,course_instructor varchar(255),course_numb int,PRIMARY KEY(id)),FOREIGN KEY (course_numb) REFERENCES course(code)");
+     statement.executeUpdate("CREATE TABLE IF NOT EXISTS userdata(id int NOT NULL AUTO_INCREMENT,course_instructor varchar(255),course_numb int,PRIMARY KEY(id)),FOREIGN KEY (course_numb) REFERENCES course(code),FOREIGN KEY (course_instructor) REFERENCES faculty(id)");
 	  out.println("Successfully created test_table");
 statement.close();
 }
