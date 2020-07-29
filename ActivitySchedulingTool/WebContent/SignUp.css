@@ -1,5 +1,3 @@
-@charset "ISO-8859-1";
-
 body{
 	 margin: 0;
     padding: 0;
@@ -113,14 +111,6 @@ input{
   font-weight: bold;
   font-size: 16px;
 }
-
-#doubleoverlay.active{
-	opacity:1;
-	pointer-events:all;
-}
-
-
-
 
   #overlyArea{
     position: absolute;

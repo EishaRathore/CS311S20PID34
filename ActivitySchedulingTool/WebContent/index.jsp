@@ -36,7 +36,7 @@ try {
 	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test5","root","");
 	out.println("databaes");
 	 Statement statement=con.createStatement();
-	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS userdata(id int NOT NULL AUTO_INCREMENT,firstname varchar(255),lastname varchar(255),email varchar(255),pass varchar(255),cpass varchar(255),mblnum varchar(255),role varchar(255),PRIMARY KEY(id))");
+	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS userdata(id int NOT NULL AUTO_INCREMENT,fName varchar(255),lName varchar(255),email varchar(255),password varchar(255),cpassword varchar(255),mbl varchar(255),role varchar(255),PRIMARY KEY(id))");
 	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS rooms(id int NOT NULL AUTO_INCREMENT,room_no varchar(255),room_capacity varchar(255),PRIMARY KEY(id))");
 	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS course(id int NOT NULL AUTO_INCREMENT,Cname varchar(255),code varchar(255),seating_capacity varchar(255),departmentID varchar(255),PRIMARY KEY(id),FOREIGN KEY (departmentID) REFERENCES dept(id))");
 	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept(id int NOT NULL AUTO_INCREMENT,dname varchar(255),PRIMARY KEY(id))");
