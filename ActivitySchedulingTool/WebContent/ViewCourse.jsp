@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
- <title>View Table</title>
+ <title>View Course</title>
     <link  rel="stylesheet" type="text/css" href="Addtable.css">
 </head>
 <body>
