@@ -38,9 +38,9 @@ try {
 	 Statement statement=con.createStatement();
 	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS userdata(id int NOT NULL AUTO_INCREMENT,firstname varchar(255),lastname varchar(255),email varchar(255),pass varchar(255),cpass varchar(255),mblnum varchar(255),role varchar(255),PRIMARY KEY(id))");
 	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS rooms(id int NOT NULL AUTO_INCREMENT,room_no varchar(255),room_capacity varchar(255),PRIMARY KEY(id))");
-	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS course(id int NOT NULL AUTO_INCREMENT,Cname varchar(255),code varchar(255),seating_capacity varchar(255),PRIMARY KEY(id))");
+	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS course(id int NOT NULL AUTO_INCREMENT,Cname varchar(255),code varchar(255),seating_capacity varchar(255),departmentID varchar(255),PRIMARY KEY(id),FOREIGN KEY (departmentID) REFERENCES dept(id))");
 	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept(id int NOT NULL AUTO_INCREMENT,dname varchar(255),PRIMARY KEY(id))");
-	statement.executeUpdate("CREATE TABLE IF NOT EXISTS faculty(id int NOT NULL AUTO_INCREMENT,Iname varchar(255),PRIMARY KEY(id))");
+	statement.executeUpdate("CREATE TABLE IF NOT EXISTS faculty(id int NOT NULL AUTO_INCREMENT,Iname varchar(255),CourseID varchar(255),PRIMARY KEY(id),FOREIGN KEY (CourseID) REFERENCES course(id))");
 	statement.executeUpdate("CREATE TABLE IF NOT EXISTS meetingtime(id int NOT NULL AUTO_INCREMENT,meeting_time varchar(255),PRIMARY KEY(id))");
 	  out.println("Successfully created test_table");
 statement.close();
