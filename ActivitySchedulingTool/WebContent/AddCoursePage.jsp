@@ -10,6 +10,11 @@
     <title>Add Course</title>
 </head>
 <body>
+<%
+Connection con=dbConnection.getCon();
+PreparedStatement st;
+ ResultSet rs=st.executeQuery("Select dname from dept where id like (Select id from dept where Depart=dname)");
+%>
     <!--Header Start-->
     <section id="header">
         
@@ -98,6 +103,13 @@
         <input type="text" name="CourseCode" placeholder="Course Code.." required>
         <input type="number" name="Max" placeholder="Max # of student.." required>
         <select>
+      
+	    while(rs.next()){
+		%><option value="<%rs.getString("dname")%>">
+			<%rs.getString("dname")%>	
+		</option>
+		<%
+	}
         </select>
 
          <input type="submit" name="submit" href="#" value="Submit">
