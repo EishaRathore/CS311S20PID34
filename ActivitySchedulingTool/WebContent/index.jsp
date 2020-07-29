@@ -42,6 +42,8 @@ try {
 	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept(id int NOT NULL AUTO_INCREMENT,dname varchar(255),PRIMARY KEY(id))");
 	statement.executeUpdate("CREATE TABLE IF NOT EXISTS faculty(id int NOT NULL AUTO_INCREMENT,Iname varchar(255),CourseID varchar(255),PRIMARY KEY(id),FOREIGN KEY (CourseID) REFERENCES course(id))");
 	statement.executeUpdate("CREATE TABLE IF NOT EXISTS meetingtime(id int NOT NULL AUTO_INCREMENT,meeting_time varchar(255),PRIMARY KEY(id))");
+     statement.executeUpdate("CREATE TABLE IF NOT EXISTS course_instructor(id int NOT NULL AUTO_INCREMENT,course_instructor varchar(255),course_numb int,PRIMARY KEY(id)),FOREIGN KEY (course_numb) REFERENCES course(code),FOREIGN KEY (course_instructor) REFERENCES faculty(id)");
+      statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept_course(id int NOT NULL AUTO_INCREMENT,dept_name varchar(255),course_numb int,PRIMARY KEY(id)),FOREIGN KEY (course_numb) REFERENCES course(code),FOREIGN KEY (dept_name) REFERENCES dept(id)");
 	  out.println("Successfully created test_table");
 statement.close();
 }
