@@ -6,10 +6,19 @@
 String Ccode = request.getParameter("CourseCode");
 String Course_name = request.getParameter("name");
 String Cmax = request.getParameter("Max");
+String Depart = request.getParameter("Depart");
 try{
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
+    ResultSet rs=st.executeQuery("Select dname from dept where id like (Select id from dept where Depart=dname)")
+	while(rs.next()){
+		<%<option value="<%rs.getString("dname")%>">
+			<%rs.getString("dname")%>	
+		</option>
+		%>
+	}
 	st=con.prepareStatement("INSERT INTO course(Cname,code,seating_capacity) values('"+Course_name+"','"+Ccode+"','"+Cmax+"')");
+	
 	int x=st.executeUpdate();
 	if(x>0){
 		out.println("Added successfuly!");
