@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@ page import="java.sql.*" %>
+    <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,17 +19,17 @@
         <tr>
                 <%
                 try{
-                    Class.forName("SQL").newInstance();
-                    Connection conn=DriverManager.getConnection("localhostname");
-                    String query="query";
-                    String stm=conn.createStatement();
-                    ResultSet rs=stm.executeQuery(query);
+                  Connection conn= dbConnection.getCon();
+                  PreparedStatement st;
+              	st=conn.prepareStatement("select * from course");
+              	
+                    ResultSet rs=st.executeQuery();
                     while(rs.next())
                     {
                         %>
-                        <td><%=rs.getString("column")%></td>
-                        <td><%=rs.getString("column")%></td>
-                        <td><%=rs.getInt("column")%></td>
+                        <td><%=rs.getString("Cname")%></td>
+                        <td><%=rs.getString("code")%></td>
+                        <td><%=rs.getInt("seating_capacity")%></td>
                         <%
                     }
                 }

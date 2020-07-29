@@ -19,9 +19,13 @@ public class Driver {
       public static void main(String args []){
         
        Driver driver= new Driver();
-       driver.data=new Dbmgr();
+       try {
+		driver.data=new Dbmgr();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
        int generationNumber=0;
-       driver.printAvailableData();
+     //  driver.printAvailableData();
       // System.out.println(">Generation # "+generationNumber);
        //System.out.println("     Schedule # |                                    ");
        //System.out.println("Classes [dept,class,room,instructor,Class-Time]      ");
@@ -117,11 +121,11 @@ public class Driver {
                 System.out.println();
         }
         private void printCourse(){
-                System.out.println("course: |name  |max # of students |qualified instructors");
-                System.out.println("--------------------------------------------------------------------------");
+               // System.out.println("course: |name  |max # of students |qualified instructors");
+              //  System.out.println("--------------------------------------------------------------------------");
                 data.getCourse().forEach( x-> System.out.println(x.getNumber() + "\t|"+ 
                         x.getName()+ "\t|"+ x.getmaxNoOfStudent()+"\t\t  |"+x.getInstructors()));
-                System.out.println(); 
+               // System.out.println(); 
         }
         private void printRoom(){
                 System.out.println("room: |seating capacity");
