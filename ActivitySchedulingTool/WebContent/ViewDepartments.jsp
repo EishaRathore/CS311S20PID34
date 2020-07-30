@@ -6,35 +6,30 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
- <title>View Course</title>
- 
+ <title>View Department</title>
     <link  rel="stylesheet" type="text/css" href="Addtable.css">
 </head>
 <body>
  <table border="table table-bordered table-stripped table-condensed" align="center">
         <tr>
-        <th>Course Id</th>
-            <th>Course Name</th>
-            <th>Course Code</th>
-            <th>Max # of students</th>
+            <th>Id</th>
+            <th>Department Name</th>
+           
         </tr>
         <tr>
                 <%
                 try{
                   Connection conn= dbConnection.getCon();
                   PreparedStatement st;
-              	st=conn.prepareStatement("select * from course");
+              	st=conn.prepareStatement("select * from dept");
               	
                     ResultSet rs=st.executeQuery();
                     while(rs.next())
                     {
                         %>
-                        <tr>
                         <td><%=rs.getString("id")%></td>
-                        <td><%=rs.getString("Cname")%></td>
-                        <td><%=rs.getString("code")%></td>
-                        <td><%=rs.getInt("seating_capacity")%></td>
-                        </tr>
+                        <td><%=rs.getString("dname")%></td>
+                       
                         <%
                     }
                 }

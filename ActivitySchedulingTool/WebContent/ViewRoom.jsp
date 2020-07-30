@@ -1,40 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-     <%@ page import="java.sql.*" %>
+       <%@ page import="java.sql.*" %>
     <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
- <title>View Course</title>
- 
-    <link  rel="stylesheet" type="text/css" href="Addtable.css">
+<title>Insert title here</title>
 </head>
 <body>
- <table border="table table-bordered table-stripped table-condensed" align="center">
+<table border="table table-bordered table-stripped table-condensed" align="center">
         <tr>
-        <th>Course Id</th>
-            <th>Course Name</th>
-            <th>Course Code</th>
-            <th>Max # of students</th>
+            <th>Id</th>
+            <th>Room No</th>
+            <th>Seating Capacity</th>
         </tr>
         <tr>
                 <%
                 try{
                   Connection conn= dbConnection.getCon();
                   PreparedStatement st;
-              	st=conn.prepareStatement("select * from course");
+              	st=conn.prepareStatement("select * from rooms");
               	
                     ResultSet rs=st.executeQuery();
                     while(rs.next())
                     {
                         %>
-                        <tr>
-                        <td><%=rs.getString("id")%></td>
-                        <td><%=rs.getString("Cname")%></td>
-                        <td><%=rs.getString("code")%></td>
-                        <td><%=rs.getInt("seating_capacity")%></td>
-                        </tr>
+                        <td><%=rs.getInt("id")%></td>
+                        <td><%=rs.getString("room_no")%></td>
+                        <td><%=rs.getString("room_capacity")%></td>
+                        
                         <%
                     }
                 }
@@ -46,6 +41,5 @@
         </tr>
 
     </table>
-    
 </body>
 </html>

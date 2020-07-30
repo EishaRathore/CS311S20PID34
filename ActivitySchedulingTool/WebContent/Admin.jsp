@@ -30,7 +30,7 @@
             <div class="sub-menu-1">
                 <ul>
                     <li><i class="fa fa-plus"></i><a href="AddCourse.html">Add Course</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Course List</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewCourse.jsp">Course List</a></li>
                 </ul>
             </div>
         </li>
@@ -41,10 +41,10 @@
                     <li><i class="fa fa-plus"></i><a href="AddRoom.html">Add Rooms</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddDept.jsp">Add Department</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddTime.html">Add Class Time</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Faculty List</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Rooms List</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Department List</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Class Time List</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewRoom.jsp">Rooms List</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewDepartments.jsp">Department List</a></li>
+                 <!--  <li><i class="fa fa-list"></i><a href="#">Class Time List</a></li> -->  
                 </ul>
             </div>
         </li>

@@ -81,7 +81,7 @@ public class Driver {
            //       System.out.println(data.getClassTime().get(classTimeIndex).getTime()+"("+data.getClassTime().get(classTimeIndex).getId()+") ");
                   classNumb++;        
           });
-          if(schedule.getFitness()==1) System.out.println("> Solution Found in "+ (generation+1)+" generations");
+       //   if(schedule.getFitness()==1) System.out.println("> Solution Found in "+ (generation+1)+" generations");
      //     System.out.println("------------------------------------------------------------");
      //     System.out.println("------------------------------------------------------------");     
   }
@@ -109,41 +109,6 @@ public class Driver {
         
         
     }*/
-        private void printDept(){
-                System .out.println("department: | "+"courses offered");
-                System.out.println("---------------------------------");
-                data.getDept().forEach(x -> {
-                        StringBuffer valueSB  = new StringBuffer();
-                        valueSB.insert(0,x.getCourses());
-                        System.out.println(x.getName()+"\t   | "+valueSB);
-
-                });
-                System.out.println();
-        }
-        private void printCourse(){
-               // System.out.println("course: |name  |max # of students |qualified instructors");
-              //  System.out.println("--------------------------------------------------------------------------");
-                data.getCourse().forEach( x-> System.out.println(x.getNumber() + "\t|"+ 
-                        x.getName()+ "\t|"+ x.getmaxNoOfStudent()+"\t\t  |"+x.getInstructors()));
-               // System.out.println(); 
-        }
-        private void printRoom(){
-                System.out.println("room: |seating capacity");
-                System.out.println("-----------------------");
-                data.getRooms().forEach(x -> System.out.println(x.getNumber()+ "    |"+ x.getSeatingCapacity()));
-                System.out.println();
-        }
-        private void printInstructor(){
-                System.out.println("instructor: |name             ");
-                System.out.println("-------------------------------");
-                data.getInstructors().forEach(x -> System.out.println(x.getId()+ "         |"+ x.getName()));
-                System.out.println();
-        }
-        private void printclassTime(){
-                System.out.println("class time: |time ");
-                System.out.println("------------------------------");
-                data.getClassTime().forEach(x -> System.out.println(x.getId() + "            |" + x.getTime()));
-                System.out.println();
-        }
+       
 
 }

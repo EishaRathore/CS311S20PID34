@@ -5,6 +5,7 @@
 <%
 String Iname = request.getParameter("InstructorName");
 try{
+	
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
 	st=con.prepareStatement("INSERT INTO faculty(Iname) values('"+Iname+"')");

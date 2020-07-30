@@ -76,7 +76,7 @@ public class Dbmgr {
     public ArrayList<Rooms> selectRooms(Connection connection) throws SQLException{
         ArrayList<Rooms> rooms = new ArrayList<Rooms>();
         ResultSet roomRS = connection.createStatement().executeQuery("select *from rooms");
-        while (roomRS.next()) rooms.add(new Rooms(roomRS.getString("room_no"), roomRS.getString("room_capacity")));
+        while (roomRS.next()) rooms.add(new Rooms(roomRS.getString("room_no"), roomRS.getInt("room_capacity")));
         return rooms;
     }
     public ArrayList<ClassTime> selectClassTime(Connection connection) throws SQLException{

@@ -17,6 +17,29 @@
     align-items: center;
     justify-content: center;
 }
+select{
+background: rgb(10,19,11);
+background: radial-gradient(circle,crimson 44%,rgba(10,19,11,0) 91%);
+	color:#fff;
+	padding:6px;
+	width:325px;
+	height:35px;
+	border: 1px solid #eb234b;
+	font-size:20px;
+	box-shadow:0 5px 25px rgba(0,0,0,.5);
+	margin-bottom:16px;
+	outline:none;
+     border-radius:5px;
+}
+
+option{
+	background:#eb234b;
+	outline:none;
+	box-shadow:0 5px 25px rgba(0,0,0,.5);
+	font-size:20px;
+	color:#fff;
+	border: 1px solid #eb234b;
+}
 
 /* background section*/
 .content-table{

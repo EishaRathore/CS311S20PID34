@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import = "java.sql.*" %>
+<%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,11 +12,6 @@
     <title>Add Course</title>
 </head>
 <body>
-<%
-Connection con=dbConnection.getCon();
-PreparedStatement st;
- ResultSet rs=st.executeQuery("Select dname from dept where id like (Select id from dept where Depart=dname)");
-%>
     <!--Header Start-->
     <section id="header">
         
@@ -99,26 +96,32 @@ PreparedStatement st;
             <div class="wrap">
             
      <h2>Add Course</h2>
-       <input type="text"  name="name" placeholder="Course Name.." required>  
-        <input type="text" name="CourseCode" placeholder="Course Code.." required>
-        <input type="number" name="Max" placeholder="Max # of student.." required>
-        <form action="">
-        Menu:<select>
+     <select  required>
+        <option disabled selected value="-1">-- select Department Name --  </option>
         <%
         try{
+        	Connection conn=dbConnection.getCon();
+        	PreparedStatement st;
+        	Statement stmt=conn.createStatement();
+        	 ResultSet rs=stmt.executeQuery("Select dname from dept");
 	    while(rs.next()){
-		%><option value="<%rs.getString("dname")%>">
-			<%rs.getString("dname")%>	
+		%><option value="<%=rs.getString("dname")%>">
+			<%=rs.getString("dname")%>	
 		</option>
 		<%
 
-            }
+            } }
                     catch(Exception e){
-                out.print(e.getMeddage());
+                out.print(e.getMessage());
                     }
         %>
  
         </select>
+       <input type="text"  name="name" placeholder="Course Name.." required>  
+        <input type="text" name="CourseCode" placeholder="Course Code.." required>
+        <input type="number" name="Max" placeholder="Max # of student.." required>
+      <!-- <form action=""> -->  
+        
 
          <input type="submit" name="submit" href="#" value="Submit">
    </div>
