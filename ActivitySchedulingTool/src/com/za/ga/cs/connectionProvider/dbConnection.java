@@ -3,14 +3,14 @@ import java.sql.*;
 
 import javax.swing.JOptionPane;
 public class dbConnection {
-	public static void main(String[] args) throws Exception{
+	public static void main() throws Exception{
 		getCon();
 	}
 public static Connection getCon() {
 	try {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test5","root","");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test9","root","");
 		System.out.println( "connected to database");
 		return con;
 	}catch(Exception e) {

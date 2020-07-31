@@ -2,6 +2,8 @@
     pageEncoding="ISO-8859-1"%>
     <%@ page import="java.sql.*" %>
     <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
+     <%@page import="com.za.ga.cs.connectionProvider.createDb" %>
+     <%@page import="com.za.ga.cs.connectionProvider.InsertIntoDb" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,41 +17,12 @@
 <%
 
 try {
-	Class.forName("com.mysql.jdbc.Driver");
-	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306","root","");
-Statement statement = con.createStatement();
-String query = "CREATE DATABASE IF NOT EXISTS test5";
-statement.executeUpdate(query);
-out.println("Database test created sucessfully.");
-statement.close();
+	createDb.main();
+	InsertIntoDb.main();
 }
 catch (Exception e)
 {
-out.println("An error occurred.");
-}
-
-%>
-<%
-
-try {
-	Class.forName("com.mysql.jdbc.Driver");
-	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test5","root","");
-	out.println("databaes");
-	 Statement statement=con.createStatement();
-	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS userdata(id int NOT NULL AUTO_INCREMENT,fName varchar(255),lName varchar(255),email varchar(255),password varchar(255),cpassword varchar(255),mbl varchar(255),role varchar(255),PRIMARY KEY(id))");
-	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS rooms(id int NOT NULL AUTO_INCREMENT,room_no varchar(255),room_capacity varchar(255),PRIMARY KEY(id))");
-	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS course(id int NOT NULL AUTO_INCREMENT,Cname varchar(255),code varchar(255),seating_capacity varchar(255),departmentID varchar(255),PRIMARY KEY(id),FOREIGN KEY (departmentID) REFERENCES dept(id))");
-	 statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept(id int NOT NULL AUTO_INCREMENT,dname varchar(255),PRIMARY KEY(id))");
-	statement.executeUpdate("CREATE TABLE IF NOT EXISTS faculty(id int NOT NULL AUTO_INCREMENT,Iname varchar(255),CourseID varchar(255),PRIMARY KEY(id),FOREIGN KEY (CourseID) REFERENCES course(id))");
-	statement.executeUpdate("CREATE TABLE IF NOT EXISTS meetingtime(id int NOT NULL AUTO_INCREMENT,meeting_time varchar(255),PRIMARY KEY(id))");
-     statement.executeUpdate("CREATE TABLE IF NOT EXISTS course_instructor(id int NOT NULL AUTO_INCREMENT,course_instructor varchar(255),course_numb int,PRIMARY KEY(id)),FOREIGN KEY (course_numb) REFERENCES course(code),FOREIGN KEY (course_instructor) REFERENCES faculty(id)");
-      statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept_course(id int NOT NULL AUTO_INCREMENT,dept_name varchar(255),course_numb int,PRIMARY KEY(id)),FOREIGN KEY (course_numb) REFERENCES course(code),FOREIGN KEY (dept_name) REFERENCES dept(id)");
-	  out.println("Successfully created test_table");
-statement.close();
-}
-catch (Exception e)
-{
-out.println("An error occurred.");
+out.println("An error occurred calling createDb function.");
 }
 
 %>

@@ -8,10 +8,11 @@
  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="AddCourse.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="jQuery.js"></script>
     <title>Add Course</title>
 </head>
-<body>
+<body onload="check()">
     <!--Header Start-->
     <section id="header">
         
@@ -96,8 +97,8 @@
             <div class="wrap">
             
      <h2>Add Course</h2>
-     <select  required>
-        <option disabled selected value="-1">-- select Department Name --  </option>
+     <select class="dropHolder"  required>
+        <option  disabled selected value="-1">-- select Department Name --  </option>
         <%
         try{
         	Connection conn=dbConnection.getCon();

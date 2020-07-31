@@ -17,30 +17,81 @@
     align-items: center;
     justify-content: center;
 }
-select{
-background: rgb(10,19,11);
-background: radial-gradient(circle,crimson 44%,rgba(10,19,11,0) 91%);
-	color:#fff;
-	padding:6px;
-	width:325px;
-	height:35px;
-	border: 1px solid #eb234b;
-	font-size:20px;
-	box-shadow:0 5px 25px rgba(0,0,0,.5);
-	margin-bottom:16px;
-	outline:none;
-     border-radius:5px;
-}
 
+select:hover::after {
+    animation-play-state: paused;
+  }
+
+/*--Drop down section*/
 option{
 	background:#eb234b;
 	outline:none;
 	box-shadow:0 5px 25px rgba(0,0,0,.5);
 	font-size:20px;
-	color:#fff;
-	border: 1px solid #eb234b;
+	color:#000;
+	
+	
+}
+.select::after{
+  content: '\25bc';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: rgb(220, 20, 60);
+  pointer-events: none;
+    border:none;
+}
+.select:hover::after{
+  color: #1b121a;
+  border:none;
+}
+.select:hover{
+  color: #1b121a;
+    border:none;
+}
+.dropHolder {
+    width: 320px;
+    height: 50px;
+   padding: 0 0 0 20px;
+    border-radius: 10px;
+    font: 18px arial;
+    color: black;
+    border: none;
+    animation: move 3s ease-in-out infinite;
+    position: relative;
+    margin-top:0px;
+    
+  }
+  
+.dropHolder:hover, .dropHolder:hover::after {
+    animation-play-state: paused;
+     border: none;
+  }
+  
+ .dropHolder option::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0);
+    display: block;
+    top: 100px;
+    left: 37px;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    animation: moveShadow 3s ease-in-out infinite;
+  }
+ 
+
+.dropHolder {
+  background: linear-gradient(crimson , #3d2125);
 }
 
+ 
+/*--Drop down section end*/
 /* background section*/
 .content-table{
     border-collapse: collapse;
@@ -721,7 +772,7 @@ z-index: -1;
 } 
 
 /*media Query for tablet*/
-@media only screen and (min-width:10000px){
+@media only screen and (min-width:100px){
     h1.SectionTitle{
         font-size: 6rem;
         
@@ -804,3 +855,28 @@ z-index: -1;
     color: whitesmoke;
 }
 }
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveShadow {
+  0%,
+  100% {
+    transform: translateY(10px);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+ 

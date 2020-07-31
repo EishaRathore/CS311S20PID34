@@ -30,7 +30,8 @@ option{
 	box-shadow:0 5px 25px rgba(0,0,0,.5);
 	font-size:20px;
 	color:#000;
-	border: 1px solid #eb234b;
+	
+	
 }
 .select::after{
   content: '\25bc';
@@ -41,12 +42,15 @@ option{
   padding: 0 1em;
   background: rgb(220, 20, 60);
   pointer-events: none;
+    border:none;
 }
 .select:hover::after{
   color: #1b121a;
+  border:none;
 }
 .select:hover{
   color: #1b121a;
+    border:none;
 }
 .dropHolder {
     width: 320px;
@@ -55,16 +59,16 @@ option{
     border-radius: 10px;
     font: 18px arial;
     color: black;
-    position: relative;
-    box-sizing: border-box;
-    border: 1px solid #1b121a;
+    border: none;
     animation: move 3s ease-in-out infinite;
     position: relative;
     margin-top:0px;
+    
   }
   
 .dropHolder:hover, .dropHolder:hover::after {
     animation-play-state: paused;
+     border: none;
   }
   
  .dropHolder option::after {

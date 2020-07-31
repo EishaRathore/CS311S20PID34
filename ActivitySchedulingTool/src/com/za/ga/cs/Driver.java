@@ -5,6 +5,7 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 
 import com.za.ga.cs.connectionProvider.Dbmgr;
+import com.za.ga.cs.connectionProvider.dbConnection;
 
 public class Driver {
 	 public static final int POPULATION_SIZE=9;
@@ -15,16 +16,126 @@ public class Driver {
      private Dbmgr data;
 	private int scheduleNumb=0;
 	private int classNumb = 1;
-
+	  
       public static void main(String args []){
-        
+       System.out.println("driver main running");
        Driver driver= new Driver();
-       try {
+       System.out.println("before stmt running");
 		driver.data=new Dbmgr();
-	} catch (SQLException e) {
-		e.printStackTrace();
-	}
-       int generationNumber=0;
+		System.out.println("before stmt1 running");
+		//driver.printAvailableData();
+		System.out.println("before stmt running");
+       GeneticAlgorithm geneticAlgorithm=new GeneticAlgorithm(driver.data);
+       System.out.println("GA running");
+       Population population=new Population(Driver.POPULATION_SIZE, driver.data).sortByFitness();
+       System.out.println("GA1 running");
+     int t=0;
+       while (population.getSchedule().get(0).getFitness() != 1.0) {
+    	   population = geneticAlgorithm.evolve(population).sortByFitness();
+    	   t++;
+       }
+       System.out.println("while loop runned for " + t);
+       
+       driver.printTimeTable(population.getSchedule().get(0));
+       driver.printTimeTable(population.getSchedule().get(1));
+      }
+      
+      public static void generateTimeTable() {
+      Driver driver=new Driver();
+      driver.data=new Dbmgr();
+    //  driver.printAvailableData();
+      
+      GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(driver.data);
+      Population population = new Population(Driver.POPULATION_SIZE, driver.data).sortByFitness();
+      
+      int t=0;
+      while(population.getSchedule().get(0).getFitness()!=1.0){
+          population = geneticAlgorithm.evolve(population).sortByFitness();
+          t++;
+          System.out.println("inside while "+t);
+      }
+      
+      System.out.println("while loop runned for "+t);
+      try {
+    	  System.out.println(population.getSchedule().get(0).getClasses().get(20).getInstructor().getId()); 
+      }catch(NullPointerException e) {
+			System.out.println("NullPointerException thrown!");
+		}
+      
+      driver.printTimeTable(population.getSchedule().get(0));
+      //driver.printTimeTable(population.getSchedules().get(1));
+  
+  }
+  private void printTimeTable(Schedule schedule){
+      
+      Connection conn= dbConnection.getCon();
+      Statement stmt=null;
+      String str=null;
+      
+      str="truncate table class";
+       try {
+          stmt=conn.createStatement();
+          stmt.executeUpdate(str);
+          }catch(Exception e){
+              JOptionPane.showMessageDialog(null, "error in truncating");
+              JOptionPane.showMessageDialog(null, e);
+          }
+      
+       System.out.println("before forloop");
+      for (int i=0;i<schedule.getClasses().size();i++){
+          str="insert into class (classId , departmentId , courseId, instructorId , classTImeId, classroom_id) VALUES ('"+(i+1)+"','"+schedule.getClasses().get(i).getDept().getName()+  "','"+schedule.getClasses().get(i).getCourse().getNumber()+ "','"+schedule.getClasses().get(i).getInstructor().getId()+ "','"+schedule.getClasses().get(i).getClassTime().getId()+ "','"+schedule.getClasses().get(i).getRoom().getNumber()+"')";
+          
+          System.out.println(str);
+          try {
+          stmt=conn.createStatement();
+          stmt.executeUpdate(str);
+          }catch(Exception e){
+              JOptionPane.showMessageDialog(null, "error in inserting where i="+(i+1));
+              JOptionPane.showMessageDialog(null, e);
+          }
+      }
+      for (int i=0;i<schedule.getClasses().size();i++){
+          System.out.print(schedule.getClasses().get(i).getId() + "  |  ");
+          System.out.print(schedule.getClasses().get(i).getDept().getName()+ "  |  ");
+          System.out.print(schedule.getClasses().get(i).getCourse().getName()+"   |  ");
+          // Instructor ins= schedule.getClasses().get(i).getInstructor();
+          //System.out.print(ins+"  ");
+          System.out.print(schedule.getClasses().get(i).getInstructor().getName()+"  |   ");
+          System.out.print(schedule.getClasses().get(i).getRoom().getNumber()+ "   |  ");
+          System.out.println(schedule.getClasses().get(i).getClassTime().getTime());
+          //System.out.println("  collisions "+schedule.getNumberOfConflicts());
+          
+          
+      }
+      System.out.println("============================================================");
+  }
+  private void printAvailableData(){
+      
+      System.out.println("Available Departments=>");
+      data.getDept().forEach(x-> 
+              System.out.println("name :"+ x.getName()  + " courses :"+ x.getCourses()));
+      System.out.println("Available Courses=>");
+      data.getCourse().forEach(x ->
+              System.out.println("course :"+x.getName() + " id :"+ x.getNumber()));
+      
+      System.out.println("Available Rooms=>");
+      data.getRooms().forEach(x ->
+              System.out.println("Room :"+ x.getNumber() + " capacity :" + x.getSeatingCapacity()));
+      System.out.println("Available Instructors=>");
+      data.getInstructors().forEach(x ->
+              System.out.println("name :"+ x.getName()+ " id :"+x.getId()));
+      
+      
+      System.out.println("Available MeetingRooms=>");
+      data.getClassTime().forEach(x ->
+              System.out.println("id :"+x.getId() + " time:" +x.getTime()));
+      
+      System.out.println("---------------------------------------------------------------------------------------------\n");
+      
+      
+  }   }
+      
+      /* int generationNumber=0;
      //  driver.printAvailableData();
       // System.out.println(">Generation # "+generationNumber);
        //System.out.println("     Schedule # |                                    ");
@@ -39,7 +150,7 @@ public class Driver {
                                                                 String.format("%.5f", schedule.getFitness())+
                                                                 "  | "+schedule.getNumbOfConflicts()));*/
       // driver.printScheduleAsTable(population.getSchedule().get(0),generationNumber);
-       driver.classNumb=1;
+     /*  driver.classNumb=1;
        while (population.getSchedule().get(0).getFitness() != 1.0){
              //  System.out.println("> Generation #" + ++generationNumber);
               // System.out.print(" Schedule # |                                          ");
@@ -52,11 +163,11 @@ public class Driver {
                population.getSchedule().forEach(schedule -> System.out.println("      "+driver.scheduleNumb++ +                                                      " | "+schedule.getNumbOfConflicts()));
                driver.printScheduleAsTable(population.getSchedule().get(0), generationNumber);
                driver.classNumb =1;
-       }
+       }*/
     
-    }
+   // }
     
-      private void printScheduleAsTable(Schedule schedule,int generation){
+  /*    private void printScheduleAsTable(Schedule schedule,int generation){
           ArrayList<com.za.ga.cs.domain.Class> classes=schedule.getClasses();
        //   System.out.println("\n                 ");
        //   System.out.println("     Class # | Dept | Course (number, max # of students) |  Room (Capacity) | Instructor (ID) | Meeting Time (ID)  ");
@@ -110,5 +221,3 @@ public class Driver {
         
     }*/
        
-
-}
