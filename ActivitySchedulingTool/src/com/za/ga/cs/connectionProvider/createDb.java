@@ -15,7 +15,7 @@ public class createDb{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306","root","");
 		Statement statement = con.createStatement();
-		String query = "CREATE DATABASE IF NOT EXISTS test9";
+		String query = "CREATE DATABASE IF NOT EXISTS kem_schedule";
 		statement.executeUpdate(query);
 		//statement.close();
 		}

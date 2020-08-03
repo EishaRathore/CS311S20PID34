@@ -30,7 +30,7 @@
                     {
                         %>
                         <tr>
-                        <td><%=rs.getString("id")%></td>
+                        <td><%=rs.getString("CID")%></td>
                         <td><%=rs.getString("Cname")%></td>
                         <td><%=rs.getString("code")%></td>
                         <td><%=rs.getInt("seating_capacity")%></td>

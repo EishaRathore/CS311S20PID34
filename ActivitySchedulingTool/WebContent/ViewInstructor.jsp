@@ -26,9 +26,10 @@
                     while(rs.next())
                     {
                         %>
-                        <td><%=rs.getString("id")%></td>
+                        <tr>
+                        <td><%=rs.getString("Inum")%></td>
                         <td><%=rs.getString("Iname")%></td>
-                    
+                    </tr>
                         <%
                     }
                 }

@@ -26,10 +26,11 @@
                     while(rs.next())
                     {
                         %>
+                        <tr>
                         <td><%=rs.getInt("id")%></td>
                         <td><%=rs.getString("room_no")%></td>
                         <td><%=rs.getString("room_capacity")%></td>
-                        
+                        </tr>
                         <%
                     }
                 }

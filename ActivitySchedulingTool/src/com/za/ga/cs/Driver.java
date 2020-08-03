@@ -1,6 +1,7 @@
 package com.za.ga.cs;
 
 import java.util.ArrayList;
+import java.io.PrintWriter;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -17,11 +18,12 @@ public class Driver {
 	private int scheduleNumb=0;
 	private int classNumb = 1;
 	
-	  public static void main(String args []){
+	  public static void main(){
 		  Driver driver= new Driver();
 			driver.data=new Dbmgr();
 			  int generationNumber=0;
-			driver.printAvailableData();
+	
+			//driver.printAvailableData();
 		/*	System.out.println(">Generation# "+generationNumber);
 			System.out.println("  Schedule # |");
 			   System.out.println("\n                 ");
@@ -80,33 +82,50 @@ public class Driver {
                  classNumb++;        
          });
          if(schedule.getFitness()==1) {
-        	 System.out.println("Scheduled Time table: "); 
-        	  System.out.println("\n                 ");
-             System.out.println("     Class # | Dept | Course (number, max # of students) |  Room (Capacity) | Instructor (ID) | Meeting Time (ID)  ");
-               System.out.println("                   ");
-              System.out.println("--------------------------------------");
-              System.out.println("------------------------------------------------------------");
-              classes.forEach(x->{
-                      int majorIndex=data.getDept().indexOf(x.getDept());
-                      int coursesIndex=data.getCourse().indexOf(x.getCourse());
-                      int roomsIndex=data.getRooms().indexOf(x.getRoom());
-                      int instructorsIndex=data.getInstructors().indexOf(x.getInstructor());
-                      int classTimeIndex=data.getClassTime().indexOf(x.getClassTime());
-                      System.out.print("      ");
-                      System.out.print(String.format("  %1$02d", classNumb)+"   | ");    
-                     System.out.print(String.format("%1$4s", data.getDept().get(majorIndex).getName())+"   | ");
-                      System.out.print(String.format("%1$21s",data.getCourse().get(coursesIndex).getName()+" ("+data.getCourse().get(coursesIndex).getNumber()+" , "+
-                      x.getCourse().getmaxNoOfStudent())+")   | ");
-                     System.out.print(String.format("%1$10s",data.getRooms().get(roomsIndex).getNumber()+
-                      "  ("+x.getRoom().getSeatingCapacity())+")   | ");
-                      System.out.print(String.format("%1$15s",data.getInstructors().get(instructorsIndex).getName()+
-                      "   ("+data.getInstructors().get(instructorsIndex).getId()+")")+"  | ");
-                      System.out.println(data.getClassTime().get(classTimeIndex).getTime()+"("+data.getClassTime().get(classTimeIndex).getId()+") ");        
-              });
-        	 
+            	 System.out.println("Scheduled Time table: "); 
+            	  System.out.println("\n                 ");
+                 System.out.println("     Class # | Dept | Course (number, max # of students) |  Room (Capacity) | Instructor (ID) | Meeting Time (ID)  ");
+                   System.out.println("                   ");
+                  System.out.println("--------------------------------------");
+                  System.out.println("------------------------------------------------------------");
+                 
+                  classes.forEach(x->{
+                          int majorIndex=data.getDept().indexOf(x.getDept());
+                          int coursesIndex=data.getCourse().indexOf(x.getCourse());
+                          int roomsIndex=data.getRooms().indexOf(x.getRoom());
+                          int instructorsIndex=data.getInstructors().indexOf(x.getInstructor());
+                          int classTimeIndex=data.getClassTime().indexOf(x.getClassTime());
+                          String dept= data.getDept().get(majorIndex).getName();
+                          String course_all=data.getCourse().get(coursesIndex).getName()+" ("+data.getCourse().get(coursesIndex).getNumber()+" , "+  x.getCourse().getmaxNoOfStudent()+")";
+                          String Room_all=data.getRooms().get(roomsIndex).getNumber()+ "  ("+x.getRoom().getSeatingCapacity()+")";
+                          String Instr_all=data.getInstructors().get(instructorsIndex).getName()+ "   ("+data.getInstructors().get(instructorsIndex).getId()+")";
+                          String Classtime_all=data.getClassTime().get(classTimeIndex).getTime()+"("+data.getClassTime().get(classTimeIndex).getId()+") ";
+                          try {
+                        	  Connection conn=dbConnection.getCon();  
+                         	 Statement statement;
+                  			statement = conn.createStatement();
+                        	//  System.out.print(String.format("  %1$02d", classNumb)+"   | ");    
+                           //   System.out.print(String.format("%1$4s", data.getDept().get(majorIndex).getName())+"   | ");
+                           //   System.out.print(String.format("%1$21s",data.getCourse().get(coursesIndex).getName()+" ("+data.getCourse().get(coursesIndex).getNumber()+" , "+
+                           //   x.getCourse().getmaxNoOfStudent())+")   | ");
+                          //   System.out.print(String.format("%1$10s",data.getRooms().get(roomsIndex).getNumber()+
+                          //    "  ("+x.getRoom().getSeatingCapacity())+")   | ");
+                          //    System.out.print(String.format("%1$15s",data.getInstructors().get(instructorsIndex).getName()+
+                          //    "   ("+data.getInstructors().get(instructorsIndex).getId()+")")+"  | ");
+                         //     System.out.println(data.getClassTime().get(classTimeIndex).getTime()+"("+data.getClassTime().get(classTimeIndex).getId()+") ");        
+                        
+               //Insert schedule Time table into db table TimeTable
+                  			statement.executeUpdate("INSERT INTO time_table (dept,`course(number,max # of students)`,`Room(capacity)`,`Instructor(ID)`,`MeetingTime(ID)`) VALUES('"+dept+"','"+course_all+"','"+Room_all+"','"+Instr_all+"','"+Classtime_all+"')");
+                  		  }catch(Exception e) {
+                        	  System.out.println("An error occurred while Inserting Scheduled data in table.");
+                   			System.out.println("Error"+e.getMessage());
+                          }     
+                  });
+        	        	 
          }    
  }
-       private void printAvailableData(){
+
+      /* private void printAvailableData(){
            System.out.println("Available Rooms=>");
            data.getRooms().forEach(x ->
                    System.out.println("Room # :"+ x.getNumber() + ",   seating capacity :" + x.getSeatingCapacity()));
@@ -130,5 +149,5 @@ public class Driver {
        System.out.println("---------------------------------------------------------------------------------------------\n");
        
        
-   }
+   }*/
 }

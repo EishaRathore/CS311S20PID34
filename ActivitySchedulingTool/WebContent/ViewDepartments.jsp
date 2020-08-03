@@ -12,7 +12,7 @@
 <body>
  <table border="table table-bordered table-stripped table-condensed" align="center">
         <tr>
-            <th>Id</th>
+            
             <th>Department Name</th>
            
         </tr>
@@ -26,9 +26,11 @@
                     ResultSet rs=st.executeQuery();
                     while(rs.next())
                     {
+                    
                         %>
-                        <td><%=rs.getString("id")%></td>
-                        <td><%=rs.getString("dname")%></td>
+                        <tr>
+                        
+                        <td><%=rs.getString("dname")%></td></tr>
                        
                         <%
                     }

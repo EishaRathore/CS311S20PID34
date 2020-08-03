@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+       <%@ page import="java.sql.*" %>
+    <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
+    <%@page import="com.za.ga.cs.Driver" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,28 +13,33 @@
 <body>
  <table border="table table-bordered table-stripped table-condensed" align="center">
         <tr>
-            <th>Class Number</th>
+            <th>ID</th>
             <th>Department</th>
-            <th>Course</th>
-            <th>Room</th>
-            <th>Instructor</th>
-            <th>Meeting Time</th>
+            <th>Course(Number, max # of Students)</th>
+            <th>Room(Capacity)</th>
+            <th>Instructor(ID)</th>
+            <th>Meeting Time(ID)</th>
         </tr>
         <tr>
                 <%
                 try{
-                    Class.forName("SQL").newInstance();
-                    Connection conn=DriverManager.getConnection("localhostname");
-                    String query="query";
-                    String stm=conn.createStatement();
-                    ResultSet rs=stm.executeQuery(query);
+                	  Connection conn= dbConnection.getCon();
+                	  Driver.main();
+                      PreparedStatement st;
+                  	st=conn.prepareStatement("select * from time_table");
+                  	
+                        ResultSet rs=st.executeQuery();
                     while(rs.next())
                     {
                         %>
-                        <td><%=rs.getInt("column")%></td>
-                        <td><%=rs.getString("column")%></td>
-                        <td><%=rs.getInt("column")%></td>
-                        <td><%=rs.getInt("column")%></td>
+                       <tr>
+                        <td><%=rs.getString("Id")%></td>
+                        <td><%=rs.getString("dept")%></td>
+                        <td><%=rs.getString("course(number,max # of students)")%></td>
+                        <td><%=rs.getString("Room(capacity)")%></td>
+                        <td><%=rs.getString("Instructor(ID)")%></td>
+                        <td><%=rs.getString("MeetingTime(ID)")%></td>
+                  </tr>
                         <%
                     }
                 }
