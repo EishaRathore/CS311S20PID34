@@ -40,17 +40,17 @@ public class Dbmgr {
     	}
     private Dbmgr initialize() throws SQLException {
         Connection connection = dbConnection.getCon();
-        System.out.println("In Initialize");
+ 
         rooms = selectRooms(connection);
-        System.out.println("dept for each");
+     
         classtime = selectClassTime(connection);
-        System.out.println("dept for each1");
+   
         instructor =selectInstructors(connection);
-        System.out.println("dept for each2");
+     
         course = selectCourses(connection);
-        System.out.println("dept for each4");
+     
         dept = selectDepartments(connection);
-        System.out.println("dept for each3");
+    
        
         dept.forEach(x -> numberOfClasses += x.getCourses().size());
         return this;
@@ -73,33 +73,32 @@ public class Dbmgr {
     public ArrayList<ClassTime> selectClassTime(Connection connection) throws SQLException{
         ArrayList<ClassTime> classtime = new ArrayList<ClassTime>();
         ResultSet classTimeRS = connection.createStatement().executeQuery("select * from meetingtime");
-        while (classTimeRS.next()) classtime.add(new ClassTime(classTimeRS.getString("id"), classTimeRS.getString("meeting_time")));
+        while (classTimeRS.next()) classtime.add(new ClassTime(classTimeRS.getString("meetingID"), classTimeRS.getString("meeting_time")));
         return classtime;
     }
     public ArrayList<Instructor> selectInstructors(Connection connection) throws SQLException{
         ArrayList<Instructor> instructor = new ArrayList<Instructor>();
         ResultSet instructorsRS = connection.createStatement().executeQuery("select * from faculty");
-        while ( instructorsRS.next()) instructor.add(new Instructor(instructorsRS.getInt("id"),instructorsRS.getString("Iname")));
+        while ( instructorsRS.next()) instructor.add(new Instructor(instructorsRS.getString("Inum"),instructorsRS.getString("Iname")));
         return instructor;
     }
     
     public ArrayList<Course> selectCourses(Connection connection) throws SQLException{
         ArrayList<Course> course = new ArrayList<Course>();
-        System.out.println("in select course");
+    
         ResultSet courseRS = connection.createStatement().executeQuery("select * from course");
-        System.out.println("in select course1");
+   
         while ( courseRS.next()){
-        	 System.out.println("in select course2");
-            ResultSet courseInstructorRS = connection.createStatement().executeQuery("Select * from course_insrtuctor where course_numb= "+courseRS.getString("code")+"'");
-            System.out.println("in select course3");
+        	
+            ResultSet courseInstructorRS = connection.createStatement().executeQuery("Select * from course_instructor where course_numb= '"+courseRS.getString("CID")+"'");
+      
             ArrayList<Instructor> courseInstructors = new ArrayList<Instructor>();
-            System.out.println("in select course4");
+       
             while (courseInstructorRS.next())
-            for(int i=0;i<instructor.size();i++)
-            if (instructor.get(i).getId()==courseInstructorRS.getInt("instructor_id"))
-            courseInstructors.add(instructor.get(i));
-            course.add(new Course(courseRS.getString("code"),courseRS.getString("Cname"), courseInstructors, courseRS.getInt("seating_capacity")));
-            System.out.println("in select course4");
+               for(int i=0;i<instructor.size();i++)
+                     if (instructor.get(i).getId().equals(courseInstructorRS.getString("course_instructor")))
+                          courseInstructors.add(instructor.get(i));
+            course.add(new Course(courseRS.getString("CID"),courseRS.getString("Cname"), courseInstructors, courseRS.getInt("seating_capacity")));
         }
         return course;
     }
@@ -108,12 +107,12 @@ public class Dbmgr {
         ArrayList<Department> dept = new ArrayList<Department>();
         ResultSet deptRS = connection.createStatement().executeQuery("select * from dept");
         while ( deptRS.next()){
-            ResultSet deptCourseRS = connection.createStatement().executeQuery("Select * from dept_course where dept_name= "+deptRS.getString("dname")+"'");
+            ResultSet deptCourseRS = connection.createStatement().executeQuery("Select * from dept_course where dept_name= '"+deptRS.getString("dname")+"'");
             ArrayList<Course> deptCourses = new ArrayList<Course>();
             while (deptCourseRS.next())
             for(int i=0;i<course.size();i++)
-            if (course.get(i).getNumber().equals(deptCourseRS.getString("course_numb")))
-            deptCourses.add(course.get(i));
+               if (course.get(i).getNumber().equals(deptCourseRS.getString("course_numb")))
+                     deptCourses.add(course.get(i));
             dept.add(new Department(deptRS.getString("dname"), deptCourses));
         }
         return dept;
