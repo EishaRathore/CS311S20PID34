@@ -25,6 +25,8 @@ try{
 	st.executeUpdate();
 	response.sendRedirect("Login.jsp");
 }catch(Exception e){
-	out.println("Error"+e.getMessage());
+	//out.println("Error"+e.getMessage());
+	out.println("Please Input Valid Data!");
+	response.sendRedirect("Signuppage.jsp");
 }
 %>
