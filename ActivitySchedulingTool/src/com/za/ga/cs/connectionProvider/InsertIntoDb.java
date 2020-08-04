@@ -19,8 +19,8 @@ public class InsertIntoDb {
 			statement.executeUpdate("INSERT INTO role (Role)  SELECT 'Admin' WHERE NOT EXISTS (Select Role From role WHERE Role ='Admin') LIMIT 1 ");
 		    statement.executeUpdate("INSERT INTO role (Role)  SELECT 'Student' WHERE NOT EXISTS (Select Role From role WHERE Role ='Student') LIMIT 1 ");
 
-		    statement.executeUpdate("INSERT INTO userdata (fName,lName,email,password,cpassword,mbl,role)  SELECT 'Eisha','Butt','eisha@gmail.com','1234','1234','03214567890','Admin' WHERE NOT EXISTS (Select fName,lName,email,password,cpassword,mbl,role From userdata WHERE fName='Eisha' AND lName='Butt' AND email='eisha@gmail.com' AND password='1234' AND cpassword='1234' AND mbl='03214567890' AND role ='Admin') LIMIT 1 ");
-		    statement.executeUpdate("INSERT INTO userdata (fName,lName,email,password,cpassword,mbl,role)  SELECT 'Alisha','Butt','alisha@gmail.com','12345','12345','03214567891','Student' WHERE NOT EXISTS (Select fName,lName,email,password,cpassword,mbl,role From userdata WHERE fName='Alisha' AND lName='Butt' AND email='alisha@gmail.com' AND password='12345' AND cpassword='12345' AND mbl='03214567891' AND role ='Student') LIMIT 1 ");
+		    statement.executeUpdate("INSERT INTO userdata (fName,lName,email,password,cpassword,mbl,urole)  SELECT 'Eisha','Butt','eisha@gmail.com','1234','1234','03214567890','Admin' WHERE NOT EXISTS (Select fName,lName,email,password,cpassword,mbl,urole From userdata WHERE fName='Eisha' AND lName='Butt' AND email='eisha@gmail.com' AND password='1234' AND cpassword='1234' AND mbl='03214567890' AND urole ='Admin') LIMIT 1 ");		   
+		    statement.executeUpdate("INSERT INTO userdata (fName,lName,email,password,cpassword,mbl,urole)  SELECT 'Alisha','Butt','alisha@gmail.com','12345','12345','03214567891','Student' WHERE NOT EXISTS (Select fName,lName,email,password,cpassword,mbl,urole From userdata WHERE fName='Alisha' AND lName='Butt' AND email='alisha@gmail.com' AND password='12345' AND cpassword='12345' AND mbl='03214567891' AND urole ='Student') LIMIT 1 ");
 		    
 		     statement.executeUpdate("INSERT INTO rooms (room_no,room_capacity) SELECT 'N11','25' WHERE NOT EXISTS (Select room_no,room_capacity From rooms WHERE room_no ='N11' AND room_capacity='25') LIMIT 1 ");
 		     statement.executeUpdate("INSERT INTO rooms (room_no,room_capacity) SELECT 'N9','50' WHERE NOT EXISTS (Select room_no,room_capacity From rooms WHERE room_no ='N9' AND room_capacity='50') LIMIT 1 ");
@@ -74,13 +74,14 @@ public class InsertIntoDb {
 			Connection con=dbConnection.getCon();
 			 Statement statement;
 			statement = con.createStatement();
-			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS userdata(id int NOT NULL AUTO_INCREMENT,fName varchar(255),lName varchar(255),email varchar(255),password varchar(255),cpassword varchar(255),mbl varchar(255),role varchar(255),PRIMARY KEY(id))");
+			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS role(Role VARCHAR(50),PRIMARY KEY(Role))");
+			statement.executeUpdate("CREATE TABLE IF NOT EXISTS  userdata(id int NOT NULL AUTO_INCREMENT,fName varchar(255),lName varchar(255),email varchar(255),password varchar(255),cpassword varchar(255),mbl varchar(255),urole VARCHAR(50),PRIMARY KEY(id),FOREIGN KEY (urole) REFERENCES role (Role))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS rooms(id int NOT NULL AUTO_INCREMENT,room_no TEXT,room_capacity int,PRIMARY KEY(id))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept(dname VARCHAR(50),PRIMARY KEY(dname))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS meetingtime(id int NOT NULL AUTO_INCREMENT,meetingID text,meeting_time TEXT,PRIMARY KEY(id))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS course(CID VARCHAR(50) NOT NULL,Cname TEXT,code VARCHAR(50),seating_capacity int,PRIMARY KEY(CID))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS faculty(Iname TEXT ,Inum VARCHAR(50) NOT NULL,PRIMARY KEY(Inum))");
-			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS role(id int NOT NULL AUTO_INCREMENT,Role TEXT,PRIMARY KEY(id))");
+
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS course_instructor(id int NOT NULL AUTO_INCREMENT,course_instructor VARCHAR(50),course_numb VARCHAR(50),PRIMARY KEY(id),FOREIGN KEY (course_instructor) REFERENCES faculty (Inum),FOREIGN KEY (course_numb) REFERENCES course (CID))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept_course(id int NOT NULL AUTO_INCREMENT,dept_name VARCHAR(50),course_numb VARCHAR(50),PRIMARY KEY(id),FOREIGN KEY (dept_name) REFERENCES dept (dname),FOREIGN KEY (course_numb) REFERENCES course (CID))");
 		

@@ -11,19 +11,20 @@ System.out.println(password);
 try{
 	Connection con=dbConnection.getCon();
 	Statement st=con.createStatement();
-	ResultSet rs=st.executeQuery("select * from userdata where fName='"+username+"' AND urole='Admin'");
+	ResultSet rs=st.executeQuery("select * from userdata where fName='"+username+"' AND urole='Student'");
    
-			if(rs.next()){
-				if(rs.getString(5).equals(password)){
+	if(rs.next()){
+		if(rs.getString(5).equals(password)){
+				response.sendRedirect("Student.html");
+			
+		}else{
+			response.sendRedirect("LoginError.jsp");
+		}
+	}else{
+		response.sendRedirect("LoginError.jsp");
+	}		
 
-						response.sendRedirect("Admin.jsp");
-
-				}else{
-					response.sendRedirect("LoginError.jsp");
-				}
-			}		
-	
 }catch(Exception e){
-	out.println("Error"+e.getMessage());
+out.println("Error"+e.getMessage());
 }
 %>

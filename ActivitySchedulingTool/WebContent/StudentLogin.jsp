@@ -1,14 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+        <%@ page import="java.sql.*" %>
+    <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="ISO-8859-1">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="jQuery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>LogIn</title>
-   
 </head>
 <body onload="check()">
       <section id="header">
@@ -21,17 +23,8 @@
         <div class="main">
          <h1>LOG IN</h1>
         
-         <select class="dropHolder" required>           
-           
-               <option disabled selected value> -- select an option -- </option>
-                 <option>Admin</option>
-                 <option>Student</option>
-                <!-- <li><i class="fa fa-star"></i> Admin</li> -->
-                <!-- <li><i class="fa fa-heart"></i> Student</li>  -->
-           
-              </select>
-              
-    <form action="LoginAction.jsp" method="POST">
+              <input type="text" value="Student" readonly>
+    <form action="SLoginAction.jsp" method="POST">
         <input type="text" name="userName" placeholder="USER NAME" required>
         <input type="password" name="Password" placeholder="PASSWORD" required>
         <input type="submit" value="LOGIN">
@@ -50,5 +43,6 @@
         <div id="overlyArea">
     
      </div>
+     
 </body>
 </html>

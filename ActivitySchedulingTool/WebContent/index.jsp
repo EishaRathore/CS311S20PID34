@@ -39,7 +39,7 @@ out.println("An error occurred calling createDb function.");
         <li><i class="fa fa-home"></i><a href="#header">Home</a></li>
         <li><i class="fa fa-user"></i><a href="#About">About Us</a></li>
                 <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
-        <li><i class="fa fa-sign-in"></i><a href="Login.html">Log In</a></li>
+        <li><i class="fa fa-sign-in"></i><a href="Login.jsp">Log In</a></li>
     </ul>
         </div>
             <div class="header container">

@@ -4,6 +4,11 @@
         <title> Forgot Password</title>
     <link rel= "stylesheet"  href= "forgot.css">
 <head>
+<script type="text/javascript"> 
+function showAlert(){ 
+alert("Changed Successfuly!"); 
+} 
+</script> 
 <body>
   <section id="header">
         
@@ -15,14 +20,14 @@
    </section>
    <div class="wrap">
      <h2>Change Password</h2>
-     <form>
-       <input type="email" placeholder="Email ID.." required>
-       <input type="password" placeholder="New Password.." required>
-       <input type="password" placeholder="Confirm New Password.." required>
+     <form action="ForgotAction.jsp" method="POST">
+       <input type="email" name="Email" placeholder="Email ID.." required>
+       <input type="password" name="newPass" placeholder="New Password.." required>
+       <input type="password" name="CnewPass" placeholder="Confirm New Password.." required>
        
         <input type="submit" value="Submit">
     </form>
-
+   showAlert();
    </div>
    <div id="overlyArea">
 
