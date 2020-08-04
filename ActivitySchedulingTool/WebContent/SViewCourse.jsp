@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
- <title>View Course</title>
+ <title>View Faculty</title>
  <link rel="stylesheet" href="AddCourse.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link  rel="stylesheet" type="text/css" href="Addtable.css">
@@ -81,28 +81,31 @@
     <section id="background">
         <div class="background container">
       <table class="content-table" border="table table-bordered table-stripped table-condensed" align="center">
-         <thead>
+        <thead>
             <tr>
-             <th>id</th>
-            <th>Instructor Name</th>
-        
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th>Max # of students</th>
         </tr>
         </thead>
         <tr>
-                <%
+                 <%
                 try{
                   Connection conn= dbConnection.getCon();
                   PreparedStatement st;
-              	st=conn.prepareStatement("select * from faculty");
+              	st=conn.prepareStatement("select * from course");
               	
                     ResultSet rs=st.executeQuery();
                     while(rs.next())
                     {
                         %>
                         <tr>
-                        <td><%=rs.getString("Inum")%></td>
-                        <td><%=rs.getString("Iname")%></td>
-                    </tr>
+                        <td><%=rs.getString("CID")%></td>
+                        <td><%=rs.getString("Cname")%></td>
+                        <td><%=rs.getString("code")%></td>
+                        <td><%=rs.getInt("seating_capacity")%></td>
+                        </tr>
                         <%
                     }
                 }
