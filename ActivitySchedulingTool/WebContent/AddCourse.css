@@ -316,128 +316,19 @@ input[type=button]{
 }
 
 /*End Contact Section*/
-/*Mission Start*/
-#Mission{
-    background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+.mission a{
+        height: 50px;
+    width: 50px;
+    margin: 0 30px;
+    margin-bottom: 30px;
+    font-size: medium;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-decoration-color: #ccffff;
+    filter: brightness(19);
+    font-style: italic;
+    transition: .3s ease filter
 }
-#Mission .Mission{
-    min-height: 200px;
-    flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
-}
-.Mission{
-	margin-left:20px;
-}
-
-.Mission h1{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: whitesmoke;
-    text-align: center;
-}
-
-.Mission p{
-        text-align: center;
-}
-#Mission h2{
-    font-size: 1.2rem;
-    font-style: none;
-    letter-spacing: .1rem;
-    font-weight: 100;
-    margin-left: 10px;
-    margin-right: 10px;    
-}
-.Mission h1 span{
-    color:  crimson;
-}
-
-/*Mission End*/
-
-/*Vision Start*/
-#Vision{
-    background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
-        /* position: absolute; */
-}
-#Vision .Vision{
-
-    min-height: 200px;
-    flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
-}
-.Vision{
-	margin-left:20px;
-}
-
-.Vision h1{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: whitesmoke;
-    text-align: center;
-}
-
-.Vision p{
-        text-align: center;
-}
-#Vision h2{
-    font-size: 1.2rem;
-    font-style: none;
-    letter-spacing: .1rem;
-    font-weight: 100;
-    /* margin-left: 10px;
-    margin-right: 10px;     */
-}
-.Vision h1 span{
-    color:  crimson;
-}
-
-/*Vision End*/
-
-/*Team Start*/
-#Team{
-    background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
-        /* position: absolute; */
-}
-#Team .Team{
-
-    min-height: 200px;
-    flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
-}
-.Team{
-	margin-left:20px;
-}
-
-.Team h1{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: whitesmoke;
-    text-align: center;
-}
-
-.Team p{
-        text-align: center;
-}
-#Team h2{
-    font-size: 1.2rem;
-    font-style: none;
-    letter-spacing: .1rem;
-    font-weight: 100;
-    color: whitesmoke;
-    /* margin-left: 10px;  */
-    margin-right: 10px;   
-}
-#Team h3{
-    color: whitesmoke;
-}
-.Team h1 span{
-    color:  crimson;
-}
-
-/*Vision End*/
-
 /*Footer Start*/
 #footer{
     background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
