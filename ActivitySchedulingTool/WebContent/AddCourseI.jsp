@@ -55,6 +55,8 @@ try{
                     <li><i class="fa fa-plus"></i><a href="AddDeptC.jsp">Add Department Course</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddCourse.html">Add Course</a></li>
                      <li><i class="fa fa-list"></i><a href="ViewCourse.html">Course List</a></li>
+                      <li><i class="fa fa-list"></i><a href="ViewDeptCourse.jsp">Department Course List</a></li>
+                      <li><i class="fa fa-list"></i><a href="ViewCourseIns.jsp">Course Instructor List</a></li>
                 </ul>
             </div>
         </li>
