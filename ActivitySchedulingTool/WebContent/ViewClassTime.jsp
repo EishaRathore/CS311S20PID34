@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
- <title>View Instructor</title>
+ <title>View Class Time</title>
  <link rel="stylesheet" href="AddCourse.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link  rel="stylesheet" type="text/css" href="Addtable.css">
@@ -121,9 +121,9 @@
       <table class="content-table" border="table table-bordered table-stripped table-condensed" align="center">
          <thead>
             <tr>
-             <th>id</th>
-            <th>Instructor Name</th>
-        
+             
+            <th>Meeting ID</th>
+        <th>Meeting Time</th>
         </tr>
         </thead>
         <tr>
@@ -131,22 +131,22 @@
                 try{
                   Connection conn= dbConnection.getCon();
                   PreparedStatement st;
-              	st=conn.prepareStatement("select * from faculty");
+              	st=conn.prepareStatement("select * from meetingtime");
               	
                     ResultSet rs=st.executeQuery();
                     while(rs.next())
                     {
                         %>
                         <tr>
-                        <td><%=rs.getString("Inum")%></td>
-                        <td><%=rs.getString("Iname")%></td>
+                        <td><%=rs.getString("meetingID")%></td>
+                        <td><%=rs.getString("meeting_time")%></td>
                     </tr>
                         <%
                     }
                 }
                 catch(Exception e){
                     out.println("Exception: "+e.getMessage());
-                    e.printStackTrace();
+                   // e.printStackTrace();
                 }
                 %>
         </tr>

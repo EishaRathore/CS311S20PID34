@@ -35,28 +35,27 @@ out.println("An error occurred calling createDb function.");
             <div class="brand">
                 <h1><span>S</span>chedule<span>G</span>enerator</h1>
             </div>
-<div class="menu-bar">
+            <div class="menu-bar">
     <ul>
         <li><i class="fa fa-home"></i><a href="#header">Home</a></li>
-        <li><i class="fa fa-user"></i><a href="#About">About Us</a></li>
-                <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
-        <li><i class="fa fa-sign-in"></i><a href="Login.jsp">Log In</a></li>
-    </ul>
-        </div>
-            <div class="header container">
-                <div class="nav-bar">
-                   
-                    <div class="nav-list">
-                        <div class="ham"><div class="bar"></div></div>
-                        <ul>
-                            <li><a href="#header" data-after="Home">Home</a></li>
-                            <li><a href="#About" data-after="About">About Us</a></li>
-                            <li><a  href="#Contact" onclick="javascript:myFunc()">Contact</a></li>
-                            <li><a href="Login.html" data-after="login">Log in</a></li>
-                        </ul>
-                    </div>
-                </div>
+    
+     
+        <li><i class="fa fa-user"></i><a href="#">About Us</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><i class="fa fa-ravelry"></i><a href="#Mission">Mission</a></li>
+                  <li><i class="fa fa-eercast"></i><a href="#Vision">Vision</a></li>
+                  <li><i class="fa fa-angellist"></i><a href="#Team">Team</a></li>
+                    <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
+
+                </ul>
             </div>
+        </li>
+
+        
+       <li><i class="fa fa-sign-in"></i><a href="Login.jsp">Log In</a></li>
+    </ul>
+</div>
         </nav>
        
     </section>
