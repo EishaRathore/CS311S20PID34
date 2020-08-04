@@ -9,7 +9,11 @@ body{
       background-size: cover;
       font-family: poppins;
 }
-
+.us{
+  height: 150px;
+  width: 150px;
+  position: relative;
+}
 .main{
     width: 350px;
     height: 480px;

@@ -161,37 +161,57 @@ out.println("An error occurred calling createDb function.");
         <div class="title"><h1>Team</h1></div>
         <div class="ContactItems">
             <div class="ContactItem">
-                <div class="Icon"><img src="https://avatars3.githubusercontent.com/u/46721882?s=400&u=f4c42cc5a3efef4b2236ea33a487f008e338fd7f&v=4"></div>
+                <div class="us"><img src="https://avatars3.githubusercontent.com/u/46721882?s=400&u=f4c42cc5a3efef4b2236ea33a487f008e338fd7f&v=4" width="100px" height="100px"></div>
                 <div class="Contact-Info">
                     <h1>Eisha Butt</h1>
-                    <h2></h2>
-                    <h2>0303 7671222</h2>
+                    <h2><i class="fa fa-github"></i><span>  </span><a href="https://github.com/EishaButt">Eisha Butt</a></h2>
+                    <h2>eisharathore5@gmail.com</h2>
                 </div>
             </div>
         </div>
          <div class="ContactItems">
                 <div class="ContactItem">
-                    <div class="Icon"><img src="https://avatars2.githubusercontent.com/u/55192237?s=400&v=4"></div>
+                    <div class="us"><img src="https://avatars2.githubusercontent.com/u/55192237?s=400&v=4"  width="150px" height="150px"></div>
                    <div class="Contact-Info"> <h1>Manahil Ameer</h1>
-                    <h2><a href="https://github.com/ManahilAmeer">Manahil Ameer</a></h2>
+                    <h2><i class="fa fa-github"></i><span>  </span><a href="https://github.com/ManahilAmeer">Manahil Ameer</a></h2>
                     <h2>manahil1054@gmail.com</h2>
-                    <h2>khaliqkhansa@gmail.com</h2></div>
+                    </div>
                        
                 </div>
               
             </div>
                 <div class="ContactItems">
                     <div class="ContactItem">
-                        <div class="Icon"><img src="https://avatars2.githubusercontent.com/u/55206006?s=460&u=2d4a7c1254207d4f53bb4eab3f8a28df667b5424&v=4"></div>
+                        <div class="us"><img src="https://avatars2.githubusercontent.com/u/55206006?s=460&u=2d4a7c1254207d4f53bb4eab3f8a28df667b5424&v=4"  width="150px" height="150px"></div>
                         <div class="Contact-Info">
                             <h1>Khansa Khaliq</h1>
-                            <h2>Shad Bagh Lahore</h2>
-                        </div>
-                   
+                            <h2><i class="fa fa-github"></i><span>  </span><a href="https://github.com/Khansa-Khaliq">Khansa Khaliq</a></h2>
+                            <h2>khaliqkhansa@gmail.com</h2>
+                            </div>                  
                     </div>
 
                 </div>
             </div>
+</section>
+<section id="About">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 309"><path fill="#fff" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,250.7C384,245,480,203,576,202.7C672,203,768,245,864,256C960,267,1056,245,1152,208C1248,171,1344,117,1392,90.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+   <div class="About container">
+       
+    <div class="About-top">
+        
+        <h1 class="SectionTitle">   Core values of Team  </h1>
+        
+        <p>
+Integrity: Being Open and honest in all our dealings and maintaing
+            highest Integrity at all times<br>
+         Teamwork: Providing support to one another, working co-operatively, 
+            respecting one another’s views,<br> and making our work environment fun and enjoyable.<br>
+         Excellence: Always doing what we say we will and striving for excellence 
+            and quality in everything we do.        </p>
+    </div>
+    <div class="About Bottom"></div>
+   </div>
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 309"><path fill="#fff" fill-opacity="2" d="M0,160L48,133.3C96,107,192,53,288,69.3C384,85,480,171,576,218.7C672,267,768,277,864,282.7C960,288,1056,288,1152,240C1248,192,1344,96,1392,48L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 </section>
  <!--Team Section End-->
            <!-- Vision Section Start-->
@@ -214,16 +234,6 @@ out.println("An error occurred calling createDb function.");
 </section>
  <!-- Vision Section End-->
   
-                    <section id="Team">
-               <h1><span>C</span>ore <span>V</span>alues of <span>T</span>eam </h1>
-          <h2>Integrity: Being Open and honest in all our dealings and maintaing
-            highest Integrity at all times<br>
-         Teamwork: Providing support to one another, working co-operatively, 
-            respecting one another’s views,<br> and making our work environment fun and enjoyable.<br>
-         Excellence: Always doing what we say we will and striving for excellence 
-            and quality in everything we do.
-          </h2>
-
         </section>
 </section>
           </section>
