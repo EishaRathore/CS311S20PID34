@@ -3,26 +3,22 @@
      <%@ page import="java.sql.*" %>
     <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
 <%
-String Ccode = request.getParameter("CourseCode");
-String Course_name = request.getParameter("name");
-String Cmax = request.getParameter("Max");
-String Cid = request.getParameter("cid");
+String Ccode = request.getParameter("cid");
+
+String Course_name = request.getParameter("id");
+String Cid = request.getParameter("Ccode");
+String Cmax = request.getParameter("SeatingC");
 try{
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
   
-	st=con.prepareStatement("INSERT INTO course(cid,Cname,code,seating_capacity) values('"+Cid+"','"+Course_name+"','"+Ccode+"','"+Cmax+"')");
+	st=con.prepareStatement("INSERT INTO course(cid,Cname,code,seating_capacity) values('"+Ccode+"','"+Course_name+"','"+Cid+"','"+Cmax+"')");
 	
 	int x=st.executeUpdate();
-	if(x>0){
-		out.println("Added successfuly!");
-	}
-	else{
-		out.println("not added!");
-	}
+	response.sendRedirect("Admin.jsp");
 	
 }catch(Exception e){
-	e.printStackTrace();
+	//e.printStackTrace();
 	out.println("Error"+e.getMessage());
 }
 %>
