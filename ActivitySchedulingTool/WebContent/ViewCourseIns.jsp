@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
- <title>View Departments</title>
+ <title>View Course Instructor</title>
  <link rel="stylesheet" href="AddCourse.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link  rel="stylesheet" type="text/css" href="Addtable.css">

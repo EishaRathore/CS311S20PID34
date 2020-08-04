@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
- <title>View Course</title>
+ <title>View Instructor</title>
  <link rel="stylesheet" href="AddCourse.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link  rel="stylesheet" type="text/css" href="Addtable.css">
@@ -14,69 +14,107 @@
 <body>
  <!--Header Start-->
     <section id="header">
-        
-        <nav>
-            <div class="brand">
-                <h1><span>S</span>chedule<span>G</span>enerator</h1>
-            </div>
-<div class="menu-bar">
-    <ul>
-        <li><i class="fa fa-home"></i><a href="#">Home</a></li>
-        <li><i class="fa fa-calendar"></i><a href="#">Time Table</a>
-            <div class="sub-menu-1">
+      <nav>
+        <div class="brand">
+          <h1><span>S</span>chedule<span>G</span>enerator</h1>
+        </div>
+        <div class="menu-bar">
+          <ul>
+            <li><i class="fa fa-home"></i><a href="#header">Home</a></li>
+            <li>
+              <i class="fa fa-calendar"></i><a href="#">Time Table</a>
+              <div class="sub-menu-1">
                 <ul>
-                    <li><i class="fa fa-list"></i><a href="SViewTimeTable.jsp">Time Table List</a></li>
+               
+                   <li><i class="fa fa-list"></i><a href="ViewTable.jsp">View Time Table</a></li>
+                 
                 </ul>
-            </div>
-        </li>
-        <li><i class="fa fa-book"></i><a href="#">Subjetcs</a>
-            <div class="sub-menu-1">
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-book"></i><a href="#">Courses</a>
+              <div class="sub-menu-1">
                 <ul>
-                    <li><i class="fa fa-list"></i><a href="SViewCourse.jsp">Subject List</a></li>
+                 <li><i class="fa fa-plus"></i><a href="AddCourseI.jsp">Add Course Instructor</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddDeptC.jsp">Add Department Course</a></li>
+                  <li><i class="fa fa-list"></i><a href="ViewCourse.html">Course List</a></li>
+                  <li><i class="fa fa-list"></i><a href="#">Course List</a></li>
+                   <li><i class="fa fa-list"></i><a href="ViewDeptCourse.jsp">Department Course List</a></li>
+                      <li><i class="fa fa-list"></i><a href="ViewCourseIns.jsp">Course Instructor List</a></li>
                 </ul>
-            </div>
-        </li>
-        <li><i class="fa fa-users"></i><a href="#">Faculty</a>
-            <div class="sub-menu-1">
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-users"></i><a href="#">Resources</a>
+              <div class="sub-menu-1">
                 <ul>
-                    <li><i class="fa fa-list"></i><a href="SViewFaculty.jsp">Faculty List</a></li>
+                  <li>
+                    <i class="fa fa-plus"></i
+                    ><a href="AddInstr.jsp">Add Faculty</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-plus"></i
+                    ><a href="AddRoom.html">Add Rooms</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-plus"></i
+                    ><a href="AddDept.jsp">Add Department</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-plus"></i
+                    ><a href="AddTime.html">Add Class Time</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-list"></i><a href="#">Faculty List</a>
+                  </li>
+                  <li><i class="fa fa-list"></i><a href="#">Rooms List</a></li>
+                  <li>
+                    <i class="fa fa-list"></i><a href="#">Department List</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-list"></i><a href="#">Class Time List</a>
+                  </li>
                 </ul>
-            </div>
-        </li>
-        <li><i class="fa fa-user"></i><a href="#">About Us</a>
-            <div class="sub-menu-1">
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-user"></i><a href="#">About Us</a>
+              <div class="sub-menu-1">
                 <ul>
                   <li><i class="fa fa-ravelry"></i><a href="#Mission">Mission</a></li>
                   <li><i class="fa fa-eercast"></i><a href="#Vision">Vision</a></li>
                   <li><i class="fa fa-angellist"></i><a href="#Team">Team</a></li>
-                    <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
-
+                  <li>
+                    <i class="fa fa-phone"></i><a href="#Contact">Contact Us</a>
+                  </li>
                 </ul>
-            </div>
-        </li>
+              </div>
+            </li>
 
-        
-        <li><i class="fa fa-sign-in"></i><a href="Login.jsp">Log Out</a></li>
-    </ul>
-</div>
-            <div class="header container">
-                <div class="nav-bar">
-                   
-                    <div class="nav-list">
-                        <div class="ham"><div class="bar"></div></div>
-                        <ul>
-                            <li><a href="#" data-after="Home">Home</a></li>
-                            <li><a href="#About" data-after="About">About Us</a></li>
-                            <li><a href="#Contact" data-after="contact">Contact</a></li>
-                            <li><a href="Login.jsp" data-after="login">Log in</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <li>
+              <i class="fa fa-sign-in"></i><a href="Login.html">Log In</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header container">
+          <div class="nav-bar">
+            <div class="nav-list">
+              <div class="ham"><div class="bar"></div></div>
+              <ul>
+                <li><a href="#header" data-after="Home">Home</a></li>
+                <li><a href="#" data-after="Time">Time Table</a></li>
+                <li><a href="#" data-after="Course">Subjects</a></li>
+                <li><a href="#About" data-after="About">About Us</a></li>
+                <li><a href="#" data-after="Resources">Resources</a></li>
+                <li><a href="Login.html" data-after="Login">Log in</a></li>
+              </ul>
             </div>
-        </nav>
-       
+          </div>
+        </div>
+      </nav>
     </section>
     <!--Header End-->
+
      <!-- Background Section Start-->
     <section id="background">
         <div class="background container">
