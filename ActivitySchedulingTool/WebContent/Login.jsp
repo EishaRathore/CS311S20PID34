@@ -58,7 +58,7 @@
         
               <input type="text" name="value" id="val" readonly>
    
-        <input type="submit" value="LOGIN"  onclick="getcube()">
+      
          <p class="message"> Does'nt have account? <a href="Signuppage.jsp">Signup</a></p>
      
     <div class="Socials">

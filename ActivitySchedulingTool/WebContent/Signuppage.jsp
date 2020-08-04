@@ -30,7 +30,7 @@
         <input type="password" name="cpass" placeholder="Confirm Password" required>
         <input type="tel" name="mbl" placeholder="Phone Number" required>
         <button type="submit" class="submit" href="#">Submit</button>
-        <p class="message">Already have account? <a href="Login.html">Login</a></p>
+        <p class="message">Already have account? <a href="Login.jsp">Login</a></p>
     </form>
 
    </div>
