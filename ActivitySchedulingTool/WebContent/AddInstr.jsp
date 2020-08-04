@@ -81,7 +81,7 @@
                             <li><a href="#" data-after="Course">Subjects</a></li>
                             <li><a href="#About" data-after="About">About Us</a></li>
                             <li><a href="#" data-after="Resources">Resources</a></li>
-                            <li><a href="Login.html" data-after="Login">Log in</a></li>
+                            <li><a href="index.jsp" data-after="Login">Log Out</a></li>
                         </ul>
                     </div>
                 </div>
