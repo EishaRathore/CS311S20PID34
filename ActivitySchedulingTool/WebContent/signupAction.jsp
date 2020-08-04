@@ -21,9 +21,9 @@ try{
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
 	
-	st=con.prepareStatement("INSERT INTO userdata(role,fName,lName,email,password,cpassword,mbl) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"')");
+	st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"')");
 	st.executeUpdate();
-	response.sendRedirect("Login.html");
+	response.sendRedirect("Login.jsp");
 }catch(Exception e){
 	out.println("Error"+e.getMessage());
 }

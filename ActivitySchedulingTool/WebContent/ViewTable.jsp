@@ -24,9 +24,9 @@
                 <%
                 try{
                 	  Connection conn= dbConnection.getCon();
-                	  Driver.main();
+                	   Driver.main();
                       PreparedStatement st;
-                  	st=conn.prepareStatement("select * from time_table");
+                  	st=conn.prepareStatement("select * from timetable");
                   	
                         ResultSet rs=st.executeQuery();
                     while(rs.next())

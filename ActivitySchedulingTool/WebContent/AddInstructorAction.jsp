@@ -4,21 +4,22 @@
     <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
 <%
 String Iname = request.getParameter("InstructorName");
+String Id = request.getParameter("InstructorId");
 try{
 	
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
-	st=con.prepareStatement("INSERT INTO faculty(Iname) values('"+Iname+"')");
+	st=con.prepareStatement("INSERT INTO faculty(Iname,Inum) values('"+Iname+"','"+Id+"')");
 	int x=st.executeUpdate();
 	if(x>0){
-		out.println("Added successfuly!");
+		response.sendRedirect("Admin.jsp");
 	}
 	else{
-		out.println("not added!");
+		response.sendRedirect("AddInstr.jsp");
 	}
 	
 }catch(Exception e){
-	e.printStackTrace();
-	out.println("Error"+e.getMessage());
+	//e.printStackTrace();
+	response.sendRedirect("AddInstr.jsp");
 }
 %>

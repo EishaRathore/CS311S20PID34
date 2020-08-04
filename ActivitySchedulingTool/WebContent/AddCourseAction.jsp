@@ -6,12 +6,12 @@
 String Ccode = request.getParameter("CourseCode");
 String Course_name = request.getParameter("name");
 String Cmax = request.getParameter("Max");
-String Depart = request.getParameter("Depart");
+String Cid = request.getParameter("cid");
 try{
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
   
-	st=con.prepareStatement("INSERT INTO course(Cname,code,seating_capacity) values('"+Course_name+"','"+Ccode+"','"+Cmax+"')");
+	st=con.prepareStatement("INSERT INTO course(cid,Cname,code,seating_capacity) values('"+Cid+"','"+Course_name+"','"+Ccode+"','"+Cmax+"')");
 	
 	int x=st.executeUpdate();
 	if(x>0){

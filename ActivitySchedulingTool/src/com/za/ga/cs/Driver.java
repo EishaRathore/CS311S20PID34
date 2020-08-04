@@ -82,13 +82,30 @@ public class Driver {
                  classNumb++;        
          });
          if(schedule.getFitness()==1) {
-            	 System.out.println("Scheduled Time table: "); 
+            	/* System.out.println("Scheduled Time table: "); 
             	  System.out.println("\n                 ");
                  System.out.println("     Class # | Dept | Course (number, max # of students) |  Room (Capacity) | Instructor (ID) | Meeting Time (ID)  ");
                    System.out.println("                   ");
                   System.out.println("--------------------------------------");
-                  System.out.println("------------------------------------------------------------");
-                 
+                  System.out.println("------------------------------------------------------------");*/
+                  try {
+                	  Connection conn=dbConnection.getCon();  
+                 	 Statement statement;
+          			statement = conn.createStatement();
+          			statement.executeUpdate("DROP TABLE IF EXISTS `timetable`");	
+          			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS timetable(Id INT NOT NULL AUTO_INCREMENT,\r\n" + 
+          			 		"  `dept` TEXT NULL,\r\n" + 
+          			 		"  `course(number,max # of students)` TEXT NULL,\r\n" + 
+          			 		"  `Room(capacity)` TEXT NULL,\r\n" + 
+          			 		"  `Instructor(ID)` TEXT NULL,\r\n" + 
+          			 		"  `MeetingTime(ID)` TEXT NULL,\r\n" + 
+          			 		"  PRIMARY KEY (`Id`))");
+          			
+          		
+       }catch(Exception e) {
+                	  System.out.println("An error occurred while Inserting Scheduled data in table.");
+           			System.out.println("Error"+e.getMessage());
+                  }    
                   classes.forEach(x->{
                           int majorIndex=data.getDept().indexOf(x.getDept());
                           int coursesIndex=data.getCourse().indexOf(x.getCourse());
@@ -104,6 +121,11 @@ public class Driver {
                         	  Connection conn=dbConnection.getCon();  
                          	 Statement statement;
                   			statement = conn.createStatement();
+              
+                  		
+                  			 //Insert schedule Time table into db table TimeTable
+                  			statement.executeUpdate("INSERT INTO timetable (dept,`course(number,max # of students)`,`Room(capacity)`,`Instructor(ID)`,`MeetingTime(ID)`) VALUES('"+dept+"','"+course_all+"','"+Room_all+"','"+Instr_all+"','"+Classtime_all+"')");
+                  		 
                         	//  System.out.print(String.format("  %1$02d", classNumb)+"   | ");    
                            //   System.out.print(String.format("%1$4s", data.getDept().get(majorIndex).getName())+"   | ");
                            //   System.out.print(String.format("%1$21s",data.getCourse().get(coursesIndex).getName()+" ("+data.getCourse().get(coursesIndex).getNumber()+" , "+
@@ -114,9 +136,7 @@ public class Driver {
                           //    "   ("+data.getInstructors().get(instructorsIndex).getId()+")")+"  | ");
                          //     System.out.println(data.getClassTime().get(classTimeIndex).getTime()+"("+data.getClassTime().get(classTimeIndex).getId()+") ");        
                         
-               //Insert schedule Time table into db table TimeTable
-                  			statement.executeUpdate("INSERT INTO time_table (dept,`course(number,max # of students)`,`Room(capacity)`,`Instructor(ID)`,`MeetingTime(ID)`) VALUES('"+dept+"','"+course_all+"','"+Room_all+"','"+Instr_all+"','"+Classtime_all+"')");
-                  		  }catch(Exception e) {
+               }catch(Exception e) {
                         	  System.out.println("An error occurred while Inserting Scheduled data in table.");
                    			System.out.println("Error"+e.getMessage());
                           }     

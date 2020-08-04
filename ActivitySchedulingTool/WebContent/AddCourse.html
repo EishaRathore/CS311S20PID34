@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="AddCourse.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Admin</title>
+    <title>Add Course</title>
 </head>
 <body>
     <!--Header Start-->
@@ -21,16 +21,18 @@
         <li><i class="fa fa-calendar"></i><a href="#">Time Table</a>
             <div class="sub-menu-1">
                 <ul>
-                    <li><i class="fa fa-plus"></i><a href="AddTime.html">Add Time Table</a></li>
-                    <li><i class="fa fa-list"></i><a href="ViewTable.jsp">Time Table List</a></li>
+                 
+                   <li><i class="fa fa-list"></i><a href="ViewTable.jsp">View Time Table</a></li>
                 </ul>
             </div>
         </li>
         <li><i class="fa fa-book"></i><a href="#">Courses</a>
             <div class="sub-menu-1">
                 <ul>
+                 <li><i class="fa fa-plus"></i><a href="AddCourseI.jsp">Add Course Instructor</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddDeptC.jsp">Add Department Course</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddCourse.html">Add Course</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Course List</a></li>
+                     <li><i class="fa fa-list"></i><a href="ViewCourse.html">Course List</a></li>
                 </ul>
             </div>
         </li>
@@ -92,12 +94,9 @@
             <div class="wrap">
             
      <h2>Add Course</h2>
-       <input type="text"  name="name" placeholder="Course Name.." required>  
-        <input type="text" name="CourseCode" placeholder="Course Code.." required>
-        <input type="number" name="Max" placeholder="Max # of student.." required>
-        <select>
-        </select>
-
+     <input type="text"  name="cid" placeholder="Course ID" required> 
+      
+       <input type="text"  name="id" placeholder="Instructor ID" required>  
          <input type="submit" name="submit" href="#" value="Submit">
    </div>
    </form>

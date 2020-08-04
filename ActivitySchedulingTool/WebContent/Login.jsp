@@ -11,11 +11,6 @@
     <script src="jQuery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>LogIn</title>
-  <script type="text/javascript">
-  var selectedValue=document.getElementById("role").value;
-  out.println("run");
-  console.log(selectedValue);
-  </script>
 </head>
 <body onload="check()">
       <section id="header">

@@ -23,16 +23,18 @@
         <li><i class="fa fa-calendar"></i><a href="#">Time Table</a>
             <div class="sub-menu-1">
                 <ul>
-                    <li><i class="fa fa-plus"></i><a href="AddTime.html">Add Time Table</a></li>
-                    <li><i class="fa fa-list"></i><a href="ViewTable.jsp">Time Table List</a></li>
+                 
+                   <li><i class="fa fa-list"></i><a href="ViewTable.jsp">View Time Table</a></li>
                 </ul>
             </div>
         </li>
         <li><i class="fa fa-book"></i><a href="#">Courses</a>
             <div class="sub-menu-1">
                 <ul>
+                 <li><i class="fa fa-plus"></i><a href="AddCourseI.jsp">Add Course Instructor</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddDeptC.jsp">Add Department Course</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddCourse.html">Add Course</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Course List</a></li>
+                     <li><i class="fa fa-list"></i><a href="ViewCourse.html">Course List</a></li>
                 </ul>
             </div>
         </li>
@@ -92,9 +94,9 @@
         <form action="AddInstructorAction.jsp" method="POST">
             <div class="wrap">
      <h2>Add Instructor</h2>
-
+          <input type="text"  name="InstructorId" placeholder="Instructor Id like(I1)" required>  
         <input type="text"  name="InstructorName" placeholder="Instructor Name" required>   
-        <input type="text"  name="InstructorName" placeholder="Course Name" required>        
+              
          <input type="submit" name="submit" href="#" value="Submit">
 
    </div>

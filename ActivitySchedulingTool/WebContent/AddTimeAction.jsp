@@ -10,14 +10,15 @@ try{
 	st=con.prepareStatement("INSERT INTO meetingtime(meeting_time) values('"+Mtime+"')");
 	int x=st.executeUpdate();
 	if(x>0){
-		out.println("Added successfuly!");
+		response.sendRedirect("Admin.jsp");
 	}
 	else{
-		out.println("not added!");
+		response.sendRedirect("AddTime.jsp");
 	}
 	
 }catch(Exception e){
-	e.printStackTrace();
-	out.println("Error"+e.getMessage());
+//	e.printStackTrace();
+	//out.println("Error"+e.getMessage());
+	response.sendRedirect("AddTime.jsp");
 }
 %>

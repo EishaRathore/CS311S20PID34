@@ -10,14 +10,15 @@ try{
 	st=con.prepareStatement("INSERT INTO dept(dname) values('"+Dname+"')");
 	int x=st.executeUpdate();
 	if(x>0){
-		out.println("Added successfuly!");
+		response.sendRedirect("Admin.jsp");
 	}
 	else{
-		out.println("not added!");
+		response.sendRedirect("AddDeptAction.jsp");
 	}
 	
 }catch(Exception e){
-	e.printStackTrace();
-	out.println("Error"+e.getMessage());
+	//e.printStackTrace();
+	//out.println("Error"+e.getMessage());
+	response.sendRedirect("AddDeptAction.jsp");
 }
 %>
