@@ -27,10 +27,7 @@ pageEncoding="ISO-8859-1"%>
                 <ul>
                
                    <li><i class="fa fa-list"></i><a href="ViewTable.jsp">View Time Table</a></li>
-                  <li>
-                    <i class="fa fa-list"></i
-                    ><a href="ViewTable.jsp">Time Table List</a>
-                  </li>
+                 
                 </ul>
               </div>
             </li>
