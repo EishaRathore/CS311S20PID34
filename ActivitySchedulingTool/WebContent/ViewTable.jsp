@@ -197,6 +197,12 @@
              </div>
         </div>
         <p>Copyright @ 2020 Kem. All rights Reserved</p>
+        <div class="mission">
+        <a href="Mission.html">Mission</a>
+        <a href="vision.html">Vision</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact Us</a>
+        </div>
     </div>
 </section>
 <!--Footer End-->
