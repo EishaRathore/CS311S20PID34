@@ -63,7 +63,7 @@
         
               <input type="text" name="value" id="val" readonly>
    
-        <input type="submit" value="LOGIN"  onclick="getcube()">
+      
          <h4>Incorrect User Name or Password! Try Again.</h4>
          <p class="message"> Does'nt have account? <a href="Signuppage.jsp">Signup</a></p>
      

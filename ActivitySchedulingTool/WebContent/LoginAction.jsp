@@ -21,6 +21,8 @@ try{
 				}else{
 					response.sendRedirect("LoginError.jsp");
 				}
+			}else{
+				response.sendRedirect("LoginError.jsp");
 			}		
 	
 }catch(Exception e){
