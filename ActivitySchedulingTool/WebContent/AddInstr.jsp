@@ -57,10 +57,10 @@
         <li><i class="fa fa-user"></i><a href="#">About Us</a>
             <div class="sub-menu-1">
                 <ul>
-                  <li><i class="fa fa-ravelry"></i><a href="#Mission">Mission</a></li>
-                  <li><i class="fa fa-eercast"></i><a href="#Vision">Vision</a></li>
-                  <li><i class="fa fa-angellist"></i><a href="#Team">Team</a></li>
-                    <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
+                 <li><i class="fa fa-ravelry"></i><a href="Mission.html">Mission</a></li>
+                  <li><i class="fa fa-eercast"></i><a href="vision.html">Vision</a></li>
+                  <li><i class="fa fa-angellist"></i><a href="team.html">Team</a></li>
+                    <li><i class="fa fa-phone"></i><a href="contact.html">Contact Us</a></li>
 
                 </ul>
             </div>

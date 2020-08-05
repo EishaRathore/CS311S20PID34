@@ -22,13 +22,15 @@
      <h2>Sign Up</h2>
      <form action="signupAction.jsp" method="post">
      
-        <input type="text"  name="Role" placeholder="Role (Admin or Student)" required>
-        <input type="text"  name="First" placeholder="First Name" required>
-        <input type="text" name="last" placeholder="Last Name" required>
-        <input type="text" name="email" placeholder="Email ID" required pattern="[a-z0-9._%+-]+@[a-z0-9._]+\.[a-z]{2,4}$" title="Must start with small letter">
+        <input type="text"  name="Role" placeholder="Role (Admin or Student)" pattern="^(Admin|Student)$"
+            title="Enter Admin or Student!">
+        <input type="text"  name="First" placeholder="First Name" onKeyDown="myFunction()" value="">
+        <input type="text" name="last" placeholder="Last Name" onKeyDown="myFunction()" value="">
+        <input type="text" name="email" placeholder="Email ID" required pattern="[a-z0-9._%+-]+@[a-z0-9._]+\.[a-z]{2,4}$" title="Must start with small letter and have format like example@gmail.com">
         <input type="password" name="pass" placeholder="Password" pattern=".{8,}" title="Eight or more characters">
         <input type="password" name="cpass" placeholder="Confirm Password" required>
-        <input type="tel" name="mbl" placeholder="Phone Number" required>
+        <input type="tel" name="mbl" placeholder="Phone Number" pattern="^(03)([0-9]{9})$"
+            title="Enter eleven digit number starting with specific number 03">
         <button type="submit" class="submit" href="#">Submit</button>
         <p class="message">Already have account? <a href="Login.jsp">Login</a></p>
     </form>

@@ -43,9 +43,9 @@ out.println("An error occurred calling createDb function.");
         <li><i class="fa fa-user"></i><a href="#">About Us</a>
             <div class="sub-menu-1">
                 <ul>
-                  <li><i class="fa fa-ravelry"></i><a href="#Mission">Mission</a></li>
-                  <li><i class="fa fa-eercast"></i><a href="#Vision">Vision</a></li>
-                  <li><i class="fa fa-angellist"></i><a href="#Team">Team</a></li>
+                  <li><i class="fa fa-ravelry"></i><a href="#ViewMission">Mission</a></li>
+                  <li><i class="fa fa-eercast"></i><a href="#ViewVision">Vision</a></li>
+                  <li><i class="fa fa-angellist"></i><a href="#ViewTeam">Team</a></li>
                     <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
 
                 </ul>
@@ -134,7 +134,7 @@ out.println("An error occurred calling createDb function.");
  <!-- Mission Section Start-->
  <section id="About">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 309"><path fill="#fff" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,250.7C384,245,480,203,576,202.7C672,203,768,245,864,256C960,267,1056,245,1152,208C1248,171,1344,117,1392,90.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-   <div class="About container">
+   <div id="ViewMission"  class="About container">
        
     <div class="About-top">
         
@@ -155,8 +155,8 @@ out.println("An error occurred calling createDb function.");
  <!-- Mission Section End-->
   
  <!--Team Section Start-->
-<section id="Contact">
-    <div class="Contact container">
+<section  id="Contact">
+    <div id="ViewTeam" class="Contact container">
         <div class="title"><h1>Team</h1></div>
         <div class="ContactItems">
             <div class="ContactItem">
@@ -214,9 +214,9 @@ Integrity: Being Open and honest in all our dealings and maintaing
 </section>
  <!--Team Section End-->
            <!-- Vision Section Start-->
- <section id="About">
+ <section  id="About">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 309"><path fill="#fff" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,250.7C384,245,480,203,576,202.7C672,203,768,245,864,256C960,267,1056,245,1152,208C1248,171,1344,117,1392,90.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-   <div class="About container">
+   <div id="ViewVision" class="About container">
        
     <div class="About-top">
         
@@ -257,6 +257,13 @@ Integrity: Being Open and honest in all our dealings and maintaing
              </div>
         </div>
         <p>Copyright @ 2020 Kem. All rights Reserved</p>
+          <div class="mission">
+        <a href="#ViewMission">Mission</a>
+        <a href="#ViewVision">Vision</a>
+        <a href="#ViewTeam">Team</a>
+        <a href="#Contact">Contact Us</a>
+        </div>
+      </div>
     </div>
 </section>
 <!--Footer End-->
