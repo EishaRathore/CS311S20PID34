@@ -243,6 +243,7 @@ input[type=button]{
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: whitesmoke;
 }
 
 #Contact .title h1{
@@ -271,6 +272,7 @@ input[type=button]{
     flex-direction: column;
     box-shadow: 0px 0px 18px 0 #0000002c;
     transition: .3s ease box-shadow;
+    text-decoration-color: #1b121a;
 }
 #Contact .ContactItem:hover{
     box-shadow: 0px 0px 5px 0 #0000002c;
@@ -283,12 +285,15 @@ input[type=button]{
 
 #Contact .Contact-Info h1{
     font-size: 2.5rem;
+    color: #000000;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-#Contact .Contact-Info h2{
+#Contact .Contact-Info h2,a{
     font-size: 1.3rem;
+    color: #000000;
+    text-decoration: none;
     font-weight: 500;
     line-height: 2rem;
 }
@@ -302,7 +307,7 @@ input[type=button]{
     font-size: medium;
     font-family: sans-serif;
     text-decoration: none;
-    text-decoration-color: #ccffff;
+    color: #ccffff;
     filter: brightness(19);
     font-style: italic;
     transition: .3s ease filter
