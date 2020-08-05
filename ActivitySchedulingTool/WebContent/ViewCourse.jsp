@@ -52,7 +52,7 @@
                     <li><i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewRoom.jsp">Rooms List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewDepartments.jsp">Department List</a></li>
-                 <!--  <li><i class="fa fa-list"></i><a href="#">Class Time List</a></li> -->  
+                    <li><i class="fa fa-list"></i><a href="ViewClassTime.jsp">Class Time List</a></li>
                 </ul>
             </div>
         </li>
