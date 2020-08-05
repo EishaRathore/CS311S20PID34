@@ -54,7 +54,7 @@ try{
                  <li><i class="fa fa-plus"></i><a href="AddCourseI.jsp">Add Course Instructor</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddDeptC.jsp">Add Department Course</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddCourse.html">Add Course</a></li>
-                     <li><i class="fa fa-list"></i><a href="ViewCourse.html">Course List</a></li>
+                     <li><i class="fa fa-list"></i><a href="ViewCourse.jsp">Course List</a></li>
                       <li><i class="fa fa-list"></i><a href="ViewDeptCourse.jsp">Department Course List</a></li>
                       <li><i class="fa fa-list"></i><a href="ViewCourseIns.jsp">Course Instructor List</a></li>
                 </ul>
@@ -67,10 +67,10 @@ try{
                     <li><i class="fa fa-plus"></i><a href="AddRoom.html">Add Rooms</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddDept.jsp">Add Department</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddTime.html">Add Class Time</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Faculty List</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Rooms List</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Department List</a></li>
-                    <li><i class="fa fa-list"></i><a href="#">Class Time List</a></li>
+                     <li><i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewRoom.jsp">Rooms List</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewDepartments.jsp">Department List</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewClassTime.jsp">Class Time List</a></li>
                 </ul>
             </div>
         </li>
@@ -146,6 +146,12 @@ try{
              </div>
         </div>
         <p>Copyright @ 2020 Kem. All rights Reserved</p>
+          <div class="mission">
+        <a href="#">Mission</a>
+        <a href="#">Vision</a>
+        <a href="#">Team</a>
+        <a href="#">Contact Us</a>
+        </div>
     </div>
 </section>
 <!--Footer End-->
