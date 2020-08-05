@@ -136,6 +136,11 @@ body{
     line-height: 2rem;
 }
 
+.us{
+  height: 150px;
+  width: 150px;
+  position: relative;
+}
 /*End Contact Section*/
 
 
