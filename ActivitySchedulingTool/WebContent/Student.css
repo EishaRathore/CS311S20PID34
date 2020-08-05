@@ -44,8 +44,11 @@ body{
     font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: -0rem;
-    color: #000000;
+    color: #ffff;
     margin-bottom: 0px;
+}
+.SectionTitle h1,p{
+color: #fff;
 }
 
 /*About Start*/
@@ -57,7 +60,7 @@ body{
 
 }
 #About{
-    background: linear-gradient(to bottom, #ccffff 0%, #ff99cc 100%);
+    background: linear-gradient(to bottom, crimson 0%, black 100%);
 }
 
 #About svg{
