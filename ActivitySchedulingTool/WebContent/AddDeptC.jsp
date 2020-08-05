@@ -87,7 +87,7 @@ try{
         </li>
 
         
-        <li><i class="fa fa-sign-in"></i><a href="Login.html">Log In</a></li>
+        <li><i class="fa fa-sign-in"><a href="index.jsp" data-after="Login">Log Out</a></li>
     </ul>
 </div>
             <div class="header container">
