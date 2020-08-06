@@ -39,9 +39,6 @@
                     <i class="fa fa-plus"></i
                     ><a href="AddCourse.html">Add Course</a>
                   </li>
-                  <li><i class="fa fa-list"></i><a href="ViewCourse.jsp">Course List</a></li>
-                   <li><i class="fa fa-list"></i><a href="ViewDeptCourse.jsp">Department Course List</a></li>
-                      <li><i class="fa fa-list"></i><a href="ViewCourseIns.jsp">Course Instructor List</a></li>
                 </ul>
               </div>
             </li>
@@ -49,6 +46,10 @@
               <i class="fa fa-users"></i><a href="#">Resources</a>
               <div class="sub-menu-1">
                 <ul>
+                 <li><i class="fa fa-plus"></i><a href="AddInstr.jsp">Add Faculty</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddRoom.html">Add Rooms</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddDept.jsp">Add Department</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddTime.jsp">Add Class Time</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewRoom.jsp">Rooms List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewDepartments.jsp">Department List</a></li>
@@ -113,13 +114,14 @@
               type="text"
               name="RoomNum"
               placeholder="Room Number..(N11)"
-              required
+              pattern="^[A-Z]{1}[0-9]{1,2}" title="Must Start with any Upper case Alphabets and then 1 to 2 digit numeric number!" required
             />
             <input
               type="number"
               name="MaxS"
               placeholder="Max Seating Capacity.."
-              required
+             pattern="^[0-9]+$"
+            title="Please Enter only Number" required
             />
             <input type="submit" name="submit" value="Submit" />
           </div>

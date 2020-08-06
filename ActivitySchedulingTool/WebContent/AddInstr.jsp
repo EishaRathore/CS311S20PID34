@@ -46,7 +46,7 @@
                     <li><i class="fa fa-plus"></i><a href="AddInstr.jsp">Add Faculty</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddRoom.html">Add Rooms</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddDept.jsp">Add Department</a></li>
-                    <li><i class="fa fa-plus"></i><a href="AddTime.html">Add Class Time</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddTime.jsp">Add Class Time</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewRoom.jsp">Rooms List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewDepartments.jsp">Department List</a></li>
@@ -96,8 +96,9 @@
         <form action="AddInstructorAction.jsp" method="POST">
             <div class="wrap">
      <h2>Add Instructor</h2>
-          <input type="text"  name="InstructorId" placeholder="Instructor Id like(I1)" required>  
-        <input type="text"  name="InstructorName" placeholder="Instructor Name" required>   
+          <input type="text"  name="InstructorId" placeholder="Instructor Id like(I1)" pattern="[I][0-9]+$" title="Must Start with I and then any numeric number!" required>  
+        <input type="text"  name="InstructorName" placeholder="Instructor Name" pattern="^[A-Za-z ]+$"
+            title="Please Enter only alphabets" required>   
               
          <input type="submit" name="submit" href="#" value="Submit">
 

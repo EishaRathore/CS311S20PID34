@@ -62,7 +62,7 @@
                   </li>
                   <li>
                     <i class="fa fa-plus"></i
-                    ><a href="AddTime.html">Add Class Time</a>
+                    ><a href="AddTime.jsp">Add Class Time</a>
                   </li>
                   <li>
                     <i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a>

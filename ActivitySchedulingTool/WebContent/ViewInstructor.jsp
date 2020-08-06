@@ -35,11 +35,11 @@
               <i class="fa fa-book"></i><a href="#">Courses</a>
               <div class="sub-menu-1">
                 <ul>
-                 <li><i class="fa fa-plus"></i><a href="AddCourseI.jsp">Add Course Instructor</a></li>
+                 <li><i class="fa fa-plus"></i><a href="AddCourse.html">Add Course</a></li>
+                      <li><i class="fa fa-plus"></i><a href="AddCourseI.jsp">Add Course Instructor</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddDeptC.jsp">Add Department Course</a></li>
-                  <li><i class="fa fa-list"></i><a href="ViewCourse.html">Course List</a></li>
-                  <li><i class="fa fa-list"></i><a href="#">Course List</a></li>
-                   <li><i class="fa fa-list"></i><a href="ViewDeptCourse.jsp">Department Course List</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewCourse.jsp">Course List</a></li>
+                     <li><i class="fa fa-list"></i><a href="ViewDeptCourse.jsp">Department Course List</a></li>
                       <li><i class="fa fa-list"></i><a href="ViewCourseIns.jsp">Course Instructor List</a></li>
                 </ul>
               </div>

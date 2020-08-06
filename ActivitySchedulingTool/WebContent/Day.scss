@@ -1,3 +1,39 @@
+
+label {
+  color: var(crimson);
+  font-size: var(--labelSize);
+  font-weight: bold;
+}
+
+.ClassTime1 input {
+ // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><circle cx='20' cy='20' r='18.5' fill='none' stroke='%23222' stroke-width='3' /><path d='M20,4 20,8 M4,20 8,20 M36,20 32,20 M20,36 20,32' stroke='%23bbb' stroke-width='1' /><circle cx='20' cy='20' r='2' fill='%23222' stroke='%23222' stroke-width='2' /></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M18.5,24.5 19.5,4 20.5,4 21.5,24.5 Z' fill='%23222' style='transform:rotate(120deg); transform-origin: 50% 50%;' /></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M18.5,24.5 19.5,8.5 20.5,8.5 21.5,24.5 Z' style='transform:rotate(20deg); transform-origin: 50% 50%;' /></svg>");
+  background-position: var(--margin) 50%;
+  background-repeat: no-repeat;
+  background-size: var(1.5rem) var(1.5rem);
+  border: var(calc(var(--size) * 0.125)) solid var(crimson);
+  border-radius: var(calc(var(--size) * 0.5));
+  color: #222;
+  font-size: var(1.5rem);
+  padding: var(--margin) var(--margin) var(--margin) var(--marginLeft);
+  transition: backgroundImage 0.25s;
+}
+.ClassTime2 input {
+ // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><circle cx='20' cy='20' r='18.5' fill='none' stroke='%23222' stroke-width='3' /><path d='M20,4 20,8 M4,20 8,20 M36,20 32,20 M20,36 20,32' stroke='%23bbb' stroke-width='1' /><circle cx='20' cy='20' r='2' fill='%23222' stroke='%23222' stroke-width='2' /></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M18.5,24.5 19.5,4 20.5,4 21.5,24.5 Z' fill='%23222' style='transform:rotate(120deg); transform-origin: 50% 50%;' /></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M18.5,24.5 19.5,8.5 20.5,8.5 21.5,24.5 Z' style='transform:rotate(20deg); transform-origin: 50% 50%;' /></svg>");
+  background-position: var(--margin) 50%;
+  background-repeat: no-repeat;
+  background-size: var(1.5rem) var(1.5rem);
+  border: var(calc(var(1.5rem) * 0.125)) solid var(crimson);
+  border-radius: var(calc(var(--size) * 0.5));
+  color: #222;
+  font-size: var(1.5rem);
+  padding: var(--margin) var(--margin) var(--margin) var(--marginLeft);
+  transition: backgroundImage 0.25s;
+}
+input:focus {
+  outline: 2px dashed #945;
+  outline-offset: 3px;
+}
+
   body{
     margin: 0;
     padding: 0;
@@ -93,6 +129,7 @@ option{
 
  
 /*--Drop down section end*/
+
 /* background section*/
 .content-table{
     border-collapse: collapse;
@@ -124,7 +161,7 @@ box-shadow: 0 0 20px rgba(0,0,0,15);
 }
 .wrap{
     width: 400px;
-    height: 390px;
+    height: 460px;
     background: rgba(51, 50, 50, 0.801);
     top: 36%;
     left: 50%;
@@ -156,6 +193,7 @@ input[type=text],input[type=number]{
   opacity: 3;
   color: #fff;
 }
+
 input{
   width: 100%;
   margin-bottom: 10%;
@@ -641,6 +679,30 @@ z-index: -1;
     transition: all 0.5s;
 }
 /*Header End*/
+/*--Day Picker*/
+
+.dowPicker {
+  width: 300px;
+  margin: 0 auto;
+margin-bottom: 10px;
+  text-align: center;
+  padding: 0px 0 0 0;}
+  .dowPickerOption {
+    display: inline-block;}
+    input[type=checkbox] {
+        display: none;
+    }
+   .dowPickerOption label {
+	color: rgb(255, 255, 255);
+   
+      cursor: pointer;
+    }
+    input[type=checkbox]:checked ~ label {
+        color: crimson;
+      font-weight: 500;
+    }
+
+/*--Day Picker End--*/
 
 /*media query for nav bar*/
 @media screen and (max-width:640px){
@@ -772,4 +834,3 @@ z-index: -1;
     opacity: 1;
   }
 }
- 

@@ -44,7 +44,7 @@
                    <li><i class="fa fa-plus"></i><a href="AddInstr.jsp">Add Faculty</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddRoom.html">Add Rooms</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddDept.jsp">Add Department</a></li>
-                    <li><i class="fa fa-plus"></i><a href="AddTime.html">Add Class Time</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddTime.jsp">Add Class Time</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewRoom.jsp">Rooms List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewDepartments.jsp">Department List</a></li>
@@ -96,11 +96,13 @@
             <div class="wrap">
             
      <h2>Add Course</h2>
-     <input type="text"  name="cid" placeholder="Course ID" pattern="[C].[0-9]" title="Must Start with C and then any numeric number!"> 
+     <input type="text"  name="cid" placeholder="Course ID" pattern="[C][0-9]+$" title="Must Start with C and then any numeric number!" required> 
       
-       <input type="text"  name="id" placeholder="Course Name" required>  
-        <input type="text"  name="Ccode" placeholder="Course code" required>  
-         <input type="text"  name="SeatingC" placeholder="Seating Capacity" required>  
+       <input type="text"  name="id" placeholder="Course Name" pattern="^[A-Za-z ]+$"
+            title="Please Enter only alphabets" required>  
+        <input type="text"  name="Ccode" placeholder="Course code" pattern="^[A-Z]{2}[0-9]{3,4}" title="Must Start with any two Upper case Alphabets and then 3 or 4 digit numeric number!" required>  
+         <input type="text"  name="SeatingC" placeholder="Seating Capacity" pattern="^[0-9]+$"
+            title="Please Enter only Number" required>  
          <input type="submit" name="submit" href="#" value="Submit">
    </div>
    </form>

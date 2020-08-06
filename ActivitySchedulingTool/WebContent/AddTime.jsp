@@ -1,16 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+     <%@ page import="java.sql.*" %>
+    <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="AddCourse.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  
+    <link rel="stylesheet" href="Day.scss" />
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
     <title>Add Time</title>
   </head>
   <body>
+    <script>
+           function checkvar() {
+        	   var checks=document.getElementsByClassName('checks');
+        	   var str='';
+        	   for(i=0;i<7;i++){
+        	   	if(checks[i].checked===true){
+        	   		str +=checks[i].value + "";
+        	   	}
+           }
+        	 var number=str;  
+        
+   		  var input=document.getElementById("val");
+   		input.value=number;  
+           }
+           </script>
+   
+  
     <!--Header Start-->
     <section id="header">
       <nav>
@@ -63,7 +82,7 @@
                   </li>
                   <li>
                     <i class="fa fa-plus"></i
-                    ><a href="AddTime.html">Add Class Time</a>
+                    ><a href="AddTime.jsp">Add Class Time</a>
                   </li>
                   <li>
                     <i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a>
@@ -91,7 +110,7 @@
             </li>
 
             <li>
-              <i class="fa fa-sign-in"></i><a href="Login.html">Log In</a>
+              <i class="fa fa-sign-in"></i><a href="Login.jsp">Log Out</a>
             </li>
           </ul>
         </div>
@@ -105,7 +124,7 @@
                 <li><a href="#" data-after="Course">Subjects</a></li>
                 <li><a href="#" data-after="About">About Us</a></li>
                 <li><a href="#" data-after="Resources">Resources</a></li>
-                <li><a href="index.jsp" data-after="Login">Log Out</a></li>
+                <li><a href="Login.jsp" data-after="Login">Log Out</a></li>
               </ul>
             </div>
           </div>
@@ -117,17 +136,51 @@
     <!-- Background Section Start-->
     <section id="background">
       <div class="background container">
-        <form action="AddTimeAction.jsp" method="post">
+        <form>
           <div class="wrap">
             <h2>Add Class Time</h2>
-
-            <input
-              type="time"
-              name="ClassTime"
-              placeholder="ClassTime.."
-              required
-            />
-            <input type="submit" name="submit" value="Submit" />
+          <input type="text" name="TimeID" placeholder="ClassTime ID.."  pattern="[M][T][0-9]+$" title="Must Start with MT and then any numeric number!" required
+            >
+          
+        <label style="color:crimson">Select Days</label>     
+    <div class="dowPicker">
+    <div class="dowPickerOption">
+      <input type="checkbox" id="dow1" class="checks" value="S">
+      <label for="dow1">S</label>
+    </div>
+    <div class="dowPickerOption">
+      <input type="checkbox" id="dow2" class="checks" value="M">
+      <label for="dow2">M</label>
+    </div>
+    <div class="dowPickerOption">
+      <input type="checkbox" id="dow3" class="checks" value="T">
+      <label for="dow3">T</label>
+    </div>
+    <div class="dowPickerOption">
+      <input type="checkbox" id="dow4" class="checks" value="W">
+      <label for="dow4">W</label>
+    </div>
+    <div class="dowPickerOption">
+      <input type="checkbox" id="dow5" class="checks" value="T">
+      <label for="dow5">T</label>
+    </div>
+    <div class="dowPickerOption">
+      <input type="checkbox" id="dow6" class="checks" value="F">
+      <label for="dow6">F</label>
+    </div>
+    <div class="dowPickerOption">
+      <input type="checkbox" id="dow7" class="checks" value="S">
+      <label for="dow7">S</label>
+    </div></br>
+  </div> 
+<input type="hidden" name="value" id="val" readonly>
+    <label for="time" style="color:crimson">Start Time</label>
+            <input type="time" name="ClassTime1" required>
+            
+            <label for="time" style="color:crimson">End Time</label>
+            <input type="time" name="ClassTime2" required>
+             <input type="submit" name="submit" value="Submit" onclick='checkvar()'>
+           
           </div>
         </form>
       </div>
@@ -165,6 +218,38 @@
       </div>
     </section>
     <!--Footer End-->
-    <script src="./app.js"></script>
+      <%
+        	  try{
+        		  Connection con=dbConnection.getCon();
+        		  PreparedStatement st;
+        		  
+        		  String Mtime2 = request.getParameter("TimeID");
+        		 
+        		  String Mtime = request.getParameter("ClassTime1");
+        		
+        		  String Mtime1 = request.getParameter("ClassTime2");
+        		
+        		  String name=request.getParameter("value");
+  
+        		  String x = request.getParameter("submit");
+        		   if(x!=null && x.equals("Submit")){
+        			
+             	  	st=con.prepareStatement("INSERT INTO meetingtime(meetingID,meeting_time) values('"+Mtime2+"',CONCAT('"+name+"',' ','"+Mtime+"',' - ','"+Mtime1+"'))");
+             	  
+             	  	int y=st.executeUpdate();
+             	  	
+              	  	if(y>0){
+              	  		response.sendRedirect("Admin.jsp");
+              	  	}
+              	  	else{
+              	  		response.sendRedirect("AddTimeTable.jsp");
+              	  	}}
+        	  }catch(Exception e){
+        	  //	e.printStackTrace();
+        	  	//out.println("Error"+e.getMessage());
+        	  	response.sendRedirect("AddTimeTable.jsp");
+        	  }
+ %>
+
   </body>
 </html>

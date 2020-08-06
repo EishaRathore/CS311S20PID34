@@ -66,8 +66,8 @@ try{
                    <li><i class="fa fa-plus"></i><a href="AddInstr.jsp">Add Faculty</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddRoom.html">Add Rooms</a></li>
                     <li><i class="fa fa-plus"></i><a href="AddDept.jsp">Add Department</a></li>
-                    <li><i class="fa fa-plus"></i><a href="AddTime.html">Add Class Time</a></li>
-                     <li><i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a></li>
+                    <li><i class="fa fa-plus"></i><a href="AddTime.jsp">Add Class Time</a></li>
+                    <li><i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewRoom.jsp">Rooms List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewDepartments.jsp">Department List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewClassTime.jsp">Class Time List</a></li>
@@ -77,7 +77,7 @@ try{
         <li><i class="fa fa-user"></i><a href="#">About Us</a>
             <div class="sub-menu-1">
                 <ul>
-                 <li><i class="fa fa-ravelry"></i><a href="Mission.html">Mission</a></li>
+                  <li><i class="fa fa-ravelry"></i><a href="Mission.html">Mission</a></li>
                   <li><i class="fa fa-eercast"></i><a href="vision.html">Vision</a></li>
                   <li><i class="fa fa-angellist"></i><a href="team.html">Team</a></li>
                     <li><i class="fa fa-phone"></i><a href="contact.html">Contact Us</a></li>
@@ -87,7 +87,7 @@ try{
         </li>
 
         
-        <li><i class="fa fa-sign-in"><a href="index.jsp" data-after="Login">Log Out</a></li>
+        <li><i class="fa fa-sign-in"></i><a href="index.jsp" data-after="Login">Log Out</a></li>
     </ul>
 </div>
             <div class="header container">
@@ -96,12 +96,12 @@ try{
                     <div class="nav-list">
                         <div class="ham"><div class="bar"></div></div>
                         <ul>
-                            <li><a href="#" data-after="Home">Home</a></li>
+                            <li><a href="#header" data-after="Home">Home</a></li>
                             <li><a href="#" data-after="Time">Time Table</a></li>
                             <li><a href="#" data-after="Course">Subjects</a></li>
-                            <li><a href="#About" data-after="About">About Us</a></li>
+                            <li><a href="#footer" data-after="About">About Us</a></li>
                             <li><a href="#" data-after="Resources">Resources</a></li>
-                            <li><a href="Login.jsp" data-after="Login">Log Out</a></li>
+                            <li><a href="index.jsp" data-after="Login">Log Out</a></li>
                         </ul>
                     </div>
                 </div>

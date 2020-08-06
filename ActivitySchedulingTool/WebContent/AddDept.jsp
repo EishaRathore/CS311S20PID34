@@ -63,7 +63,7 @@ pageEncoding="ISO-8859-1"%>
                   </li>
                   <li>
                     <i class="fa fa-plus"></i
-                    ><a href="AddTime.html">Add Class Time</a>
+                    ><a href="AddTime.jsp">Add Class Time</a>
                   </li>
               <li><i class="fa fa-list"></i><a href="ViewInstructor.jsp">Faculty List</a></li>
                     <li><i class="fa fa-list"></i><a href="ViewRoom.jsp">Rooms List</a></li>
@@ -119,7 +119,8 @@ pageEncoding="ISO-8859-1"%>
               type="text"
               name="DepartmentName"
               placeholder="Department Name"
-              required
+             pattern="^[A-Za-z ]+$"
+            title="Please Enter only alphabets" required
             />
             <input type="submit" name="submit" href="#" value="Submit" />
           </div>

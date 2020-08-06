@@ -6,13 +6,15 @@ function check(){
     }
 }
 
-function myFunction() {
-    var e = event || window.event;  // get event object
-    var key = e.keyCode || e.which; // get key cross-browser
-
-    if (key < 48 || key > 57) { //if it is not a number ascii code
-        //Prevent default action, which is inserting character
-        if (e.preventDefault) e.preventDefault(); //normal browsers
-        e.returnValue = false; //IE
-    }
+var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'Password Matched';
+document.getElementById('submit').disabled = false;
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'Password not Matching';
+ document.getElementById('submit').disabled = true;
+  }
 }
