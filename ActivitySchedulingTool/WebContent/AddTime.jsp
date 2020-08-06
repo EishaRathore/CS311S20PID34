@@ -10,23 +10,45 @@
   
     <link rel="stylesheet" href="Day.scss" />
     <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
+   
     <title>Add Time</title>
   </head>
   <body>
     <script>
+  
            function checkvar() {
         	   var checks=document.getElementsByClassName('checks');
         	   var str='';
+        	   
+        	
         	   for(i=0;i<7;i++){
         	   	if(checks[i].checked===true){
         	   		str +=checks[i].value + "";
+        	   	
+        	 
         	   	}
            }
-        	 var number=str;  
-        
-   		  var input=document.getElementById("val");
-   		input.value=number;  
+        	   var number=str;  
+ 	   		  var input=document.getElementById("val");
+ 	   		  input.value=number;
            }
+           
+           function checkvariable() {
+        	   var checks=document.getElementsByClassName('checks');
+               var count=0;
+        	   for(i=0;i<7;i++){
+        	   	if(checks[i].checked===true){
+        	   	count++;
+        	   	}
+           }
+        	   if(count>0){
+        		   document.getElementById('submit').disabled = false;
+        	   }else{
+        		   document.getElementById('submit').disabled = true;
+        		   alert("Please select atleast One Day!");
+        	   }
+           }
+   
            </script>
    
   
@@ -142,8 +164,9 @@
           <input type="text" name="TimeID" placeholder="ClassTime ID.."  pattern="[M][T][0-9]+$" title="Must Start with MT and then any numeric number!" required
             >
           
-        <label style="color:crimson">Select Days</label>     
-    <div class="dowPicker">
+        <label style="color:crimson">Select Days</label>  
+        <form id="booking">   
+    <div class="dowPicker" required>
     <div class="dowPickerOption">
       <input type="checkbox" id="dow1" class="checks" value="S">
       <label for="dow1">S</label>
@@ -173,13 +196,15 @@
       <label for="dow7">S</label>
     </div></br>
   </div> 
+  
+  </form>
 <input type="hidden" name="value" id="val" readonly>
     <label for="time" style="color:crimson">Start Time</label>
-            <input type="time" name="ClassTime1" required>
+            <input type="time" name="ClassTime1"  onclick="checkvariable()" required>
             
             <label for="time" style="color:crimson">End Time</label>
-            <input type="time" name="ClassTime2" required>
-             <input type="submit" name="submit" value="Submit" onclick='checkvar()'>
+            <input type="time" name="ClassTime2" onclick="checkvariable()" required>
+             <input type="submit" id="submit" name="submit" value="Submit" onclick="checkvar();checkvariable()" disabled>
            
           </div>
         </form>
@@ -242,12 +267,12 @@
               	  		response.sendRedirect("Admin.jsp");
               	  	}
               	  	else{
-              	  		response.sendRedirect("AddTimeTable.jsp");
+              	  		response.sendRedirect("AddTime.jsp");
               	  	}}
         	  }catch(Exception e){
         	  //	e.printStackTrace();
         	  	//out.println("Error"+e.getMessage());
-        	  	response.sendRedirect("AddTimeTable.jsp");
+        	  	response.sendRedirect("AddTime.jsp");
         	  }
  %>
 
