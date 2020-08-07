@@ -21,7 +21,7 @@
             </div>
 <div class="menu-bar">
     <ul>
-        <li><i class="fa fa-home"></i><a href="#">Home</a></li>
+        <li><i class="fa fa-home"></i><a href="Student.html">Home</a></li>
         <li><i class="fa fa-calendar"></i><a href="#">Time Table</a>
             <div class="sub-menu-1">
                 <ul>
@@ -65,7 +65,7 @@
                     <div class="nav-list">
                         <div class="ham"><div class="bar"></div></div>
                         <ul>
-                            <li><a href="#" data-after="Home">Home</a></li>
+                            <li><a href="Student.html" data-after="Home">Home</a></li>
                             <li><a href="#About" data-after="About">About Us</a></li>
                             <li><a href="#Contact" data-after="contact">Contact</a></li>
                             <li><a href="Login.jsp" data-after="login">Log in</a></li>

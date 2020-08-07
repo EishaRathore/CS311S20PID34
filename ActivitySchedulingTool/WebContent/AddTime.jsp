@@ -60,7 +60,7 @@
         </div>
         <div class="menu-bar">
           <ul>
-            <li><i class="fa fa-home"></i><a href="#">Home</a></li>
+            <li><i class="fa fa-home"></i><a href="Admin.jsp">Home</a></li>
             <li>
               <i class="fa fa-calendar"></i><a href="#">Time Table</a>
               <div class="sub-menu-1">
@@ -141,7 +141,7 @@
             <div class="nav-list">
               <div class="ham"><div class="bar"></div></div>
               <ul>
-                <li><a href="#" data-after="Home">Home</a></li>
+                <li><a href="Admin.jsp" data-after="Home">Home</a></li>
                 <li><a href="#" data-after="Time">Time Table</a></li>
                 <li><a href="#" data-after="Course">Subjects</a></li>
                 <li><a href="#" data-after="About">About Us</a></li>

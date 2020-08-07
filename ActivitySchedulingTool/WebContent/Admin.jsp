@@ -58,10 +58,10 @@
         <li><i class="fa fa-user"></i><a href="#">About Us</a>
             <div class="sub-menu-1">
                 <ul>
-                  <li><i class="fa fa-ravelry"></i><a href="#Mission">Mission</a></li>
-                  <li><i class="fa fa-eercast"></i><a href="#Vision">Vision</a></li>
-                  <li><i class="fa fa-angellist"></i><a href="#Team">Team</a></li>
-                    <li><i class="fa fa-phone"></i><a href="#Contact">Contact Us</a></li>
+                  <li><i class="fa fa-ravelry"></i><a href="Mission.html">Mission</a></li>
+                  <li><i class="fa fa-eercast"></i><a href="vision.html">Vision</a></li>
+                  <li><i class="fa fa-angellist"></i><a href="team.html">Team</a></li>
+                    <li><i class="fa fa-phone"></i><a href="contact.html">Contact Us</a></li>
 
                 </ul>
             </div>
@@ -118,16 +118,16 @@
                     <a href="#"><img src="twitter_48px.png" ></a>
                 </div>
                 <div class="social-item">
-                    <a href="#"><img src="github_32px.png" ></a>
+                    <a href="team.html"><img src="github_32px.png" ></a>
                 </div>
              </div>
         </div>
         <p>Copyright @ 2020 Kem. All rights Reserved</p>
           <div class="mission">
-        <a href="Mission.html">Mission</a>
-        <a href="vision.html">Vision</a>
-        <a href="team.html">Team</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="Mission.html" style="color:white;">Mission</a>
+        <a href="vision.html" style="color:white;">Vision</a>
+        <a href="team.html" style="color:white;">Team</a>
+        <a href="contact.html" style="color:white;">Contact Us</a>
         </div>
     </div>
 </section>

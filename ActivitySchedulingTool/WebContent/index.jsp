@@ -258,10 +258,10 @@ Integrity: Being Open and honest in all our dealings and maintaing
         </div>
         <p>Copyright @ 2020 Kem. All rights Reserved</p>
           <div class="mission">
-        <a href="#ViewMission">Mission</a>
-        <a href="#ViewVision">Vision</a>
-        <a href="#ViewTeam">Team</a>
-        <a href="#Contact">Contact Us</a>
+        <a href="#ViewMission" style="color:white;">Mission</a>
+        <a href="#ViewVision" style="color:white;">Vision</a>
+        <a href="#ViewTeam" style="color:white;">Team</a>
+        <a href="#Contact" style="color:white;" >Contact Us</a>
         </div>
       </div>
     </div>
