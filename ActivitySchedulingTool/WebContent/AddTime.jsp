@@ -221,17 +221,17 @@
             <span>A</span>ctivity <span>S</span>cheduling <span>T</span>ool
           </h1>
           <h2>Find Us on Social Media</h2>
-          <div class="social-icon">
-            <div class="social-item">
-              <a href="#"><img src="Facebook Old_48px.png" /></a>
-            </div>
-            <div class="social-item">
-              <a href="#"><img src="twitter_48px.png" /></a>
-            </div>
-            <div class="social-item">
-              <a href="#"><img src="github_32px.png" /></a>
-            </div>
-          </div>
+              <div class="social-icon">
+                 <div class="social-item">
+                     <a href="fb.html"><img src="Facebook Old_48px.png" ></a>
+                 </div>
+                 <div class="social-item">
+                    <a href="twitter.html"><img src="twitter_48px.png" ></a>
+                </div>
+                <div class="social-item">
+                    <a href="github.html"><img src="github_32px.png" ></a>
+                </div>
+             </div>
         </div>
         <p>Copyright @ 2020 Kem. All rights Reserved</p>
         <div class="mission">
