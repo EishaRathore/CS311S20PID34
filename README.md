@@ -14,7 +14,10 @@
 | 3             | Eclipse IDE for Java EE development|  4.16 | It is used to run the java project. |
 | 4             | Apache Tomcat|   v9.0 | It is used to execute web pages that include java server page coding.|
 | 5             | mysql-connector-java|   v8.0.21 | It is used to Connect MySql Database to java.|
-| 6             | Xamp|   v7.4.80 | It is used to Connect MySql Database to java.|
+| 6             | Xampp|   v7.4.80 | It is used to Connect MySql Database to java.|
+| 7             | Node js|   v12.18.3 | Node. js tools are available via Eclipse IDE for Java EE Developers / Eclipse IDE for JavaScript and Web Developers.|
+| 8             | Java|   v7.4.80 | It is used to Connect MySql Database to java.|
+
 
 # Project Configuration Guidelines(Step by Step):
 >Install JAVA </br>
@@ -36,20 +39,39 @@
         4. Now run the eclipse.exe.</br>
         5. After running it select eclipse IDE for enterprise java developers. and install it. 
         5. Open Eclipse.</br>
-        6. In nav bar select window>preference>Web Browser> </br>
+        6. In nav bar select window>preference> search Web Browser> </br>
         7. In Web Browser click new and then add name chrome and give it the location of your chrome.exe file. (it is because we have designed our project for chrome web browser on other browsers its interface will be not adjustable.)</br>
+        8. In nav bar select Window>Web browser then from the menu select chrome.
     
->Install Xamp </br>
-        1. Run it as administrator. </br>
-        2. And start apache and mysql.   
+>Install Xampp </br>
+        1. Go to this link https://www.apachefriends.org/download.html and install it.
+        2. Run it as administrator. </br>
+        3. And start apache and mysql.    
+
+>Install Tomcat </br>
+        1. Go to this link https://tomcat.apache.org/download-90.cgi</br>
+        2. In core section click the windows installer.    
+
+>Install Node Js </br>
+        1. Go to this link https://nodejs.org/en/download/</br>
+        2. And simply install it by hitting next button.</br>
+
 
 >Import Github Repo </br>
         1. After Installing Xamp navigate into this directory C:\xampp\htdocs and create a new folder name project and clone git repository in this folder. </br>
         2. Launch a workspace in eclipse.</br>
         3. You will see a search bar on upper right corner
-        in it search git Repositories(Git)
-        4. If you will see a our repository in bottom section then justthen select it clone repository link in the bottom section.</br>
-        4. Click it and type the URL of Repository.</br>
+        in it search git Repositories(Git)</br>
+        4. If you will see a our repository in bottom section then justthen select it clone existing repository link in the bottom section.</br>
+        4. Click it and type the path of C:\xampp\htdocs\project\CS311S20PID34.</br>
+        5. Select the check box and click finish.</br>
+        6. Right click on the repository shown in bottom pane and import project.
+        Do not change any field value and import the project.</br>
+        7. From ActivitySchedulingTool[CS311S20PID34]>WebContent and open index.jsp file</br>
+        8. Right click in opened index.jsp file in text editor section</br>
+        9. Choose run as > run on server.</br>
+        10. Choose Apache>Tomcat v9.0 and then add the link in browse field like this C:\Program Files\Apache Software Foundation\Tomcat 9.0 (Depending on your device)</br>
+        
 
 
 ## Author
