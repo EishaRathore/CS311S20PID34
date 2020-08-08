@@ -21,7 +21,7 @@
 
 # Project Configuration Guidelines(Step by Step):
 >Install JAVA </br>
-      1. Visit https://www.oracle.com/java/technologies/javase-downloads.html and https://www.oracle.com/java/technologies/javase-jre8-downloads.html</br>
+      1. Visit https://www.oracle.com/java/technologies/javase-downloads.html and https://download.cnet.com/Java-Runtime-Environment-JRE-64-Bit/3000-2213_4-75317067.html</br>
       2. Download File from both according to your operating system.</br>
       3. Now run the downloaded exe file
       4. Click next and Don't choose destination folder let the exe file choose it.</br>
