@@ -55,6 +55,10 @@
 >Install Node Js </br>
         1. Go to this link https://nodejs.org/en/download/</br>
         2. And simply install it by hitting next button.</br>
+        
+>Install Mysql-connector-java</br>
+        1. Go to this link https://dev.mysql.com/downloads/connector/j/5.1.html and https://dev.mysql.com/downloads/connector/j/</br>
+        2. And simply install both of them by hitting next button.and their location will be C:\mysql-connector-java-5.1.49 and C:\mysql-connector-java-8.0.21</br>
 
 
 >Import Github Repo </br>
