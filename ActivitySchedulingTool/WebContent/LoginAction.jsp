@@ -5,7 +5,7 @@
 String username = request.getParameter("userName");
 session.putValue("username",username);
 String password = request.getParameter("Password");
-System.out.println(password);
+
 
 //System.out.println(role1);
 try{
