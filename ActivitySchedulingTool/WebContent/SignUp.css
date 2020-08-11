@@ -1,4 +1,4 @@
-body{
+		body{
 	 margin: 0;
     padding: 0;
 	background-image: url(comp.jpeg);
@@ -42,7 +42,7 @@ body{
 
 .wrap{
     width: 400px;
-    height: 540px;
+    height: 560px;
     background: rgba(51, 50, 50, 0.801);
     top: 56%;
     left: 50%;

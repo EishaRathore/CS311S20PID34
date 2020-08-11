@@ -22,7 +22,7 @@
      <h2>Sign Up</h2>
      <form action="signupAction.jsp" method="post">
      
-        <input type="text"  name="Role" placeholder="Role (Admin or Student)" pattern="^(Admin|Student)$"
+        <input id= "role" type="text"  name="Role" onkeyup='dept();' placeholder="Role (Admin or Student)" pattern="^(Admin|Student)$"
             title="Enter Admin or Student!" >
         <input type="text"  name="First" placeholder="First Name" pattern="^[A-Za-z]+$"
             title="Please Enter only alphabets" required>
@@ -34,6 +34,7 @@
         <span id='message' style=font-size:14pt></span>
         <input type="tel" name="mbl" placeholder="Phone Number" pattern="^(03)([0-9]{9})$"
             title="Enter eleven digit number starting with specific number 03" required>
+        <input id="department"  type="text"  name="department" placeholder="Department Name" disabled>    
         <button type="submit" id="submit" class="submit" href="#" disabled>Submit</button>
         <p class="message">Already have account? <a href="Login.jsp">Login</a></p>
     </form>

@@ -17,12 +17,19 @@ String cpassword=request.getParameter("cpass");
 
 String mblnumber=request.getParameter("mbl");
 
+String deptname=request.getParameter("dept");
+
 try{
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
-	
-	st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"')");
-	st.executeUpdate();
+	if(Role=="Admin")
+	{	System.out.println("hello");
+		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"',NULL)");
+	}else{
+		System.out.println(deptname);
+		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"','"+deptname+"')");
+	}
+		st.executeUpdate();
 	response.sendRedirect("Login.jsp");
 }catch(Exception e){
 	//out.println("Error"+e.getMessage());
