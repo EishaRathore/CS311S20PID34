@@ -116,12 +116,12 @@
                 	  Connection conn= dbConnection.getCon();
                 	   Driver.main();
                       PreparedStatement st;
-                  	st=conn.prepareStatement("select * from timetable");
+                  	st=conn.prepareStatement("select * from timetable ");
                   	
                         ResultSet rs=st.executeQuery();
                     while(rs.next())
                     {
-                        %>
+                        %> 
                        <tr>
                         <td><%=rs.getString("Id")%></td>
                         <td><%=rs.getString("dept")%></td>

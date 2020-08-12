@@ -18,21 +18,25 @@ String cpassword=request.getParameter("cpass");
 String mblnumber=request.getParameter("mbl");
 
 String deptname=request.getParameter("department");
-System.out.println(Role);
+
 try{
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
-	if(Role=="Admin")
-	{	System.out.println("if");
-		System.out.println(deptname);
-		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"','"+deptname+"')");
-	}
-	else{
-		System.out.println("else");
-		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"','"+deptname+"')");
-	}
+	if(request.getParameter("Role").equals("Admin"))
+	{
+		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept)  SELECT '"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"',NULL WHERE NOT EXISTS (Select urole,fName,lName,email,password,cpassword From userdata WHERE urole='"+Role+"' AND fName='"+firstName+"' AND lName='"+lname+"' AND email='"+Email+"' AND password='"+password+"' AND cpassword='"+cpassword+"') LIMIT 1 ");
 		st.executeUpdate();
-	response.sendRedirect("Login.jsp");
+		response.sendRedirect("Login.jsp");
+	}
+	else if(request.getParameter("Role").equals("Student")){
+		System.out.println("else");
+		System.out.println(deptname);
+		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept)  SELECT '"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"','"+deptname+"' WHERE NOT EXISTS (Select urole,fName,lName,email,password,dept From userdata WHERE urole='"+Role+"' AND fName='"+firstName+"' AND lName='"+lname+"' AND email='"+Email+"' AND password='"+password+"' AND dept='"+deptname+"') LIMIT 1 ");
+		st.executeUpdate();
+		response.sendRedirect("Login.jsp");
+	}
+		
+	
 }catch(Exception e){
 	//out.println("Error"+e.getMessage());
 	out.println("Please Input Valid Data!");

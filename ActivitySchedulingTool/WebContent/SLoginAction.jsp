@@ -6,7 +6,7 @@ String username = request.getParameter("userName");
 session.putValue("username",username);
 String password = request.getParameter("Password");
 
-
+session.setAttribute("name",username);
 //System.out.println(role1);
 try{
 	Connection con=dbConnection.getCon();

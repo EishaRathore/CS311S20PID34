@@ -78,13 +78,13 @@
        
     </section>
     <!--Header End-->
+
      <!-- Background Section Start-->
     <section id="background">
         <div class="background container">
       <table class="content-table" border="table table-bordered table-stripped table-condensed" align="center">
          <thead>
             <tr>
-               <th>ID</th>
           <th>Department</th>
             <th>Course(Number, max # of Students)</th>
             <th>Room(Capacity)</th>
@@ -93,19 +93,21 @@
         </tr>
         </thead>
         <tr>
+       
                 <%
                 try{
                 	  Connection conn= dbConnection.getCon();
                 	   Driver.main();
                       PreparedStatement st;
-                  	st=conn.prepareStatement("select * from timetable");
+                     String username=session.getAttribute("name").toString();
+                  	st=conn.prepareStatement("select * from timetable T JOIN USERDATA U where T.dept=U.dept AND U.FNAME='"+username+"'");
                   	
                         ResultSet rs=st.executeQuery();
                     while(rs.next())
                     {
                         %>
                        <tr>
-                        <td><%=rs.getString("Id")%></td>
+                        
                         <td><%=rs.getString("dept")%></td>
                         <td><%=rs.getString("course(number,max # of students)")%></td>
                         <td><%=rs.getString("Room(capacity)")%></td>
@@ -158,7 +160,6 @@
 </section>
 <!--Footer End-->
 <script src="./app.js"></script>
-
     
 </body>
 </html>
