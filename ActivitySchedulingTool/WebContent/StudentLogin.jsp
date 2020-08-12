@@ -25,20 +25,22 @@
         
               <input type="text" value="Student" readonly>
     <form action="SLoginAction.jsp" method="POST">
-        <input type="text" name="userName" placeholder="USER NAME" required>
+        
+        <input type="text" name="userName" id="UName" placeholder="USER NAME"  required>
         <input type="password" name="Password" placeholder="PASSWORD" required>
+       
         <input type="submit" value="LOGIN">
          <p class="message"> Does'nt have account? <a href="Signuppage.jsp">Signup</a></p>
       </form>
+      
     <div class="bottomText">
         <a href="forgot.html">Forgot Password? </a>
     </div>
-  
         </div>
     
         <div id="overlyArea">
     
      </div>
-     
+
 </body>
 </html>

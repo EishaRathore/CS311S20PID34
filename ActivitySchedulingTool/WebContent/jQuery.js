@@ -23,5 +23,6 @@ var dept = function() {
   if (document.getElementById('role').value =="Student") {
 	document.getElementById('department').style.visibility = 'visible';
   } else {
+	document.getElementById('department').value=NULL;
     document.getElementById('department').style.visibility = 'hidden';  }
 }
