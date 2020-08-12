@@ -29,8 +29,7 @@ try{
 		response.sendRedirect("Login.jsp");
 	}
 	else if(request.getParameter("Role").equals("Student")){
-		System.out.println("else");
-		System.out.println(deptname);
+	
 		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept)  SELECT '"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"','"+deptname+"' WHERE NOT EXISTS (Select urole,fName,lName,email,password,dept From userdata WHERE urole='"+Role+"' AND fName='"+firstName+"' AND lName='"+lname+"' AND email='"+Email+"' AND password='"+password+"' AND dept='"+deptname+"') LIMIT 1 ");
 		st.executeUpdate();
 		response.sendRedirect("Login.jsp");

@@ -7,8 +7,9 @@ String Dname = request.getParameter("DepartmentName");
 try{
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
-	st=con.prepareStatement("INSERT INTO dept(dname) values('"+Dname+"')");
+	st=con.prepareStatement("INSERT INTO dept(dname) value('"+Dname+"')");
 	int x=st.executeUpdate();
+
 	if(x>0){
 		response.sendRedirect("Admin.jsp");
 	}

@@ -9,7 +9,7 @@ try{
 	
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
-	st=con.prepareStatement("INSERT INTO faculty(Iname,Inum) values('"+Iname+"','"+Id+"')");
+	st=con.prepareStatement("INSERT INTO faculty(Iname,Inum) SELECT '"+Iname+"','"+Id+"' Where NOT EXISTS(SELECT Iname from faculty where Iname='"+Iname+"')LIMIT 1");
 	int x=st.executeUpdate();
 	if(x>0){
 		response.sendRedirect("Admin.jsp");
