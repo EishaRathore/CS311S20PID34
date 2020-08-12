@@ -78,7 +78,7 @@ public class InsertIntoDb {
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS role(Role VARCHAR(50),PRIMARY KEY(Role))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS rooms(room_no VARCHAR(50),room_capacity int,PRIMARY KEY(room_no))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS dept(dname VARCHAR(50) NOT NULL,PRIMARY KEY(dname))");
-			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS  userdata(id INT(50) NOT NULL AUTO_INCREMENT,fName varchar(255),lName varchar(255),email varchar(255),password varchar(255),cpassword varchar(255),mbl varchar(255),urole VARCHAR(50),dept varchar(255),PRIMARY KEY(id),FOREIGN KEY (urole) REFERENCES role (Role),FOREIGN KEY (dept) REFERENCES dept (dname))");			 
+			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS userdata(id INT(50) NOT NULL AUTO_INCREMENT,fName varchar(255),lName varchar(255),email varchar(255),password varchar(255),cpassword varchar(255),mbl varchar(255),urole VARCHAR(50),dept varchar(255),PRIMARY KEY(id),FOREIGN KEY (urole) REFERENCES role (Role),FOREIGN KEY (dept) REFERENCES dept (dname))");			 
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS meetingtime(id INT(50) NOT NULL AUTO_INCREMENT,meetingID text,meeting_time TEXT,PRIMARY KEY(id))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS course(CID VARCHAR(50) NOT NULL,Cname TEXT,code VARCHAR(50),seating_capacity int,PRIMARY KEY(CID))");
 			 statement.executeUpdate("CREATE TABLE IF NOT EXISTS faculty(Iname TEXT ,Inum VARCHAR(50) NOT NULL,PRIMARY KEY(Inum))");
