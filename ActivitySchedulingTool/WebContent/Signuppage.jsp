@@ -34,9 +34,9 @@
         <span id='message' style=font-size:14pt></span>
         <input type="tel" name="mbl" placeholder="Phone Number" pattern="^(03)([0-9]{9})$"
             title="Enter eleven digit number starting with specific number 03" required>
-        <input id="department"  type="text"  name="department" placeholder="Department Name" disabled>    
+        <input id="department"  type="text" style="visibility:hidden" name="department" placeholder="Department Name" >    
         <button type="submit" id="submit" class="submit" href="#" disabled>Submit</button>
-        <p class="message">Already have account? <a href="Login.jsp">Login</a></p>
+        <p class="message">Already have account? <a id="login" href="Login.jsp">Login</a></p>
     </form>
 
    </div>

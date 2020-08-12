@@ -17,16 +17,18 @@ String cpassword=request.getParameter("cpass");
 
 String mblnumber=request.getParameter("mbl");
 
-String deptname=request.getParameter("dept");
-
+String deptname=request.getParameter("department");
+System.out.println(Role);
 try{
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;
 	if(Role=="Admin")
-	{	System.out.println("hello");
-		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"',NULL)");
-	}else{
+	{	System.out.println("if");
 		System.out.println(deptname);
+		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"','"+deptname+"')");
+	}
+	else{
+		System.out.println("else");
 		st=con.prepareStatement("INSERT INTO userdata(urole,fName,lName,email,password,cpassword,mbl,dept) values('"+Role+"','"+firstName+"','"+lname+"','"+Email+"','"+password+"','"+cpassword+"','"+mblnumber+"','"+deptname+"')");
 	}
 		st.executeUpdate();

@@ -20,8 +20,8 @@ document.getElementById('submit').disabled = false;
 }
 
 var dept = function() {
-  if (document.getElementById('role').value =='Student') {
-    document.getElementById('department').disable = true;
+  if (document.getElementById('role').value =="Student") {
+	document.getElementById('department').style.visibility = 'visible';
   } else {
-    document.getElementById('department').disable = false;  }
+    document.getElementById('department').style.visibility = 'hidden';  }
 }

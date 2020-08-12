@@ -52,6 +52,11 @@
     box-sizing: border-box;
     box-shadow: 8px 8px 50px rgb(15, 15, 15);
 }
+a#login {
+/*     color-scheme: rgb(100,5,3); */
+    color: aliceblue;
+    text-decoration: none;
+}
 h2{
   margin: 0;
     padding: 0;
@@ -106,8 +111,9 @@ input{
   font-size: 12;
 }
 
-.main .message a{
-  color: rgb(180, 55, 55);
+a{
+  color:aliceblue;
+  text-decoration:none;
   font-weight: bold;
   font-size: 16px;
 }
@@ -163,4 +169,6 @@ input{
       opacity: 1;
     }
   }
+
+
 
