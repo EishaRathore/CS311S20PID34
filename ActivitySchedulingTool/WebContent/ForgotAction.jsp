@@ -13,13 +13,7 @@ try{
 	st=con.prepareStatement("UPDATE userdata SET password = '"+pass+"', cpassword = '"+Cpass+"' WHERE email='"+uemail+"'");
 	
 	int x=st.executeUpdate();
-	if(x>0){
-		
-		out.println("not changed!");
-	}
-	else{
-		out.println("not changed!");
-	}
+
 	
 }catch(Exception e){
 	e.printStackTrace();

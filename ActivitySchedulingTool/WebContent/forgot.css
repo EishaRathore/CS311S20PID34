@@ -51,6 +51,33 @@ body{
     
     box-shadow: 8px 8px 50px rgb(15, 15, 15);
 }
+.submit{
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 15px 20;
+    border-radius: 20px;
+    background: crimson;
+    background: linear-gradient(crimson, rgb(58, 37, 37));
+    font-size: 16px;
+    font-weight: bold;
+    width:320px;
+    height:40px;
+}
+.submit:hover{
+  background: crimson;
+  opacity: 1;
+}
+.main input[type=button]{
+    background: crimson;
+}
+
+.main .message{
+  margin :15px 0 0;
+  color: aliceblue;
+  font-size: 12;
+}
+
 h2{
   margin: 0;
     padding: 0;
