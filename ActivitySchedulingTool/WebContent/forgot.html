@@ -4,11 +4,7 @@
         <title> Forgot Password</title>
     <link rel= "stylesheet"  href= "forgot.css">
 <head>
-<script type="text/javascript"> 
-function showAlert(){ 
-alert("Changed Successfuly!"); 
-} 
-</script> 
+<script type="text/javascript" src="jQuery.js"></script>
 <body>
   <section id="header">
         
@@ -21,13 +17,12 @@ alert("Changed Successfuly!");
    <div class="wrap">
      <h2>Change Password</h2>
      <form action="ForgotAction.jsp" method="POST">
-       <input type="email" name="Email" placeholder="Email ID.." required>
-       <input type="password" name="newPass" placeholder="New Password.." required>
-       <input type="password" name="CnewPass" placeholder="Confirm New Password.." required>
+        <input type="text" name="Email" placeholder="Email ID" required pattern="[a-z0-9._%+-]+@[a-z0-9._]+\.[a-z]{2,4}$" title="Must start with small letter and have format like example@gmail.com">
+       <input type="password" id="password" name="pass" placeholder="Password" onkeyup='check();' pattern=".{8,}" title="Eight or more characters" required>
+       <input type="password" id="confirm_password" name="cpass" onkeyup='check();' placeholder="Confirm Password" required>
        
         <input type="submit" value="Submit">
     </form>
-   showAlert();
    </div>
    <div id="overlyArea">
 

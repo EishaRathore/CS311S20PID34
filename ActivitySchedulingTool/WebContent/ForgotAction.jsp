@@ -4,8 +4,8 @@
     <%@page import="com.za.ga.cs.connectionProvider.dbConnection" %>
 <%
 String uemail = request.getParameter("Email");
-String pass = request.getParameter("newPass");
-String Cpass = request.getParameter("CnewPass");
+String pass = request.getParameter("pass");
+String Cpass = request.getParameter("cpass");
 try{
 	Connection con=dbConnection.getCon();
 	PreparedStatement st;

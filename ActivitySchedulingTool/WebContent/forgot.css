@@ -61,16 +61,27 @@ h2{
     font-family: courgette;
     color: #fff;
 }
-input[type=password],input[type=email]{
+input[type=password]{
   border: none;
   width: 100%;
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
-  height: 30px;
+  height: 15px;
   font-size: 18px;
   opacity: 3;
   color: #fff;
+}
+input[type="text"] {
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 15px;
+    font-size: 18px;
+    opacity: 3;
+    color: #fff;
 }
 input{
   width: 100%;
