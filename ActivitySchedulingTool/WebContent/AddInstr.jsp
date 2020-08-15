@@ -67,7 +67,7 @@
         </li>
 
         
-        <li><i class="fa fa-sign-in"></i><a href="Login.html">Log Out</a></li>
+        <li><i class="fa fa-sign-in"></i><a href="Login.jsp">Log Out</a></li>
     </ul>
 </div>
             <div class="header container">

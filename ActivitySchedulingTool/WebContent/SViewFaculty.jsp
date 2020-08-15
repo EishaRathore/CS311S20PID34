@@ -68,7 +68,7 @@
                             <li><a href="Student.html" data-after="Home">Home</a></li>
                             <li><a href="#About" data-after="About">About Us</a></li>
                             <li><a href="#Contact" data-after="contact">Contact</a></li>
-                            <li><a href="Login.jsp" data-after="login">Log in</a></li>
+                            <li><a href="Login.jsp" data-after="login">Log Out</a></li>
                         </ul>
                     </div>
                 </div>

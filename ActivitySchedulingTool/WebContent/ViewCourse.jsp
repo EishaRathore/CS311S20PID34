@@ -69,7 +69,7 @@
         </li>
 
         
-        <li><i class="fa fa-sign-in"></i><a href="index.jsp">Log Out</a></li>
+        <li><i class="fa fa-sign-in"></i><a href="Login.jsp">Log Out</a></li>
     </ul>
 </div>
             <div class="header container">
@@ -83,7 +83,7 @@
                             <li><a href="#" data-after="Subjects">Subjects</a></li>
                             <li><a href="#About" data-after="About">About Us</a></li>
                             <li><a href="#" data-after="Resources">Resources</a></li>
-                            <li><a href="index.jsp" data-after="Login">Log Out</a></li>
+                            <li><a href="Login.jsp" data-after="Login">Log Out</a></li>
                         </ul>
                     </div>
                 </div>
