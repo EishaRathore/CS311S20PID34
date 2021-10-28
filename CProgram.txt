@@ -1,7 +1,7 @@
 ##How to Write an Algorithm?
 Not all procedures can be called an algorithm. An algorithm should have the following characteristics −
 
-Unambiguous − Algorithm should be clear and unambiguous. Each of its steps (or phases), and their inputs/outputs should be clear and must lead to only one meaning.
+Unambiguous-- − Algorithm should be clear and unambiguous. Each of its steps (or phases), and their inputs/outputs should be clear and must lead to only one meaning.
 Input − An algorithm should have 0 or more well-defined inputs.
 Output − An algorithm should have 1 or more well-defined outputs, and should match the desired output.
 Finiteness − Algorithms must terminate after a finite number of steps.
