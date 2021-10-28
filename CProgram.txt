@@ -1,0 +1,47 @@
+##How to Write an Algorithm?
+Not all procedures can be called an algorithm. An algorithm should have the following characteristics −
+
+Unambiguous − Algorithm should be clear and unambiguous. Each of its steps (or phases), and their inputs/outputs should be clear and must lead to only one meaning.
+Input − An algorithm should have 0 or more well-defined inputs.
+Output − An algorithm should have 1 or more well-defined outputs, and should match the desired output.
+Finiteness − Algorithms must terminate after a finite number of steps.
+Feasibility − Should be feasible with the available resources.
+Independent − An algorithm should have step-by-step directions, which should be independent of any programming code.
+
+##Example
+Let’s try to learn algorithm-writing by using an example.
+
+Problem − Design an algorithm to add two numbers and display the result.
+
+Step 1 − START
+
+Step 2 − declare three integers a, b & c
+
+Step 3 − define values of a & b
+
+Step 4 − add values of a & b
+
+Step 5 − store output of step 4 to c
+
+Step 6 − print c
+
+Step 7 − STOP
+
+Algorithms tell the programmers how to code the program. Alternatively, the algorithm can be written as −
+
+Step 1 − START ADD
+
+Step 2 − get values of a & b
+
+Step 3 − c ← a + b
+
+Step 4 − display c
+
+Step 5 − STOP
+
+In design and analysis of algorithms, usually the second method is used to describe an algorithm. It makes it easy for the analyst to analyze the algorithm ignoring all unwanted definitions. He can observe what operations are being used and how the process is flowing.
+
+Writing step numbers, is optional.
+
+We design an algorithm to get a solution of a given problem. A problem can be solved in more than one ways.
+
