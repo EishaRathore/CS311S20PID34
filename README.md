@@ -117,10 +117,5 @@ Step 4 − display c
 
 Step 5 − STOP
 
-In design and analysis of algorithms, usually the second method is used to describe an algorithm. It makes it easy for the analyst to analyze the algorithm ignoring all unwanted definitions. He can observe what operations are being used and how the process is flowing.
-
-Writing step numbers, is optional.
-
-We design an algorithm to get a solution of a given problem. A problem can be solved in more than one ways.
 
 
